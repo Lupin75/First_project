@@ -3,6 +3,9 @@
 #include<iostream>
 #include<fstream>
 //-----------------------------------------------------------
+//-----------------USER DEFINED HEADERS----------------------
+#include "File.hpp"
+//-----------------------------------------------------------
 using namespace std;
 class State{
 /*
@@ -11,11 +14,14 @@ class State{
         ->if the player chooses '2' this state is called 'continue ' state thus reading the saveData for the player to continue.
         ->if the player chooses '3' this is exit state. 
 */
-    public:
+private:
+File prologue;
+public:
     int gameState=0;
     void checkGameState(){
         if(this->gameState==1){
             remove("saveFile.txt");
+            prologue.prologueEntry();
         }
         else if(this->gameState==2){
 
