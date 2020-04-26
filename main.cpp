@@ -15,54 +15,18 @@ TO DO:
 //-------------------------------------------------------------------------
 //---------------------USER DEFINED HEADERS---------------------------------
 #include "game.hpp"
+#include "Menu.hpp"
+#include "State.hpp"
 //--------------------------------------------------------------------------
-
 using namespace std;
 int main(){
     totalHealth=health;
     maxHealth=totalHealth;
     system("cls");
     Game game;       //creating an object called title from class Menu
-    game.printTitle();     //printing title screen
-    x:
-    if(input==1){
-        system("cls");
-        cout<<"Creating character.\n";
-        Sleep(200);
-        system("cls");
-        cout<<"Creating character..\n";
-        Sleep(200);
-        system("cls");
-        cout<<"Creating character...\n";
-        Sleep(200);
-        system("cls");
-        cout<<"Creating character....\n";
-        Sleep(200);
-        system("cls");
-        cout<<"Creating character.....\n";
-        Sleep(200);
-
-
-    //Write the story plot for this game
-
-    
-         game.HUD();
-    }
-    else if(input==2)
-        
-        /*___________________________________________________________________________________________________________
-          code to save the state of the game in a file
-        _____________________________________________________________________________________________________________
-        */
-       cout<<"Sorry!!       This feature is not availabe for now!!";
-    else if(input==3)
-        exit(0);
-    else
-    {
-        cout<<"Invalid input\n";
-        cout<<"Please try again!\n";
-        cin>>input;
-        goto x;
-    }
-    
+    Menu title;       //creating an object called title from class Menu
+    title.printTitle();      //printing title screen 
+    State status;  //creating an object called game from class State
+    cin>>status.gameState;
+    status.checkGameState();
 }
