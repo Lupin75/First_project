@@ -15,14 +15,14 @@ class Game{
     //Heads Up Display Details of Player
     void HUD(){
       Sleep(500);
-      cout<<"Name: "<<name<<"   Health: "<<totalHealth<<"\nLevel: "<<level<<"\nXP: "<<currentXP<<"\nXP to Level: "<<XptoLevel<<endl;
+      cout<<"Name: "<<playerName<<"   Health: "<<totalHealth<<"\nLevel: "<<level<<"\nXP: "<<currentXP<<"\nXP to Level: "<<XptoLevel<<endl;
       moving();
     }
 
     void combatHUD(){
       Sleep(500);
       system("cls");
-      cout<<"Name:"<<name<< "   |    Enemy Name: "<<currentEnemyName<<"\nHealth: "<<totalHealth<<"   |   Enemy Health: "<<enemyHP<<"\nLevel: "<<level<<"   |   Monster Level: "<<enemyLevel<<endl;
+      cout<<"Name:"<<playerName<< "   |    Enemy Name: "<<currentEnemyName<<"\nHealth: "<<totalHealth<<"   |   Enemy Health: "<<enemyHP<<"\nLevel: "<<level<<"   |   Monster Level: "<<enemyLevel<<endl;
  
     }
 
@@ -125,6 +125,7 @@ class Game{
 
     void moving()
     {
+      int choice;
       cout<<"\n\n";
       cout<<"1. Move Forward\n";
       cout<<"2. Relax\n";
@@ -132,12 +133,12 @@ class Game{
       cout<<"\n";
       cin>>choice;
       if(choice==1){
-        temp=rand()%100+1;
+        int temp=rand()%100+1;
         cout<<"You begin moving forward...\n"<<endl;
         if(temp>=50){
           // Encounter a enemy
           createEnemy();
-          tempName=enemyNames[rand()%currentEnemyNum];
+          string tempName=enemyNames[rand()%currentEnemyNum];
           cout<<"A "<<tempName<<"Prepare to fight!!"<<endl;
           currentEnemyName=tempName;
           Sleep(1000);
@@ -159,12 +160,12 @@ class Game{
       HUD();
       }
       else if(choice==3){
-        temp=rand()%100+1;
+        int temp=rand()%100+1;
         cout<<"You begin moving backwards...\n"<<endl;
         if(temp>=50){
           //Encounter a enemy
           createEnemy();
-          tempName=enemyNames[rand()%currentEnemyNum];
+          string tempName=enemyNames[rand()%currentEnemyNum];
           cout<<"A "<<tempName<<"!    "<<"Prepare to fight!!"<<endl;
           currentEnemyName=tempName;
           Sleep(1000);

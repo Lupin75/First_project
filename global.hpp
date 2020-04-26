@@ -1,12 +1,14 @@
+#ifndef _gv_
+#define _gv_
 #include<iostream>
 using namespace std;
 
-int input;
-int counter=0;
-int temp;
-string tempName;
-int choice;
-string name;
+int input1;
+int counter1=0;
+int temp1;
+string tempName1;
+int choice1;
+string playerName;
 int level=1;
 int HP=0;
 int health=100;
@@ -27,7 +29,6 @@ int baseXP=83;
 int XptoLevel=baseXP;
 int minLevel=1;
 int maxLevel=60;
-
 
 
 //-------------------this function is to change a string to lower case----------------
@@ -121,4 +122,6 @@ string toSmall(string large){
     }
     return large;    
 }
+
 //-----------------------------------------------------------------------------------------
+#endif
