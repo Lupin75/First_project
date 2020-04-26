@@ -1,5 +1,3 @@
-# newGame
-**This game is not yet fully functional**
 # TODO:
  * **Add story** 
  * Include Animation

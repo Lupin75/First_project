@@ -119,6 +119,7 @@ public:
         else if(this->toSmall(gameState)=="2"|| this->toSmall(gameState)=="continue"||this->toSmall(gameState)=="2."){
 
         }else if(this->toSmall(gameState)=="3"|| this->toSmall(gameState)=="exit"||this->toSmall(gameState)=="3."){
+
             cout<<"thanks for playing"<<endl;
             Sleep(1000);//puts the console on hold
             system("exit");//closes the console
