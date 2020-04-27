@@ -28,7 +28,7 @@ class Game{
 
     void combat(){
       combatHUD();
-      playerDamage=30000;
+      playerDamage=8*level/2;
       enemyAttack=6*enemyLevel/2;
       if(totalHealth>=1&&enemyHP>=1){
         cout<<"\n";
