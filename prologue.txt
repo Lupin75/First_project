@@ -1,1 +1,26 @@
-happy meals
+{
+    TIME  : MID-NIGHT ,
+    DATE  : UNKNOWN ,
+    SCENE : bedroom - small beautiful house ,
+    PLACE : UNKNOWN ,
+}
+SON    : father , father ... wake up...
+FATHER : (sleepy) hmmm , what is it , ABIEL , haven't slept yet ?
+abiel  : i'm not sleepy , will you tell me a story ?
+WOMEN  : abiel , just close your eyes and sleep already , you do know your father is an ENFORCEMENT officer ,
+         he must get his he must get his sleep while he can !
+FATHER : it's okay , NANCY , he is just a "10 year old kid" 
+nancy  : fine , just be quick.
+FATHER : alright , what kind of story ?
+abiel  : i don't know ? anything is fine but it has to be new i'm bored of hearing mom's same stories.
+FATHER : alright then , listen , this is the story of our country "CHERNARUS" .
+         back then , maybe 20 years or so , things were different. when i was at your age , we dont have these dangerous "MUTANTS".
+         it was peaceful , and nature was harmless but more importantly it's peaceful.
+         CHERNARUS has a government supported lab called "BLACK MESA" . people say this lab used to handle different kinds of viruses but
+         one day ....
+{
+    the room door was smashed open
+}
+MUTANT1: #^%&*^%^#%$W$^%R$^RTF&^&%^^$#^%&*^%^#%$W$^%R$^RTF&^&%^^$#^%&*^%^#%$W$^%R$^RTF&^&%^^$
+MUTANT2: *&%^#^%&*^&T&*Y*Y**^T^T^%^#%$W$^%R$^RTF&^&%^^$#^%&*^%^#%$W$^%R$^RTF%&^*&G&^&%^^$#^%&
+nancy  : hon....

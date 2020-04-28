@@ -23,7 +23,7 @@ int main(){
     totalHealth=health;
     maxHealth=totalHealth;
     system("cls");
-    Game game;       //creating an object called title from class Menu
+    Game game;       
     Menu title;       //creating an object called title from class Menu
     title.printTitle();      //printing title screen 
     State status;  //creating an object called game from class State
