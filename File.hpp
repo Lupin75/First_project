@@ -15,11 +15,11 @@ private:
     char character;
     fstream fin;
 //--------------------------------------------------------------
-    void readFileOnly(string fileName, int speed,string doskip){
+    void readFileOnly(string fileName, int speed,string skipSleep){
     fin.open(fileName,ios::in);
     while (fin >> noskipws >> this->character){
             cout<<this->character;
-            if(doskip=="yes"||"skip"){
+            if(skipSleep=="yes"||"skip"){
                 Sleep(1000/speed);//default 1 second
             }
         }
