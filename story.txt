@@ -1,0 +1,195 @@
+	You just woke up from a comfortable sleep. You sit upon the heavenly mattress and look outside your bedside window to find the Sun rising above the horizon. You get up from the bed and scan your room the King of Jawad provided you, in the most luxurious mansion in the kingdom. You find the brown bag of 1000 gold coins and the note from the King of Jawad that reads: 
+	We are deeply honoured to have you, the Greatest Detective in all kingdoms to participate in our annual festival. Enjoy your stay.
+Annual festival: The richest festival of all kingdoms which goes on for a month. Anyone from any kingdom can come, participate and enjoy. You were one of the chief guests for their inaugural function which held last week.
+	As you walk towards the balcony, you hear a sudden knocking on the door. You rush to the door and open to find nobody in the corridor. When you look down, you find a white cover. You open the cover and a letter is there with the following words.
+	An important person is missing. We need your help. Come quickly to Jade City and do not tell anyone.
+			-King George
+Do you accept the invitation?
+	1: Yes-> Welcome to the game 
+	2: No-> Close the game
+Enter 1 or 2
+//********TITLE**********
+Understanding the emergency, you get on your horse and start galloping towards Jade City. All alone in the scorching highways with not much trees around you to cast shadow from hot sunrays you maintain a steady pace through the rough terrains. Finally, you see a big arch welcoming you to the city of Jadeite after three hours of ride. When you go closer you find the arch looking in a bad state of maintenance and there are no guards at the entrance. As you ride through the outskirts for some ten minutes, you finally approach a junction with a nearby stall for travelers to refresh themselves.
+So you decide to take a small break and let your horse take some rest. After few minutes as you are starting to resume your journey after asking the stall owner directions to the city, you see a blonde man on a white horse coming that way taking a right at the junction (the direction of the main city/ palace).As you observe his clothes, you think that he is a foreign traveler but something seems suspicious about him. But you see that man slowing down his horse as if he was coming for you.
+Traveler: Hello, Detective 
+I am a chief intelligence agent of Jade City. This is for you.   
+He offers you a letter)
+It reads: 
+This is a secret operation of utmost importance. I apologize for not being able to meet you directly. Podrick the one with the letter will explain you everything about the issue and see to your needs. If it is of any help I completely trust him.
+		King George
+You: So you are Podrick huh?
+Podrick: Yes. We should move quickly. Let us move towards the mainland. Meanwhile, you can ask your questions to understand what's happening.
+You get on your horse and follow Podrick
+1.	What happened?
+2.	Why is it a secret?
+3.	What makes this a right opportunity?
+4.	About the people.
+
+You: So what happened and who is missing?
+Podrick: Her honor the princess "Name" has gone missing. The princess, her two friends along with two important generals in top military positions, who went for their safety, have gone missing yesterday.
+You: So why is the fact that the princess is missing, is being kept a secret?
+Podrick: If you have not heard, there was a famine 6 months ago, due to which the economy and military of the kingdom went down drastically. Due to such issues there was also a small people's rebellion which was quickly solves as the King accepted the plea of the people. Due to the current political situation, every other country is waiting for the right opportunity to hit us.
+You: What makes this a right opportunity for the invaders?
+Podrick: Due to increasing political tension, the princess was engaged to Prince Clarke of Raken for military support. But the ambassador of Raken got to know about the princess missing. To ease the tension, he asked for the prince Clarke to come here to Jade City. It takes around 2 days for the prince to come from Raken. If the prince Clarke finds that she is missing he will call off any further relationship with our country. So, our country will become more vulnerable to war.
+You: And what about the people?
+Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum possible interactions possible. Type SPYBAR.
+SPYBAR:
+1.Every interaction of yours increases a certain amount of value in a SPYBAR.
+2.Once this value reached 100, this means that spies in the city knew about the missing. This results in a war in which King George loses. Hence you lost and need to restart the level.
+3.The SPYBAR value can reach directly over 100 if you interact with even one of the spies.
+4.This SPYBAR value is revealed only after the end of that level.
+---------------------------
+You: So how did the princess go missing?
+Podrick: The princess and others started very early this morning around 5 am for a picnic. We are not sure where they went. But they should have returned by 7pm. But even after searching all night, they couldn't be found anywhere. The Prime minister somehow knew of your presence in the next country and recommended you in order to fasten the searching process.
+Others: Two best friends of princess (i.e. a girl named Matilda, a boy named Phil), Chief General of Cavalry and General of right wing of infantry.
+You: Where would they go that early in the morning?
+Podrick: We don't know. But when we searched for evidences in princess' room, a letter was found.
+   Letter: You say on going to Jawad's festival. Matilda recommends the beach. I wish to go to the cliffs. So, we need to meet up and finalize one place and save the rest for other trips.
+                There is no name written on the bottom. The handwriting and the writing style don't seem to belong to a well-educated person.
+------------------------------
+Podrick: The letter should be from Phil. He is the son of a poor pet shop owner from whom princess bought her parrot a year ago. Matilda is the princess' childhood friend.
+You: If they did actually go to Jawad, can those people at the refreshment stall whom we saw earlier have a possibility of knowing that they crossed?
+Podrick: No, not probably. Their houses are on the way to the main city. They open those shops only after 10am. We also couldn't place guards 24/7 on the entrance of the country due to internal problems. So, we don't have idea on whether they went to Jawad.
+
+# Can you identify anything from the letter
+1) As per the princess' wish, they should have gone to Jawad's festival 
+2) They should have gone to any one of the three places only 
+3) They should have planned to go to all three places 
+
+You: As per the princess' wish, they should have gone to Jawad's festival 
+Podrick: No, they valued each other
+You: They should have gone to any one of the three places only 
+Podrick: That could be right. Each place is worth spending a day
+You: They should have planned to go to all three places 
+Podrick: Traveling time will be lot and the purpose of picnic won't be fulfilled
+------------------------------
+Despite the famine you are surrounded by trees on your way to the main city. After riding for around 15 mins you can faintly see the huge gates of the main city.
+You: Did you investigate in her friend's houses?
+Podrick: Due to spies' problem, we haven't even told Matilda's parents about them missing. We told them she is staying in the palace. We don't yet know the exact location of where the boy lives. The princess has known him for less than a year. His father died due to the famine. The pet shop and their previous house have been closed for months.
+You: He seems suspicious and smart. Within a year, he has become the best friend of princess. Where are we going now?
+Podrick: I thought of starting to investigate at Matilda's house with your help first as we need to start the investigation quickly. We can come back to the junction later to investigate more.
+
+You now are at the entrance of the city gates. There are guards observing everyone who passes by. The city is densely populated, and the houses look modern but not in their best state. Also the famine seems to have affected the life of the people adversely.
+Finally, you are now in front of Matilda's house.
+--------------------------
+Podrick: I know these people. I will handle them. Never ask anything that'll make them think they are missing
+                            (He knocks the door)
+Matilda's mother: Welcome Mr. Podrick. Come in.
+					(You both enter the house. It's not a huge house but a well-furnished one.)
+Podrick (to her mother): I came to inform you that Matilda wishes to stay in the palace till tomorrow.
+Matilda's mother: You need not have come so far to tell this. Anyways, I will bring  you two something to eat.
+Podrick: No, it's fine. She also asked me to bring her book which is in her room.
+Matilda's mother: Oh fine. I'll bring that book.
+Podrick (to the player): I bought you some time. Try to find any clue.
+(There are some clothes lying around. Some papers on a table. On the wall, a painting is framed.)
+
+Clothes: they are mostly cotton clothes and threads. Her mother should be weaving as a hobby.
+Table: Sheets with unfinished drawings are lying. Among the sheets, you can see an olive oil bottle. It could also be used as a sunscreen lotion
+Painting: A beautiful painting of a white unicorn. It was painted by Matilda herself it has her sign in the bottom corner.
+
+-------------------------
+Matilda's mother: This should be the book she mentioned.
+
+			She hands Podrick a book named "Title (some Easter egg)"
+
+Podrick: Thank you madam. It seems our princess avoids the family. You know, she didn't even tell anyone about the place they were going for picnic.
+Matilda's mother: Don't come to such conclusions. Even Matilda kept that a secret.
+Podrick: Still, keeping an eye on them is better. Then we'll take leave madam.
+						(You both leave the house)	
+----------------------------
+You: The only thing that might help in investigation is that the sunscreen lotion was on the table.
+
+# Do you infer anything from that 
+1.	They should have gone to Jawad's festival because this is the place where they'll need least sunscreen. (Pod: then why would it come among books? Maybe she wanted it but forgot to take it)
+2.	They must have gone either to beach or cliff (we can't be so sure. Maybe she just applied it and kept it on the table as she doesn't need it anymore)
+3.	We can't conclude anything strongly. (Not fair! But still that's it what seems)
+
+You: Well that was not much useful. Let's back to the junction
+Podrick: Let's pray that at least they know something
+You: This could help us retrace their steps hopefully.
+
+			You then ride back to the junction to investigate the people 
+
+You have reached the colony. As Podrick describes the buildings are not continuous and spread in 3 clusters. The door numbers of shops and houses are in the order 221A, 221B and so on till 221K.
+1.	To take a closer look on the house, type the alphabet. (This will tell about the way the house/shop looks from outside along with Podrick's perspective, if any.)
+2.	//You can only go in order. (i.e. you can't type B after you typed C)
+3.	If you feel that you could get some information, type talk. Due to SPYBAR restriction, you can maximum enter any 5 houses or shops in this entire colony.
+4.	Remember, you are not investigating directly. You create a conversation and channel the talk in a way you get some information related to missing.
+5.	Also remember not to talk with spies.
+6.	Type 'move' if you don't want to get in the shop.
+7.	If you finished investigation, type 'end'.
+
+						If you want to recall, type SPYBAR.
+
+---------------------------------------
+
+At the first group, you can see
+
+A: Potter's house 
+B: Poet's house
+C: Hotel
+D: Tea shop
+
+The house is a small one. He makes the pots inside his house. He everyday goes to the main city at around 10am to sell them and returns on the evening.
+Talk: You find that the potter has gone to sell. You made a conversation with his wife. You don't think she has any useful information
+-----------
+It is a modern-looking stone house with a small area in front of the house left for garden. But the poet and his family have gone for an international trip 7 months ago. So, the house is pale and dusty without proper maintenance. You can notice an impression of a palm among those dusts on the low-height compound wall. Here there is none to talk.
+---------
+It is a poor looking building. A pale old man is walking outside slowly, due to his age, and throwing some wasted food in the dustbin near roadside. There are no customers inside the hotel.
+Talk: You get to know that this hotel was once the best in this area. After famine, he saw the extreme poverty and decided to give free meals. This took all his money but still he is very happy about it. He still gives free meals on every Saturday.
+-----------
+It's a small road-side shop with a bunch of customers sitting on the bench outside the shop. Podrick tells you that this is the shop that opens first in this colony around 6am. He insists on going in as he thinks we might get some clues
+Talk: Before even entering the shop, you see the customers outside are arguing on something.
+
+Customer 1: Here come two foreigners. Let's ask their opinion.
+Customer 2 (talking to you): Sir, do you think God is real?
+You: 1. Yes, of course.           2. No, I am an atheist
+Customer 3: Why do you think that?
+You: 1.This universe must be created by someone.
+     2. On the grounds of modesty, I believe the presence of something powerful than humans.
+     3.I have experienced his goodness and mercy.
+You: 1.It's the easiest answer for complex questions.
+     2.God is just a delusional companion during hardships in the form of faith and hope.
+     3.He was created to bring fear and order among the people.
+Customer 4: See, even this foreigner believes in god/is an atheist.
+Customer 5: Basically, there was a debate on God's existence. No native Jade believes in God. But this business man was talking on how other country citizens believe in God.
+You: All right. But I think everybody have equal rights to have their own beliefs. 
+-------------
+(You now order something and after other customers went, you got time to create a conversation with the owner)
+You get acquainted that the shop owner heard sounds of a pack of horses while he was about to wake up at around 6 am. They were going in a direction opposite to the city.
+-----------------------
+
+Podrick (to you): This man must be referring to the princess and others along with her.
+You: You said that princess started at 5am. But this man heard sounds near 6am. Will it take 1 hour to reach here from the palace?
+Podrick: No. It takes less than 30 minutes. But who else could travel with pack of horses?
+
+1.The princess got there late. (Pod: That's possible but the reason for delay is still unclear. Even her friends stayed in the palace the night before. So, ther's no need to spend time anywhere)
+2.Some group of travelers. (After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.)
+3.Somebody else from the kingdom (But no one had any official meetings and any need to come this early)
+----------------
+This reminds you of another unsolved question
+# Why would they go that early in the morning for a picnic?
+
+1.To maximize the total time of picnic (Pod: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep)
+2.In order to reach on time for the Jawad's festival that starts at 7am. (That's is more probable)
+3.To see the sunrise. (That's a possible solution. The sunrise looks magnificent in our country compared to others)
+--------------
+Type next to go to the next group of buildings
+
+The player should have visited the poet's house and the tea shop. Then only the game proceeds. (Else game tells 'you're missing a clue')
+While riding to the next group,
+Podrick: If they wanted to watch the sunrise, the sunrise looks great from both the cliffs and the beach.
+You: We might get more information on investigation. Then we can decide.
+------------------
+At the second group, you can see
+E: Farmer's house
+F: Refresher's house
+G: Antique store
+     A weak building made of straws and twigs. An old man (who is the farmer) siting on the entrance of the house, is shouting to his wife inside the house in a bit irritated voice. The words are, “you talk as if I do nothing for this house. Who is the one that goes to the farm every day at first light in the morning?”. Then he just angrily walks out of the house.
+Talk: 
+//You: Excuse me sir. We are travelers from another country. Which way is the Palace?
+//Farmer: Follow this road and it will lead you to the palace.
+You: Thank you sir.   
+I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
+
+

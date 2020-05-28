@@ -1,9 +1,20 @@
 #ifndef _gv_
 #define _gv_
 #include<iostream>
+#include<cmath>
+#include<vector>
+#include<fstream>
+#include<string>
+#include<limits>
+#include<sstream>
+#include<iomanip>
+#include<cstring>
+#include<exception>
+
+
 using namespace std;
 
-int input1;
+string input;
 int counter1=0;
 int temp1;
 string tempName1;
@@ -122,6 +133,46 @@ string toSmall(string large){
     }
     return large;    
 }
+int check_status(int status) {
+    if (status != 1 && status != 2 && status != 3 && status != 4) {
+        cout << "Error...No such status available" << endl
+            << "Enter status (1/2/3/4): ";
+        cin >> status;
+        return check_status(status);
+
+    }
+    else {
+        //cout << "status: " << status << endl;
+        return status;
+    }
+
+}
+
+// To check if the input is integer type
+int getInputAsInt(int number){
+    cin>>number;
+    while(cin.fail()){
+        cin.clear();     
+        cin.ignore(numeric_limits<streamsize>::max(),'\n');
+        cout<<"Input type is wrong.... Please try again\nEnter an integer: ";
+        number=getInputAsInt(number);
+    }
+    return number;
+}
+//Converts all letters in a string to lower case for comparison
+
+
+//Function to get the cursor to designated line
+fstream& GotoLine(fstream& file, unsigned int num) {
+
+    file.seekg(ios::beg);
+
+    for (unsigned int i = 0; i < num - 1; ++i) {
+        file.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    return file;
+}
+
 
 //-----------------------------------------------------------------------------------------
 #endif
