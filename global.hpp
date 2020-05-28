@@ -14,7 +14,7 @@
 
 using namespace std;
 
-string input;
+int input1;
 int counter1=0;
 int temp1;
 string tempName1;
@@ -134,9 +134,9 @@ string toSmall(string large){
     return large;    
 }
 int check_status(int status) {
-    if (status != 1 && status != 2 && status != 3 && status != 4) {
+    if (status != 1 && status != 2 ) {
         cout << "Error...No such status available" << endl
-            << "Enter status (1/2/3/4): ";
+            << "Enter status (1/2): ";
         cin >> status;
         return check_status(status);
 
@@ -144,6 +144,21 @@ int check_status(int status) {
     else {
         //cout << "status: " << status << endl;
         return status;
+    }
+
+}
+
+int check_pc_option(int option) {
+    if (option != 1 && option != 2 && option != 3 && option != 4 ) {
+        cout << "Error...No such status available" << endl
+            << "Enter status (1/2/3/4): ";
+        cin >> option;
+        return check_pc_option(option);
+
+    }
+    else {
+        //cout << "status: " << status << endl;
+        return option;
     }
 
 }
@@ -172,6 +187,7 @@ fstream& GotoLine(fstream& file, unsigned int num) {
     }
     return file;
 }
+
 
 
 //-----------------------------------------------------------------------------------------
