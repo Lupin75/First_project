@@ -168,16 +168,30 @@ Podrick (to you): This man must be referring to the princess and others along wi
 You: You said that princess started at 5am. But this man heard sounds near 6am. Will it take 1 hour to reach here from the palace?
 Podrick: No. It takes less than 30 minutes. But who else could travel with pack of horses?
 
-1.The princess got there late. (Pod: That's possible but the reason for delay is still unclear. Even her friends stayed in the palace the night before. So, ther's no need to spend time anywhere)
-2.Some group of travelers. (After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.)
-3.Somebody else from the kingdom (But no one had any official meetings and any need to come this early)
+1.The princess got there late. 
+2.Some group of travelers. 
+3.Somebody else from the kingdom 
+
+You: The princess got there late
+Pod: That's possible but the reason for delay is still unclear. Even her friends stayed in the palace the night before. So, ther's no need to spend time anywhere
+You: Some group of travelers.
+Pod: After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.
+You: Somebody else from the kingdom 
+Pod: But no one had any official meetings and any need to come this early
 ----------------
 This reminds you of another unsolved question
 # Why would they go that early in the morning for a picnic?
 
-1.To maximize the total time of picnic (Pod: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep)
-2.In order to reach on time for the Jawad's festival that starts at 7am. (That's is more probable)
-3.To see the sunrise. (That's a possible solution. The sunrise looks magnificent in our country compared to others)
+1.To maximize the total time of picnic
+2.In order to reach on time for the Jawad's festival that starts at 7am.
+3.To see the sunrise.
+
+You: To maximize the total time of picnic
+Pod: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep
+You: In order to reach on time for the Jawad's festival that starts at 7am
+Pod: That's is more probable
+You: To see the sunrise
+Pod: That's a possible solution. The sunrise looks magnificent in our country compared to others
 --------------
 Type next to go to the next group of buildings
 

@@ -18,6 +18,7 @@ void cls()
     system("cls");
 
 }
+
 void displaySlow(string line, int speed = 10000, bool sleepStats = true)
 {
    // char ch;
@@ -29,16 +30,18 @@ void displaySlow(string line, int speed = 10000, bool sleepStats = true)
     }
     cout << "\n";
 }
-void pod_conv(int line_n=27,int choices=4){
+void pod_conv(int line_n,int choices){
     fstream story;
     story.open("sa.txt");
     GotoLine(story,line_n);
 
     int option;
+    if(choices==4)
+    {
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0;
     while (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
     {
-        option=check_pc_option(getInputAsInt(option));
+        option=check_pc_option4(getInputAsInt(option));
         if (option == 1)
         {
             if (f1 == 0)
@@ -129,13 +132,87 @@ void pod_conv(int line_n=27,int choices=4){
                 }
         }
     }
+    }
+    if(choices==3)
+    {
+        int f1 = 0, f2 = 0, f3 = 0;
+        while (f1 == 0 || f2 == 0 || f3 == 0)
+        {
+            option=check_pc_option3(getInputAsInt(option));
+            if (option == 1)
+            {
+                if (f1 == 0)
+                {
+                    GotoLine(story, line_n);
+                    int ln = 0;
+                    while (ln < 2)
+                    {
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        ln++;
+                    }
+                    f1++;
+                }
+            else
+                displaySlow("Podrick: We already talked about this");
+            }
+            else if (option == 2)
+            {
+                if (f2 == 0)
+                {
+                    GotoLine(story, line_n+2);
+                    int ln = 0;
+                    while (ln < 2)
+                    {   
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        ln++;
+                    }
+                    f2++;
+                }
+                else
+                    displaySlow("Podrick: We already talked about this");
+            }
+        else if (option == 3)
+        {
+            if (f3 == 0)
+            {
+                GotoLine(story, line_n+4);
+                int ln = 0;
+                while (ln < 2)
+                {
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    ln++;
+                }
+                f3++;
+            }
+            else
+                displaySlow("Podrick: We already talked about this");
+        }
+        if (f1 == 0 || f2 == 0 || f3 == 0)
+        {
+             GotoLine(story, line_n-5);
+                int ln = 0;
+                while (ln < 4)
+                {
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    ln++;
+                }
+        }
+    }
+}
 }
 
 int main()
 {
     std::vector<string> story_line;
     string line;
-    string bold;
     fstream story;
     story.open("sa.txt");
     int line_count = 0;
@@ -184,7 +261,7 @@ int main()
                 displaySlow(line);
             line_count++;
         }
-        pod_conv();
+        pod_conv(27,4);
         /*int option;
         int f1 = 0, f2 = 0, f3 = 0, f4 = 0;
         while (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
@@ -675,11 +752,10 @@ int main()
                     cout<<endl;
             }
         }
-         
-        
-        /*line_count = 90;
-        GotoLine(story,91);
-        while (line_count < 98)
+        cls();
+        line_count = 166;
+        GotoLine(story,167);
+        while (line_count < 173)
         {
             line.clear();
             getline(story, line, '\n');
@@ -687,9 +763,23 @@ int main()
             displaySlow(line);
             line_count++;
         }
-        line_count = 99;
-        GotoLine(story,100);
-        while (line_count < 122)
+        pod_conv(175,3);
+        cls();
+        line_count=181,
+        GotoLine(story,182);
+        while (line_count < 187)
+        {
+            line.clear();
+            getline(story, line, '\n');
+            story_line.push_back(line);
+            displaySlow(line);
+            line_count++;
+        }
+        pod_conv(189,3);
+        cls();
+        line_count=195,
+        GotoLine(story,196);
+        while (line_count < 202)
         {
             line.clear();
             getline(story, line, '\n');
@@ -698,9 +788,15 @@ int main()
             line_count++;
         }
         cls();
-        line_count=125,
-        GotoLine(story,126);
-        */
+        while (line_count < 206)
+        {
+            line.clear();
+            getline(story, line, '\n');
+            story_line.push_back(line);
+            displaySlow(line);
+            line_count++;
+        }
+        cls();
     }
 
     else if (status == 2)

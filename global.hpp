@@ -148,12 +148,26 @@ int check_status(int status) {
 
 }
 
-int check_pc_option(int option) {
+int check_pc_option4(int option) {
     if (option != 1 && option != 2 && option != 3 && option != 4 ) {
         cout << "Error...No such status available" << endl
             << "Enter status (1/2/3/4): ";
         cin >> option;
-        return check_pc_option(option);
+        return check_pc_option4(option);
+
+    }
+    else {
+        //cout << "status: " << status << endl;
+        return option;
+    }
+
+}
+int check_pc_option3(int option) {
+    if (option != 1 && option != 2 && option != 3) {
+        cout << "Error...No such status available" << endl
+            << "Enter status (1/2/3): ";
+        cin >> option;
+        return check_pc_option3(option);
 
     }
     else {
