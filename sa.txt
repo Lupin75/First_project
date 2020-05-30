@@ -168,16 +168,31 @@ Podrick (to you): This man must be referring to the princess and others along wi
 You: You said that princess started at 5am. But this man heard sounds near 6am. Will it take 1 hour to reach here from the palace?
 Podrick: No. It takes less than 30 minutes. But who else could travel with pack of horses?
 
-1.The princess got there late. (Pod: That's possible but the reason for delay is still unclear. Even her friends stayed in the palace the night before. So, ther's no need to spend time anywhere)
-2.Some group of travelers. (After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.)
-3.Somebody else from the kingdom (But no one had any official meetings and any need to come this early)
+#What do you deduce?
+ 1.The princess got there late. 
+ 2.Some group of travelers. 
+ 3.Somebody else from the kingdom 
+
+You: The princess might have gotten there late?
+Podrick: That's possible but the reason for delay is still unclear. Even her friends stayed in the palace the night before. So, ther's no need to spend time anywhere
+You: Could it be some other group of travelers?
+Podrick: After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.
+You: It could also be somebody else from the kingdom. 
+Podrick: As far as I know, no one had any official meetings and any need to come this early, but it is possible
 ----------------
 This reminds you of another unsolved question
-# Why would they go that early in the morning for a picnic?
 
-1.To maximize the total time of picnic (Pod: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep)
-2.In order to reach on time for the Jawad's festival that starts at 7am. (That's is more probable)
-3.To see the sunrise. (That's a possible solution. The sunrise looks magnificent in our country compared to others)
+# Why would they go that early in the morning for a picnic?
+ 1.To maximize the total time of picnic
+ 2.In order to reach on time for the Jawad's festival that starts at 7am.
+ 3.To see the sunrise.
+
+You: Did they start so early to maximize the total time of picnic?
+Podrick: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep
+You: In order to reach on time for the Jawad's festival that starts at 7am
+Podrick: That's is more probable
+You: Could it be to see the sunrise
+Podrick: That's a possible solution. The sunrise looks magnificent in our country compared to others
 --------------
 Type next to go to the next group of buildings
 
@@ -187,14 +202,50 @@ Podrick: If they wanted to watch the sunrise, the sunrise looks great from both 
 You: We might get more information on investigation. Then we can decide.
 ------------------
 At the second group, you can see
+
 E: Farmer's house
 F: Refresher's house
 G: Antique store
-     A weak building made of straws and twigs. An old man (who is the farmer) siting on the entrance of the house, is shouting to his wife inside the house in a bit irritated voice. The words are, “you talk as if I do nothing for this house. Who is the one that goes to the farm every day at first light in the morning?”. Then he just angrily walks out of the house.
+     A weak building made of straws and twigs. An old man (who is the farmer) siting on the entrance of the house, is shouting to his wife inside the house in a bit irritated voice.  You hear him saying, "you talk as if I do nothing for this house. Who is the one that goes to the farm every day at first light in the morning?". Then he just angrily walks out of the house.
 Talk: 
-//You: Excuse me sir. We are travelers from another country. Which way is the Palace?
-//Farmer: Follow this road and it will lead you to the palace.
-You: Thank you sir.   
-I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
+You: Excuse me sir. We are travelers from another country. Which way is the Palace?
+Farmer: Follow this road and it will lead you to the palace.
+You: The weather is good , looks like there will be a good harvest here this year.
+Famer: Yes sir, he weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
+You: Thank you sir.
+	 (As you drink your coconut)I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
+Farmer: (smilingly replies) Yes sir. But to be honest, I work lot more than her. I go to the farm everyday as early as 5. It takes me half an hour to walk there. There won’t be anyone even to talk at that time. For three hours my only companion will be my two bullocks.
+You: Did you say that you go to the farms at 5am! You really are much younger than you look.
+         But do not tell that you will be alone with bullocks. There must be some people around your fields.
+Farmer: My field is on the way to the cliffs, a lonely path. There was another farmer who accompanied me before. But after the famine, he gave up on farming and left the country. I am not exaggerating in telling you that I have never seen anybody during my first 3 hours of the day after that. My first encounter will be with any of the colony men when they open their shops around 9 when I return to my home.
+Podrick: I heard that the famine came last year. Have you not seen even one person in the entire year during the morning?
+Farmer: No. As I say there are no houses on that way and no need for anyone to go there that early in the morning.
+(A faint voice from his wife comes out of the house and calls him for some help)
+               My wife is calling me to lift some weight. I need to go.
+You: Nice to meet you, sir.   
+You leave the place---------------
+Podrick: The princess started at 5am. She should have reached the cliffs at least by 6, if they had planned to go there. According to the farmer, no one has crossed his field before 9am. But one must cross his field to reach the cliff. 
+#What can you infer?
+ 1.	Princess didn’t go to the cliffs 
+ 2.	They didn’t reach the cliffs before 9am. 
+ 3.	The farmer might not have noticed them passing. 
+----------------
+You: So the princess didn't go to the cliffs.
+Podrick: It is possible that due to some unknown reason, they might have needed more time to go or they could have done something else before they went to cliffs.
+You: So the princess didn't reach the cliffs before 9 am.
+Podrick: That’s the only thing we can be sure of.
+You: The farmer might not have noticed them passing. 
+Podrick: They were 5 horses. He should have seen them. Moreover, he had a sharp ear. We saw how he recognized that feeble call from his wife.
+Podrick: If we summarize what we got till now, 
+ * They could have either gone to Jawad.
+ * They could have gone to the beach.
+ * They did something else and after 9am, they could have gone to the cliffs.
 
+It is a small house where every family member works. The door is locked on the outside. So, they must have gone for sales. There is no one here to enquire.
 
+This shop was the first among its 3 branches; the other two are in the main city. It was opened by a hitherto unknown foreign man 1 year ago but soon gained so much popularity. The owner was sweeping the entrance of the shop and sees you coming.
+Store owner: Hello tourists. You might want to check out on some valuable antiques. From high-class business men to the royal kingdom, everyone has bought items from my shop.
+You learn that he had heard 2 different sets of horses going yesterday morning.
+After you leave the store...
+Podrick: what he says confirms that someone else too has gone out of the main city with a pack of horse. It probably must be someone from the kingdom. But we don’t have enough facts to confirm whether it is even related to the missing.
+------------------

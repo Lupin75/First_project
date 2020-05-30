@@ -18,6 +18,7 @@ void cls()
     system("cls");
 
 }
+
 void displaySlow(string line, int speed = 10000, bool sleepStats = true)
 {
    // char ch;
@@ -29,16 +30,18 @@ void displaySlow(string line, int speed = 10000, bool sleepStats = true)
     }
     cout << "\n";
 }
-void pod_conv(int line_n=27,int choices=4){
+void pod_conv(int line_n,int choices){
     fstream story;
     story.open("sa.txt");
     GotoLine(story,line_n);
 
     int option;
+    if(choices==4)
+    {
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0;
     while (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
     {
-        option=check_pc_option(getInputAsInt(option));
+        option=check_tetra(getInputAsInt(option));
         if (option == 1)
         {
             if (f1 == 0)
@@ -129,13 +132,87 @@ void pod_conv(int line_n=27,int choices=4){
                 }
         }
     }
+    }
+    if(choices==3)
+    {
+        int f1 = 0, f2 = 0, f3 = 0;
+        while (f1 == 0 || f2 == 0 || f3 == 0)
+        {
+            option=check_tri(option);
+            if (option == 1)
+            {
+                if (f1 == 0)
+                {
+                    GotoLine(story, line_n);
+                    int ln = 0;
+                    while (ln < 2)
+                    {
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        ln++;
+                    }
+                    f1++;
+                }
+            else
+                displaySlow("Podrick: We already talked about this");
+            }
+            else if (option == 2)
+            {
+                if (f2 == 0)
+                {
+                    GotoLine(story, line_n+2);
+                    int ln = 0;
+                    while (ln < 2)
+                    {   
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        ln++;
+                    }
+                    f2++;
+                }
+                else
+                    displaySlow("Podrick: We already talked about this");
+            }
+        else if (option == 3)
+        {
+            if (f3 == 0)
+            {
+                GotoLine(story, line_n+4);
+                int ln = 0;
+                while (ln < 2)
+                {
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    ln++;
+                }
+                f3++;
+            }
+            else
+                displaySlow("Podrick: We already talked about this");
+        }
+        if (f1 == 0 || f2 == 0 || f3 == 0)
+        {
+             GotoLine(story, line_n-5);
+                int ln = 0;
+                while (ln < 4)
+                {
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    ln++;
+                }
+        }
+    }
+}
 }
 
 int main()
 {
     std::vector<string> story_line;
     string line;
-    string bold;
     fstream story;
     story.open("sa.txt");
     int line_count = 0;
@@ -165,7 +242,7 @@ int main()
     }
     //cout<<"linefawk"<<line_count;
     int status;
-    status=check_status(getInputAsInt(status));
+    status=check_binary(status);
 
     if (status == 1)
     {
@@ -184,12 +261,12 @@ int main()
                 displaySlow(line);
             line_count++;
         }
-        pod_conv();
+        pod_conv(27,4);
         /*int option;
         int f1 = 0, f2 = 0, f3 = 0, f4 = 0;
         while (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
         {
-            cin >> option;
+            option=check_tri(getInputAsInt(option));
             if (option == 1)
             {
                 if (f1 == 0)
@@ -300,7 +377,7 @@ int main()
         int f1 = 0, f2 = 0, f3 = 0;
         while (f2 == 0)
         {
-            cin >> option;
+            option=check_tri(getInputAsInt(option));
             if (option == 1)
             {
                 if (f1 == 0)
@@ -412,7 +489,7 @@ int main()
         f1 = 0, f2 = 0, f3 = 0;
         while (f3 == 0)
         {
-            cin >> option;
+            option=check_tri(getInputAsInt(option));
             if (option == 1)
             {
                 if (f1 == 0)
@@ -506,7 +583,11 @@ int main()
             line_count++;
         }
         cls();
-                
+        int SPYBAR=0;
+        int h1=0,h2=0,h3=0,h4=0;
+        int tea_talk=0;
+
+        group1:        
         line_count=131;
         GotoLine(story,132);
         while (line_count < 137){
@@ -516,7 +597,7 @@ int main()
             line_count++;
         }
         cout<<endl;
-        int h1=0,h2=0,h3=0,h4=0;
+        
         char house;
         while(h1==0||h2==0||h3==0||h4==0){
             cin>>house;
@@ -527,7 +608,7 @@ int main()
                     getline(story, lin, '\n');
                     displaySlow(lin);
                     cout<<" 1. Talk\n 2. Move"<<endl;
-                    int choice=check_status(getInputAsInt(choice));
+                    int choice=check_binary(choice);
                     if (choice==1){
                         GotoLine(story,140);
                         string lin;
@@ -559,7 +640,7 @@ int main()
                     getline(story, lin, '\n');
                     displaySlow(lin);
                     cout<<" 1. Talk\n 2. Move"<<endl;
-                    int choice=check_status(getInputAsInt(choice));
+                    int choice=check_binary(choice);
                     if (choice==1){
                         GotoLine(story,145);
                         string lin;
@@ -573,15 +654,17 @@ int main()
                 }
             }
             
-            if(house=='D'||house=='d'){
+            else if(house=='D'||house=='d'){
                 if(h4==0){
                     GotoLine(story,147);
                     string lin;
                     getline(story, lin, '\n');
                     displaySlow(lin);
                     cout<<"\n 1. Talk\n 2. Move"<<endl;
-                    int choice=check_status(getInputAsInt(choice));
+                    int choice=check_binary(choice);
                     if (choice==1){
+                        
+                        tea_talk++;
                         GotoLine(story,148);
                         int ln=0;
                         while(ln<3){
@@ -590,8 +673,8 @@ int main()
                             displaySlow(lin);
                             ln++;
                         }
-                        cout<<"# What do you reply? \n 1. Yes, of course. \n2. No, I am an atheist\n"<<endl;
-                        int reply=check_status(getInputAsInt(reply));
+                        cout<<"# What do you reply? \n1. Yes, of course. \n2. No, I am an atheist\n"<<endl;
+                        int reply=check_binary(reply);
                         if(reply==1){
                             cout<<"You: Yes, ofcourse."<<endl;
                             GotoLine(story,152);
@@ -613,7 +696,7 @@ int main()
                             else if(rep1==3){
                                 cout<<"You: I have experienced his goodness and mercy."<<endl;
                             }
-                            cout<<"See, even this foreigner believes in god."<<endl;
+                            cout<<"Customer4: See, even this foreigner believes in god."<<endl;
                         }
                         else if(reply==2){
                             //Atheist
@@ -638,7 +721,7 @@ int main()
                             else if(rep1==3){
                                 cout<<"You: He was created to bring fear and order among the people."<<endl;
                             }
-                            cout<<"See, even this foreigner is an atheist."<<endl;
+                            cout<<"Customer4: See, even this foreigner is an atheist."<<endl;
                         }
                         line_count=159;
                         GotoLine(story,160);
@@ -675,11 +758,204 @@ int main()
                     cout<<endl;
             }
         }
-         
-        
-        /*line_count = 90;
-        GotoLine(story,91);
-        while (line_count < 98)
+        cls();
+        if(tea_talk==0){
+            cout<<"You did not talk to the tea shop owner"<<endl;
+            h4=0;
+            goto group1;
+        }
+        else if(tea_talk==1){
+            line_count = 166;
+            GotoLine(story,167);
+            while (line_count < 174)
+            {
+                line.clear();
+                getline(story, line, '\n');
+                story_line.push_back(line);
+                displaySlow(line);
+                line_count++;
+            }
+            f1 = 0, f2 = 0, f3 = 0;
+            int ans=0;
+            while (ans == 0)
+            {
+                option=check_tri(getInputAsInt(option));
+                if (option == 1)
+                {
+                    if (f1 == 0)
+                    {
+                        GotoLine(story, 176);
+                        int ln = 0;
+                        while (ln < 2)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        f1++;
+                        ans++;
+                    }
+                    else
+                        displaySlow("Podrick: We already talked about this");
+                }
+                else if (option == 2)
+                {
+                    if (f2 == 0)
+                    {
+                        GotoLine(story, 178);
+                        int ln = 0;
+                        while (ln < 2)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        f2++;
+                    }
+                    else
+                        displaySlow("Podrick: We already talked about this");
+                }
+                else if (option == 3)
+                {
+                    if (f3 == 0)
+                    {
+                        GotoLine(story, 180);
+                        int ln = 0;
+                        while (ln < 2)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        f3++;
+                        ans++;
+                    }
+                    else
+                        displaySlow("Podrick: We already talked about this");
+                }
+                else{
+                    cout<<"No such option.."<<endl;
+                }
+                cout << endl;
+
+                if (ans == 0)
+                {
+                    GotoLine(story, 171);
+                    int ln = 0;
+                    while (ln < 4)
+                    {
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        ln++;
+                    }
+                    cout<<endl;
+                }
+            }
+            //pod_conv(175,3);
+            cls();
+            line_count=182,
+            GotoLine(story,183);
+            while (line_count < 188)
+            {
+                line.clear();
+                getline(story, line, '\n');
+                story_line.push_back(line);
+                displaySlow(line);
+                line_count++;
+            }
+            
+            f1 = 0, f2 = 0, f3 = 0;
+            ans=0;
+            while (ans == 0)
+            {
+                option=check_tri(getInputAsInt(option));
+                if (option == 1)
+                {
+                    if (f1 == 0)
+                    {
+                        GotoLine(story, 190);
+                        int ln = 0;
+                        while (ln < 2)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        f1++;
+                        
+                    }
+                    else
+                        displaySlow("Podrick: We already talked about this");
+                }
+                else if (option == 2)
+                {
+                    if (f2 == 0)
+                    {
+                        GotoLine(story, 192);
+                        int ln = 0;
+                        while (ln < 2)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        f2++;
+                        ans++;
+                    }
+                    else
+                        displaySlow("Podrick: We already talked about this");
+                }
+                else if (option == 3)
+                {
+                    if (f3 == 0)
+                    {
+                        GotoLine(story, 194);
+                        int ln = 0;
+                        while (ln < 2)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        f3++;
+                        ans++;
+                    }
+                    else
+                        displaySlow("Podrick: We already talked about this");
+                }
+                else{
+                    cout<<"No such option.."<<endl;
+                }
+                cout << endl;
+
+                if (ans == 0)
+                {
+                    GotoLine(story, 185);
+                    int ln = 0;
+                    while (ln < 4)
+                    {
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        ln++;
+                    }
+                    cout<<endl;
+                }
+            }
+            //pod_conv(189,3);
+            cls();
+            
+        }
+        line_count=199,
+        GotoLine(story,200);
+        while (line_count < 202)
         {
             line.clear();
             getline(story, line, '\n');
@@ -687,9 +963,8 @@ int main()
             displaySlow(line);
             line_count++;
         }
-        line_count = 99;
-        GotoLine(story,100);
-        while (line_count < 122)
+        //cls();
+        while (line_count < 203)
         {
             line.clear();
             getline(story, line, '\n');
@@ -698,10 +973,243 @@ int main()
             line_count++;
         }
         cls();
-        line_count=125,
-        GotoLine(story,126);
-        */
+        h1=0,h2=0,h3=0;
+        group2:
+        GotoLine(story, 204);
+        int ln = 0;
+        while (ln < 5)
+        {
+            string lin;
+            getline(story, lin, '\n');
+            displaySlow(lin);
+            ln++;
+        }
+        cout<<endl;
+        
+        int farmTalk=0;
+        while(h1==0||h2==0||h3==0){
+            cin>>house;
+            if(house=='e'||house=='E'){
+                if(h1==0){
+                    GotoLine(story,209);
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    cout<<"\n 1. Talk\n 2. Move"<<endl;
+                    int choice=check_binary(choice);
+                    if (choice==1){
+                        
+                        farmTalk++;
+                        cout<<" *How do you start a conversation?/\n    1. Ask directions to the palace posing as foreigners\n    2. Talk about the pleasant weather"<<endl;
+                        int ans=check_binary(ans);
+                        if (ans==1){
+                            SPYBAR+=50;
+                            GotoLine(story,210);
+                            int ln = 0;
+                            while (ln < 2)
+                            {
+                                string lin;
+                                getline(story, lin, '\n');
+                                displaySlow(lin);
+                                ln++;
+                            }
+
+                        }
+                        else if(ans==2){
+                            GotoLine(story,212);
+                            int ln = 0;
+                            while (ln < 2)
+                            {
+                                string lin;
+                                getline(story, lin, '\n');
+                                displaySlow(lin);
+                                ln++;
+                            }
+                        }
+                        line_count=213;
+                        GotoLine(story,214);
+                        while(line_count<231){
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            line_count++;
+                        }
+                        f1 = 0, f2 = 0, f3 = 0;
+                        while (f2 == 0)
+                        {
+                            option=check_tri(getInputAsInt(option));
+                            if (option == 1)
+                            {
+                                if (f1 == 0)
+                                {
+                                    GotoLine(story, 232);
+                                    int ln = 0;
+                                    while (ln < 2)
+                                    {
+                                        string lin;
+                                        getline(story, lin, '\n');
+                                        displaySlow(lin);
+                                        ln++;
+                                    }
+                                    f1++;
+                                }
+                                else
+                                    displaySlow("Podrick: We already talked about this");
+                            }
+                            else if (option == 2)
+                            {
+                                if (f2 == 0)
+                                {
+                                    GotoLine(story, 234);
+                                    int ln = 0;
+                                    while (ln < 2)
+                                    {
+                                        string lin;
+                                        getline(story, lin, '\n');
+                                        displaySlow(lin);
+                                        ln++;
+                                    }
+                                    f2++;
+                                }
+                                else
+                                    displaySlow("Podrick: We already talked about this");
+                            }
+                            else if (option == 3)
+                            {
+                                if (f3 == 0)
+                                {
+                                    GotoLine(story, 236);
+                                    int ln = 0;
+                                    while (ln < 2)
+                                    {
+                                        string lin;
+                                        getline(story, lin, '\n');
+                                        displaySlow(lin);
+                                        ln++;
+                                    }
+                                    f3++;
+                                }
+                                else
+                                    displaySlow("Podrick: We already talked about this");
+                            }
+                            else{
+                                cout<<"No such option.."<<endl;
+                            }
+                            cout << endl;
+
+                            if (f2 == 0)
+                            {
+                                GotoLine(story, 226);
+                                int ln = 0;
+                                while (ln < 5)
+                                {
+                                    string lin;
+                                    getline(story, lin, '\n');
+                                    displaySlow(lin);
+                                    ln++;
+                                }
+                                cout<<endl;
+                            }
+                        }
+                        cls();
+                        
+                        GotoLine(story,238);
+                        int ln = 0;
+                        while (ln < 4)
+                        {
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        cout<<endl;
+
+                        
+                    }
+                    h1++;
+                }
+            
+                else{
+                    cout<<"Podrick: We visited this house just now"<<endl;
+                }
+            }
+            
+            else if(house=='f'||house=='F'){
+                if(h2==0){
+                        GotoLine(story,244);
+                        string lin;
+                        getline(story, lin, '\n');
+                        displaySlow(lin);
+                        h2++;
+                    }
+                    else{
+                        cout<<"Podrick: We visited this house just now"<<endl;
+                    }
+            }
+            
+            else if(house=='g'||house=='G'){
+                if(h3==0){
+                    GotoLine(story,246);
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    cout<<" 1. Talk\n 2. Move"<<endl;
+                    int choice=check_binary(choice);
+                    if (choice==1){
+                        SPYBAR+=100;
+                        
+                        GotoLine(story,247);
+                        int ln=0;
+                        while(ln<3){
+                            string lin;
+                            getline(story, lin, '\n');
+                            displaySlow(lin);
+                            ln++;
+                        }
+                        
+                    }
+                    else if(choice==2){
+                        cout<<"You: No thanks.."<<endl;
+                    }
+                    h3++;
+                }
+                else{
+                    cout<<"Podrick: We visited this house just now"<<endl;
+                }
+            }                
+            
+            if (h1 == 0 || h2 == 0 || h3 == 0 )
+            {
+                GotoLine(story, 204);
+                int ln = 0;
+                while (ln < 5)
+                {
+                    string lin;
+                    getline(story, lin, '\n');
+                    displaySlow(lin);
+                    ln++;
+                }
+                cout<<endl;
+            }
+        }
+        if(farmTalk==0){
+            cout<<"You don't have necessary clues"<<endl;
+            h1=0;
+            goto group2;
+        }
+        cout<<"SPYBAR: "<<SPYBAR<<endl;
+        if(SPYBAR>=100){
+            cout<<"You talked with spies or caused discomfort among people... "
+                <<"\nRestarting investigation in the colonies"<<endl;
+            SPYBAR=0,
+            h1=0,h2=0,h3=0,h4=0;
+            tea_talk=0,farmTalk=0;
+            goto group1;
+        }
     }
+    
 
     else if (status == 2)
     {
