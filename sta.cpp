@@ -32,7 +32,7 @@ void displaySlow(string line, int speed = 10000, bool sleepStats = true)
 }
 void pod_conv(int line_n,int choices){
     fstream story;
-    story.open("sa.txt");
+    story.open("custom.txt");
     GotoLine(story,line_n);
 
     int option;
@@ -208,16 +208,56 @@ void pod_conv(int line_n,int choices){
     }
 }
 }
+void customise_game(){
+    ifstream templat;
+    templat.open("sa.txt");
+    ofstream c_story;
+    c_story.open("custom.txt");
+    string s;
+    string o="$PN";
+    while (getline(templat, s))
+    {
+        while(s.find(o, 0) < s.length())
+            s.replace(s.find(o, 0), o.length() ,playerName);
+
+        c_story << s <<endl;
+    }
+    templat.close();
+    c_story.close();
+}
 
 int main()
 {
     std::vector<string> story_line;
     string line;
-    fstream story;
-    story.open("sa.txt");
-    int line_count = 0;
+    
     cout<<"Enter a name for your character: ";
     cin>>playerName;
+
+    customise_game();    
+    
+
+    /*ifstream story;
+    story.open("story.txt");
+    
+
+    story.close();
+    c_story.close();
+    */
+    fstream story;
+    story.open("custom.txt");
+
+    ofstream progress;
+    progress.open("progress.txt");
+    string checkpoint;
+    /*while(progress.good()){
+        
+        getline(progress,checkpoint,'\n');
+    }
+    cout<<"Last checkpoint: "<<checkpoint<<endl;*/
+    int line_count = 0;
+    GotoLine(story,1);
+    
     system("cls");
     
     while (line_count < 3)
@@ -246,6 +286,7 @@ int main()
 
     if (status == 1)
     {
+        progress << "TITLE"  <<endl;
         system("cls");
         while (line_count < 26)
         {
@@ -382,7 +423,7 @@ int main()
             {
                 if (f1 == 0)
                 {
-                    GotoLine(story, 59);
+                    GotoLine(story, 58);
                     int ln = 0;
                     while (ln < 2)
                     {
@@ -400,7 +441,7 @@ int main()
             {
                 if (f2 == 0)
                 {
-                    GotoLine(story, 61);
+                    GotoLine(story, 60);
                     int ln = 0;
                     while (ln < 2)
                     {
@@ -418,7 +459,7 @@ int main()
             {
                 if (f3 == 0)
                 {
-                    GotoLine(story, 63);
+                    GotoLine(story, 62);
                     int ln = 0;
                     while (ln < 2)
                     {
@@ -454,7 +495,7 @@ int main()
         cls();
         line_count=65;
         GotoLine(story,66);
-        while (line_count < 73)
+        while (line_count < 69)
         {
             line.clear();
             getline(story, line, '\n');
@@ -463,7 +504,9 @@ int main()
             line_count++;
         }
         cls();
-        GotoLine(story,75);
+        progress<< "MATILDA" <<endl;
+        line_count=70;
+        GotoLine(story,71);
         while (line_count < 96)
         {
             line.clear();
@@ -583,11 +626,13 @@ int main()
             line_count++;
         }
         cls();
+        progress << "GROUP1" <<endl;
         int SPYBAR=0;
+        
+        group1:        
         int h1=0,h2=0,h3=0,h4=0;
         int tea_talk=0;
 
-        group1:        
         line_count=131;
         GotoLine(story,132);
         while (line_count < 137){
@@ -676,7 +721,7 @@ int main()
                         cout<<"# What do you reply? \n1. Yes, of course. \n2. No, I am an atheist\n"<<endl;
                         int reply=check_binary(reply);
                         if(reply==1){
-                            cout<<"You: Yes, ofcourse."<<endl;
+                            cout<<playerName + ": Yes, ofcourse."<<endl;
                             GotoLine(story,152);
                             //int ln=0;
                             string lin;
@@ -688,20 +733,20 @@ int main()
                             int rep1;
                             cin>>rep1;
                             if(rep1==1){
-                                cout<<"You: This universe must be created by someone."<<endl;
+                                cout<<playerName + ": This universe must be created by someone."<<endl;
                             }
                             else if(rep1==2){
-                                cout<<"You: On the grounds of modesty, I believe the presence of something powerful than humans."<<endl;
+                                cout<<playerName + ": On the grounds of modesty, I believe the presence of something powerful than humans."<<endl;
                             }    
                             else if(rep1==3){
-                                cout<<"You: I have experienced his goodness and mercy."<<endl;
+                                cout<<playerName + ": I have experienced his goodness and mercy."<<endl;
                             }
                             cout<<"Customer4: See, even this foreigner believes in god."<<endl;
                         }
                         else if(reply==2){
                             //Atheist
                             
-                            cout<<"You: No, I am an atheist."<<endl;
+                            cout<<playerName + ": No, I am an atheist."<<endl;
                             GotoLine(story,152);
                             //int ln=0;
                             string lin;
@@ -713,13 +758,13 @@ int main()
                             int rep1;
                             cin>>rep1;
                             if(rep1==1){
-                                cout<<"You: It's the easiest answer for complex questions."<<endl;
+                                cout<<playerName + ": It's the easiest answer for complex questions."<<endl;
                             }
                             else if(rep1==2){
-                                cout<<"You: God is just a delusional companion during hardships in the form of faith and hope."<<endl;
+                                cout<<playerName + ": God is just a delusional companion during hardships in the form of faith and hope."<<endl;
                             }    
                             else if(rep1==3){
-                                cout<<"You: He was created to bring fear and order among the people."<<endl;
+                                cout<<playerName + ": He was created to bring fear and order among the people."<<endl;
                             }
                             cout<<"Customer4: See, even this foreigner is an atheist."<<endl;
                         }
@@ -758,9 +803,9 @@ int main()
                     cout<<endl;
             }
         }
-        cls();
+        //cls();
         if(tea_talk==0){
-            cout<<"You did not talk to the tea shop owner"<<endl;
+            cout<<"You do not have enough clues"<<endl;
             h4=0;
             goto group1;
         }
@@ -973,8 +1018,10 @@ int main()
             line_count++;
         }
         cls();
-        h1=0,h2=0,h3=0;
+        progress << "GROUP2" <<endl;
+        
         group2:
+        h1=0,h2=0,h3=0;
         GotoLine(story, 204);
         int ln = 0;
         while (ln < 5)
@@ -1208,6 +1255,7 @@ int main()
             tea_talk=0,farmTalk=0;
             goto group1;
         }
+        progress.close();
     }
     
 
