@@ -11,9 +11,37 @@
 #include<cstring>
 #include<exception>
 
+#undef max
 
 using namespace std;
 
+// To check if the input is integer type
+int getInputAsInt(int number){
+    cin>>number;
+    while(cin.fail()){
+        cin.clear();     
+        cin.ignore(numeric_limits<streamsize>::max(),'\n');
+        cout<<"Input type is wrong.... Please try again\nEnter an integer: ";
+        number=getInputAsInt(number);
+    }
+    return number;
+}
+//Converts all letters in a string to lower case for comparison
+
+
+//Function to get the cursor to designated line
+fstream& GotoLine(fstream& file, unsigned int num) {
+
+    file.seekg(ios::beg);
+
+    for (unsigned int i = 0; i < num - 1; ++i) {
+        file.ignore(numeric_limits<streamsize>::max(), '\n');
+    }
+    return file;
+}
+
+int tea_talk=0;
+int farmTalk=0;
 int input1;
 int counter1=0;
 int temp1;
@@ -133,12 +161,13 @@ string toSmall(string large){
     }
     return large;    
 }
-int check_status(int status) {
+int check_binary(int status) {
+    status=getInputAsInt(status);
     if (status != 1 && status != 2 ) {
-        cout << "Error...No such status available" << endl
-            << "Enter status (1/2): ";
+        cout << "Error...No such option available" << endl
+            << "Enter option (1/2): ";
         cin >> status;
-        return check_status(status);
+        return check_binary(status);
 
     }
     else {
@@ -148,12 +177,26 @@ int check_status(int status) {
 
 }
 
-int check_pc_option(int option) {
+int check_tetra(int option) {
     if (option != 1 && option != 2 && option != 3 && option != 4 ) {
-        cout << "Error...No such status available" << endl
-            << "Enter status (1/2/3/4): ";
+        cout << "Error...No such option available" << endl
+            << "Enter option (1/2/3/4): ";
         cin >> option;
-        return check_pc_option(option);
+        return check_tetra(option);
+
+    }
+    else {
+        //coption << "status: " << status << endl;
+        return option;
+    }
+
+}
+int check_tri(int option) {
+    if (option != 1 && option != 2 && option != 3) {
+        cout << "Error...No such option available" << endl
+            << "Enter option (1/2/3): ";
+        cin >> option;
+        return check_tri(option);
 
     }
     else {
@@ -163,30 +206,6 @@ int check_pc_option(int option) {
 
 }
 
-// To check if the input is integer type
-int getInputAsInt(int number){
-    cin>>number;
-    while(cin.fail()){
-        cin.clear();     
-        cin.ignore(numeric_limits<streamsize>::max(),'\n');
-        cout<<"Input type is wrong.... Please try again\nEnter an integer: ";
-        number=getInputAsInt(number);
-    }
-    return number;
-}
-//Converts all letters in a string to lower case for comparison
-
-
-//Function to get the cursor to designated line
-fstream& GotoLine(fstream& file, unsigned int num) {
-
-    file.seekg(ios::beg);
-
-    for (unsigned int i = 0; i < num - 1; ++i) {
-        file.ignore(numeric_limits<streamsize>::max(), '\n');
-    }
-    return file;
-}
 
 
 
