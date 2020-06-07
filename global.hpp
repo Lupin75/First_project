@@ -68,6 +68,11 @@ int baseXP=83;
 int XptoLevel=baseXP;
 int minLevel=1;
 int maxLevel=60;
+int SPYBAR=0;
+char house;
+int line_count=0;
+string line;
+int option;
 
 
 //-------------------this function is to change a string to lower case----------------
