@@ -1390,7 +1390,7 @@ int main()
                         lin.clear();
                         getline(story, lin, '\n');
                         displaySlow(lin);
-                    }progress<<"GROUP3\n";
+                    }
                     h3++;
                 }
                 else
