@@ -1,14 +1,14 @@
+
 #include <iostream>
 #include <string>
 #include <fstream>
 #include <Windows.h>
 #include "global.hpp"
 /*
-    Last modified by: Nirmal Kumar
-    Created on      : 21 05, 2020
-    Last modified   : 29/5/2020 3:00 AM
+    Last modified by: Abishek.R
+    Last modified   : 09/06/2020 6:00 PM
     Filename        : &TM_FILENAME
-    Description     : 
+    Description     : Added code for group3 and some part of The forest 
 */
 
 using namespace std;
@@ -1568,6 +1568,122 @@ int main()
             else
                 displaySlow("Podrick: We already talked about this");
             if(f2==0)
+            {
+                 GotoLine(story,318);
+                 ln=0;
+                while(ln<4)
+                {
+                  string lin;
+                  getline(story,lin,'\n');
+                  displaySlow(lin);
+                  ln++;
+                }
+            }
+        }
+        cls();
+        GotoLine(story,329);
+        ln=0;
+        while(ln<18)
+        {
+            string lin;
+            getline(story,lin,'\n');
+            displaySlow(lin);
+            ln++;
+        }
+        cls();
+        GotoLine(story,348);
+        ln=0;
+        while(ln<10)
+        {
+            string lin;
+            getline(story,lin,'\n');
+            displaySlow(lin);
+            ln++;
+        }
+        cls();
+        GotoLine(story,359);
+        ln=0;
+        while(ln<6)
+        {
+            string lin;
+            getline(story,lin,'\n');
+            displaySlow(lin);
+            ln++;
+        }
+        int f4,f5;
+        f1=0,f2=0,f3=0,f4=0,f5=0;
+        while(f2==0 && f5==0)
+        {
+            cin>>option;
+            //option=check_five(option);
+            if(option==1&&f1==0)
+            {
+                GotoLine(story,366);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f1++;
+            }
+            else if(option==2)
+            {
+                GotoLine(story,368);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f2++;
+            }
+            else if(option==3&&f3==0)
+            {
+                GotoLine(story,370);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f3++;
+            }
+            else if(option==4 && f4==0)
+            {
+                GotoLine(story,372);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f4++;
+            }
+            else if(option==5)
+            {
+                 GotoLine(story,374);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f5++;
+            }
+            else
+                displaySlow("Podrick: We already talked about this");
+            if(f2==0 && f5==0)
             {
                  GotoLine(story,318);
                  ln=0;

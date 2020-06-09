@@ -214,7 +214,7 @@ Abi: The weather is good , looks like there will be a good harvest here this yea
 Famer: Yes sir, he weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
 Abi: Thank you sir.
 	 (As you drink your coconut)I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
-Farmer: (smilingly replies) Yes sir. But to be honest, I work lot more than her. I go to the farm everyday as early as 5. It takes me half an hour to walk there. There won’t be anyone even to talk at that time. For three hours my only companion will be my two bullocks.
+Farmer: (smilingly replies) Yes sir. But to be honest, I work lot more than her. I go to the farm everyday as early as 5. It takes me half an hour to walk there. There won't be anyone even to talk at that time. For three hours my only companion will be my two bullocks.
 Abi: Did you say that you go to the farms at 5am! You really are much younger than you look.
          But do not tell that you will be alone with bullocks. There must be some people around your fields.
 Farmer: My field is on the way to the cliffs, a lonely path. There was another farmer who accompanied me before. But after the famine, he gave up on farming and left the country. I am not exaggerating in telling you that I have never seen anybody during my first 3 hours of the day after that. My first encounter will be with any of the colony men when they open their shops around 9 when I return to my home.
@@ -233,7 +233,7 @@ Podrick: The princess started at 5am. She should have reached the cliffs at leas
 Abi: So the princess didn't go to the cliffs.
 Podrick: It is possible that due to some unknown reason, they might have needed more time to go or they could have done something else before they went to cliffs.
 Abi: So the princess didn't reach the cliffs before 9 am.
-Podrick: That’s the only thing we can be sure of.
+Podrick: That's the only thing we can be sure of.
 Abi: The farmer might not have noticed them passing. 
 Podrick: They were 5 horses. He should have seen them. Moreover, he had a sharp ear. We saw how he recognized that feeble call from his wife.
 Podrick: If we summarize what we got till now, 
@@ -247,7 +247,7 @@ This shop was the first among its 3 branches; the other two are in the main city
 Store owner: Hello tourists. You might want to check out on some valuable antiques. From high-class business men to the royal kingdom, everyone has bought items from my shop.
 You learn that he had heard 2 different sets of horses going yesterday morning.
 After that you leave the store...
-Podrick: what he says confirms that someone else too has gone out of the main city with a pack of horse. It probably must be someone from the kingdom. But we don’t have enough facts to confirm whether it is even related to the missing.
+Podrick: what he says confirms that someone else too has gone out of the main city with a pack of horse. It probably must be someone from the kingdom. But we don't have enough facts to confirm whether it is even related to the missing.
 ------------------
 At the third group, you can see
 
@@ -257,7 +257,7 @@ J: Grocery shop
 K: Cobbler's house
 
 It's the largest building you saw till now. This family is one of the oldest natives of the country. The owner and his three sons are running the shop. There are plenty of customers inside. 
-As they are busy running the shop, you could not develop a good conversation. So, you didn’t get any information.
+As they are busy running the shop, you could not develop a good conversation. So, you didn't get any information.
 
 You see the barber opening the shop as you approach it. There is a board hanging with words “Shop closed for 3 days”.
 Another by-passer talks to the barber.
@@ -293,7 +293,7 @@ You have finished investigating the colony.
 Abi: Does the boy Phil stay in the palace?
 Podrick: No. He does not stay in the palace. But the princess did offer him accommodation.
 Abi: But these people think he stays in the palace. (Then you pause for a moment)     
-         Think of this. The princess came herself to this simple cobbler this far from the palace. Doesn’t this point irk you? 
+         Think of this. The princess came herself to this simple cobbler this far from the palace. Doesn't this point irk you? 
 Podrick: Yes. Even I noticed it.
 # Can you find a reason?
 1. As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more. 
@@ -325,3 +325,51 @@ Abi: In the poet's house
 Podrick: We even saw some palm impressions on the compound wall. He could be secretly staying in that house.
 Abi: In the refresher's house
 Podrick: No, that can't be the best guess
+
+Investigating Phil's  hideout
+You turn your horses around.
+To clear your doubts, you go back to the poet's house. On your way, Podrick recalls a small basement behind the poet's house which has no lock. 
+Podrick: I think I might know where Phil stays. (He guides you on another path to enter the house without any colony men noticing.
+As you both suspected, Phil was secretly staying in the basement of the poet's house.
+You enter the basement to find any clues. It's a poor compact room yet tidy. You find some books spread on the floor, small statues on one corner and something covered with a piece of cloth.
+
+Books – It is mostly book on history.
+Statues – It looks like Phil has a hobby of sculpting. There are few stones lying around and few that have been sculpted to beautiful statues.
+Covered – You remove the cloth to see brand new fancy footwear, probably gifted by the princess.
+
+Podrick: I do't think we made any progress here.
+Abi: Did you notice the shoes? The one that cobbler mentioned was not there.
+Podrick: Yes. Then that should be the slipper he wore for the picnic. But wait. Why would he wear that when he had a better-looking shoe?
+Abi: Jawad's festival is the richest in the world. If they really went there, he would have worn this.
+Podrick: Fantastic. Then this eliminated Jawad from our list.
+Abi: They could have either gone to the beach or gone to the cliffs after 9am.
+Podrick: Yes. But we need to go find that directly as we can't investigate inside the city.
+
+You and Podrick reach the junction. You need to decide on whether you turn right and search in the cliffs or straight into the forest to search the beach. Suddenly you hear some sound from the direction of the forest.
+Podrick: The sound should be from the wood cutter family living on the edge of the forest. We might get some information from them.
+You both talk to the woodcutter and get to know that he heard some unclear noises few of which that sounded like muffled human voices inside the forest yesterday morning.
+-------------------
+Abi: I think he is referring the princess. It is better to start searching from the forest.
+Podrick: As you say.
+You get into the forest and look for some clues. 
+-------------
+Abi: My inner voice tells that they have been kidnapped inside this forest.
+Podrick: We can't act based on to inner voices sir.
+
+# What can you show as evidences among these?
+1. A deep cut on one of the trees 
+2. A bag full of packed food items. 
+3. A broken branch 
+4. A piece of ordinary brown cloth. 
+5. Blood stains on a leaf 
+
+Abi: A deep cut on one of the trees
+Podrick: That must be an incomplete work of the wood cutter
+Abi: A bag full of packed food items.
+Podrick: This looks like the bag of the princess
+Abi: A broken branch
+Podrick: You must be joking
+Abi: A piece of ordinary brown cloth.
+Podrick: This cloth doesn’t look like it came from a dress worn for picnic from the color of the cloth.
+Abi: Blood stains on a leaf 
+Podrick: This could have happened while defending the kidnap
