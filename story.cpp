@@ -1443,6 +1443,74 @@ int main()
                 cout<<endl;
             }
         }
+        GotoLine(story,293);
+        ln=0;
+        while(ln<9)
+        {
+            string lin;
+            getline(story,lin,'\n');
+            displaySlow(lin);
+            ln++;
+        }
+        f1=0,f2=0,f3=0;
+        while(f2==0 && f3==0)
+        {
+            cin>>option;
+            option=check_tri(option);
+            if(option==1&&f1==0)
+            {
+                GotoLine(story,302);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f1++;
+            }
+            else if(option==2)
+            {
+                GotoLine(story,304);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f2++;
+            }
+            else if(option==3)
+            {
+                GotoLine(story,306);
+                int ln=0;
+                while(ln<2)
+                {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+                }
+                f3++;
+            }
+            else
+                displaySlow("Podrick: We already talked about this");
+            if(f2==0 && f3==0)
+            {
+                 GotoLine(story,298);
+                 ln=0;
+                while(ln<4)
+                {
+                  string lin;
+                  getline(story,lin,'\n');
+                  displaySlow(lin);
+                  ln++;
+                }
+            }
+        }
         progress.close();
     }
 

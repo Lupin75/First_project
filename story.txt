@@ -296,6 +296,12 @@ $PN: But these people think he stays in the palace. (Then you pause for a moment
          Think of this. The princess came herself to this simple cobbler this far from the palace. Doesn’t this point irk you? 
 Podrick: Yes. Even I noticed it.
 # Can you find a reason?
-1. As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more. (But there are few shops in the main city where the prices are lower than this)
-2. This was the nearest cobbler shop from the place where his slipper got torn (Could be probable)
-3. Phil might be a regular customer to this shop (Could be probable)
+1. As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more. 
+2. This was the nearest cobbler shop from the place where his slipper got torn 
+3. Phil might be a regular customer to this shop 
+$PN: As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more.
+Podrick: But there are few shops in the main city where the prices are lower than this
+$PN: This was the nearest cobbler shop from the place where his slipper got torn
+Podrick: Could be probable
+$PN: Phil might be a regular customer to this shop
+Podrick: Could be probable
