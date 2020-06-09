@@ -305,3 +305,23 @@ $PN: This was the nearest cobbler shop from the place where his slipper got torn
 Podrick: Could be probable
 $PN: Phil might be a regular customer to this shop
 Podrick: Could be probable
+(Suddenly something strikes)
+$PN: Didn't the cobbler mention that the princess walked away?
+Podrick: Yes. But he could not have meant it. This place is so far from the palace to have come by walk.
+$PN: No. The way he told, his gesture, his tone ... I don't know for sure, but I do feel that the princess did walk away.
+Podrick: What could this possibly mean?
+You: Wait. We still didn't find a valid reason why they came to this small colony.
+Podrick: They might be taking some ride.
+You: (after thinking for a moment) Or perhaps, the boy's house could be somewhere near here, and the princess came to visit him. After which they both went to the cobbler with the princess' horse parked at the boy's house.
+Podrick: This sounds like a good deduction. 
+                But where could the boy stay in this small colony without this cobbler noticing it?
+# Your guesses on where he could be
+1.  In the vast empty land behind this colony.
+2.  In the poet's house 
+3.  In the refresher's house 
+$PN: In the vast empty land behind this colony.
+Podrick: He cannot stay there at night due to excessive snakes on those lands
+$PN: In the poet's house
+Podrick: We even saw some palm impressions on the compound wall. He could be secretly staying in that house.
+$PN: In the refresher's house
+Podrick: No, that can't be the best guess
