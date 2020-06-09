@@ -20,10 +20,6 @@
 #ifndef WIN32STDTHREAD_H
 #define WIN32STDTHREAD_H
 
-#if !defined(__cplusplus) || (__cplusplus < 201103L)
-#error A C++11 compiler is required!
-#endif
-
 //  Use the standard classes for std::, if available.
 #include <thread>
 
@@ -41,9 +37,6 @@
 #include "mingw.invoke.h"
 
 #if (defined(__MINGW32__) && !defined(__MINGW64_VERSION_MAJOR))
-#pragma message "The Windows API that MinGW-w32 provides is not fully compatible\
- with Microsoft's API. We'll try to work around this, but we can make no\
- guarantees. This problem does not exist in MinGW-w64."
 #include <windows.h>    //  No further granularity can be expected.
 #else
 #include <synchapi.h>   //  For WaitForSingleObject

@@ -39,7 +39,6 @@ fstream& GotoLine(fstream& file, unsigned int num) {
     }
     return file;
 }
-
 int tea_talk=0;
 int farmTalk=0;
 int input1;
@@ -48,32 +47,14 @@ int temp1;
 string tempName1;
 int choice1;
 string playerName;
-int level=1;
-int HP=0;
 int health=100;
-int totalHealth=0;
-int maxHealth=0;
-int enemyXP=0;
-int enemyHP=0;
-int enemyLevel=0;
-string enemyNames[]={"Enemy1","Enemy2","Enemy3","Enemy4","Enemy5","Enemy6"};
-int currentEnemyNum=5;
-string currentEnemyName;
-int playerAttack;
-int playerDamage;
-int enemyAttack;
-int heal;
-int currentXP=0;
-int baseXP=83;
-int XptoLevel=baseXP;
-int minLevel=1;
-int maxLevel=60;
+int playerBaseDamage = 10;
 int SPYBAR=0;
 char house;
 int line_count=0;
 string line;
 int option;
-
+int playerDefendStat;
 
 //-------------------this function is to change a string to lower case----------------
 string toSmall(string large){
