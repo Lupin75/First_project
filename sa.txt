@@ -333,9 +333,9 @@ Podrick: I think I might know where Phil stays. (He guides you on another path t
 As you both suspected, Phil was secretly staying in the basement of the poet's house.
 You enter the basement to find any clues. It's a poor compact room yet tidy. You find some books spread on the floor, small statues on one corner and something covered with a piece of cloth.
 
-Books – It is mostly book on history.
-Statues – It looks like Phil has a hobby of sculpting. There are few stones lying around and few that have been sculpted to beautiful statues.
-Covered – You remove the cloth to see brand new fancy footwear, probably gifted by the princess.
+Books   - It is mostly book on history.
+Statues - It looks like Phil has a hobby of sculpting. There are few stones lying around and few that have been sculpted to beautiful statues.
+Covered - You remove the cloth to see brand new fancy footwear, probably gifted by the princess.
 
 Podrick: I do't think we made any progress here.
 $PN: Did you notice the shoes? The one that cobbler mentioned was not there.
@@ -354,7 +354,7 @@ Podrick: As you say.
 You get into the forest and look for some clues. 
 -------------
 $PN: My inner voice tells that they have been kidnapped inside this forest.
-Podrick: We can't act based on to inner voices sir.
+Podrick: We can't act based on our inner voices, we need evidence.
 
 # What can you show as evidences among these?
 1. A deep cut on one of the trees 
@@ -406,7 +406,7 @@ $PN: I know. It's already around 5pm. I'll search here for some more time while 
 Podrick: It's about quarter of the current treasury. But the princess' life is more important. I will arrange for the money and wait at the junction by 6:30.
 -------------------
 They both leave. As Ivan searched the forests, you go to the beach. You see a guard cleaning a caravel and readying a sail. You couldn't find anything related to the missing. Possibly due to the mild anxiety caused by that letter.
-Caravel – a small highly maneuverable ship.
+Caravel - a small highly maneuverable ship.
 ------------
 You come to the junction to see Podrick waiting for you with a bag
 Podrick: Here is the money. You might also need this. (He hands over a sword)
@@ -420,7 +420,7 @@ Podrick: (smiles) Good luck sir.
 $PN: Where is the princess? Who sent you? 
 Assassin: Who are you and why should I tell you?
 He spits the blood in his mouth nearby
-$PN: The name is "" and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
+$PN: So you have been attacking me even though you don't know who I am? Listen carefullly. The name is $PN and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
 You pull him up by his collar with cold calmness and ask him again
 Assassin: Don't kill me. I'll tell everything I know.
 You put him down.
