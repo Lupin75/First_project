@@ -10,6 +10,7 @@
 #include<iomanip>
 #include<cstring>
 #include<exception>
+#include<ctype.h>
 
 #undef max
 
@@ -77,95 +78,12 @@ int option;
 
 //-------------------this function is to change a string to lower case----------------
 string toSmall(string large){
-    for(int i=0 ; i<large.size() ; i++){
-        if(isalpha(large[i])!=0){
-            switch(large[i]){
-                case 'A':
-                    large[i]='a';
-                    break;
-                case 'B':
-                    large[i]='b';
-                    break;
-                case 'C':
-                    large[i]='c';
-                    break;
-                case 'D':
-                    large[i]='d';
-                    break;
-                case 'E':
-                    large[i]='e';
-                    break;
-                case 'F':
-                    large[i]='f';
-                    break;
-                case 'G':
-                    large[i]='g';
-                    break;
-                case 'H':
-                    large[i]='h';
-                    break;
-                case 'I':                        
-                    large[i]='i';
-                    break;
-                case 'J':
-                    large[i]='j';
-                    break;
-                case 'K':
-                    large[i]='k';
-                    break;
-                case 'L':
-                    large[i]='l';
-                    break;
-                case 'M':
-                    large[i]='m';
-                    break;
-                case 'N':
-                    large[i]='n';
-                    break;
-                case 'O':
-                    large[i]='o';
-                    break;
-                case 'P':
-                    large[i]='p';
-                    break;
-                case 'Q':
-                    large[i]='q';
-                    break;
-                case 'R':
-                    large[i]='r';
-                    break;
-                case 'S':
-                    large[i]='s';
-                    break;
-                case 'T':
-                    large[i]='t';
-                    break;
-                case 'U':
-                    large[i]='u';
-                    break;
-                case 'V':
-                    large[i]='v';
-                    break;
-                case 'W':                        
-                    large[i]='w';
-                    break;
-                case 'X':
-                    large[i]='x';
-                    break;
-                case 'Y':
-                    large[i]='y';
-                    break;
-                case 'Z':
-                    large[i]='z';
-                    break;
-                default:                        
-                    large[i]=large[i];
-                    break;
-            }
-        }
-    }
-    return large;    
-}
+    for(int i=0 ; i<large.size() ; i++)
+        if(isalpha(large[i])!=0)
+            if(isupper(large[i])!=0)
+                large[i]=tolower(large[i]);
+    return large;
+    }      
 int check_binary(int status) {
     status=getInputAsInt(status);
     if (status != 1 && status != 2 ) {
@@ -210,8 +128,34 @@ int check_tri(int option) {
     }
 
 }
+int check_two(int option) {
+    if (option != 1 && option != 2) {
+        cout << "Error...No such option available" << endl
+            << "Enter option (1/2): ";
+        cin >> option;
+        return check_two(option);
 
+    }
+    else {
+        //cout << "status: " << status << endl;
+        return option;
+    }
 
+}
+int check_penta(int option) {
+    if (option != 1 && option != 2 && option != 3 && option != 4 && option!=5) {
+        cout << "Error...No such option available" << endl
+            << "Enter option (1/2/3/4/5): ";
+        cin >> option;
+        return check_penta(option);
+
+    }
+    else {
+        //coption << "status: " << status << endl;
+        return option;
+    }
+
+}
 
 
 //-----------------------------------------------------------------------------------------
