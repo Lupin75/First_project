@@ -66,11 +66,11 @@ class Fighting{
         int dummy;
         dummy = rand()%3;
         if(dummy==0){
-            fightFunction::enemyLogic=="attack";
+            fightFunction::enemyLogic="attack";
         }else if(dummy==1){
-            fightFunction::enemyLogic=="defend";
+            fightFunction::enemyLogic="defend";
         }else{
-            fightFunction::enemyLogic=="jump";
+            fightFunction::enemyLogic="jump";
         }
     }
     std::string enemyName;//I don't know if need these two or not.Anyway , i included this here, you can remove it if you dont want to tho.
