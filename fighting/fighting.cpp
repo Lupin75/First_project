@@ -21,10 +21,11 @@ int playerDefendStat = 50;
 #include "mingw.thread.h"
 #include<Windows.h>
 #include<ctime>
+std::string temporaryInput="NO";
 namespace fightFunction{
     std::string didTheUserType = "NO";
     std::string enemyLogic = "NULL";
-    std::string playerLogic =" NULL";
+    std::string playerLogic = "NULL";
     std::string enemyPreviousLogic = "NULL";
     std::string playerPreviousLogic = "NULL";
     bool doProceed = false;
@@ -33,19 +34,17 @@ namespace fightFunction{
         int time = std::time(NULL);
         // std::cout<<time<<"   "<<std::time(NULL)<<std::endl;
         int plusFive = time + 5;
-        int plusOne = time + 1;
-        int plusTwo = time + 2;
-        int plusThree = time + 3;
-        int plusFour = time + 4;
         // std::cout<<plusFive<<std::endl;
         while(time != plusFive && fightFunction::doProceed !=true){
-            if(fightFunction::didTheUserType=="attack"||fightFunction::didTheUserType == "defend"||fightFunction::didTheUserType == "jump"){
+            fightFunction::didTheUserType=temporaryInput;
+            if(fightFunction::didTheUserType== "attack" ||fightFunction::didTheUserType == "defend"||fightFunction::didTheUserType == "jump"){
                 fightFunction::doProceed = true;
                 fightFunction::playerLogic = didTheUserType;
             }
-            else if(fightFunction::didTheUserType != "NO"){
+            else if(fightFunction::didTheUserType != "NO" && fightFunction::didTheUserType!="attack" && fightFunction::didTheUserType != "defend" && fightFunction::didTheUserType != "jump"){
                 std::cout<<"nope!try again"<<std::endl;
                 fightFunction::didTheUserType = "NO";
+                temporaryInput="NO";
             }
             time = std::time(NULL);
         }
@@ -76,28 +75,34 @@ class Fighting{
     std::string enemyName;//I don't know if need these two or not.Anyway , i included this here, you can remove it if you dont want to tho.
     void getEvent(){
         std::thread th( fightFunction::countDown);
-        while(fightFunction::didFunctionQuit == false && fightFunction::doProceed != true){
+        while(fightFunction::didFunctionQuit == false){
             // std::cout<<"intput is going to be given"<<std::endl;
-            std::cin>>fightFunction::didTheUserType;
+            std::cin>>temporaryInput;
             // std::cout<<"input has been given"<<std::endl;
         }
         th.join();
-        fightFunction::playerLogic=fightFunction::didTheUserType;
+        if(fightFunction::doProceed!=true){
+            std::cout<<"you failed to move in time"<<std::endl;
+        }else{
+            fightFunction::playerLogic=fightFunction::didTheUserType;
+        }
         fightFunction::reset();
     }
     public:
     //startBattle works both as a constructor and as a function.
-    void startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int enemyHealth=100,bool isPlayerFirst = true){
+    void startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int eH=10,bool isPlayerFirst = true){
+        int enemyHealth = eH;
         int PBD = playerBaseDamage;
         int EBD = enemyBaseDamage;
         this->enemyName=ename;
         //printing instructions for the battle
         std::cout<<"\t1:Type `attack` to attack the enemy."<<std::endl<<"\t2:Type `defend` to brace yourself for impact(you will take damage but extremely lower than usual.defending yourself will increase the attack power if you `attack` right after `defend`)"<<std::endl;
         std::cout<<"\t3:Type `jump` to jump backward to completely miss the enemy attack, however if you type `attack` right after `jump` your damage output will be lower"<<std::endl;
+        Sleep(3000);
         if(isPlayerFirst == true){
-            std::cout<<"The "<<this->enemyName<<" is infront for you, You : "<<std::endl;
+            std::cout<<this->enemyName<<" is infront for you"<<std::endl;
             this->getEvent();
-            if(fightFunction::playerLogic=="attack"){
+            if(fightFunction::playerLogic== "attack" ){
                 std::cout<<"You attacked "<<this->enemyName<<" and inflicted "<<playerBaseDamage*(enemyDefendStat/100);
                 enemyHealth=enemyHealth-(playerBaseDamage*(enemyDefendStat/100));
             }else if(fightFunction::playerLogic=="defend"){
@@ -157,7 +162,7 @@ class Fighting{
                 fightFunction::enemyPreviousLogic = fightFunction::enemyLogic;
             }
         }
-        while(playerHealth>=0 || enemyHealth>=0){
+        while(playerHealth >=0 && enemyHealth >= 0 ) {
             this->generateEnemyLogic();
             //continue battle here
             std::cout<<this->enemyName<<" is about to "<<fightFunction::enemyLogic<<std::endl;
@@ -176,11 +181,13 @@ class Fighting{
                 if(fightFunction::enemyLogic=="attack"){
                     std::cout<<"You inflicted "<<(PBD*enemyDefendStat/100)<<" on "<<this->enemyName<<std::endl;
                     std::cout<<this->enemyName<<" inflicted "<<(EBD*playerDefendStat/100)<<" on YOU"<<std::endl;
-                    enemyHealth=enemyHealth-(PBD*enemyDefendStat/100);
-                    playerHealth=playerHealth-(EBD*playerDefendStat/100);
+                    enemyHealth = enemyHealth - (PBD*enemyDefendStat/100);
+                    std::cout<<enemyHealth<<std::endl;
+                    playerHealth = playerHealth - (EBD*playerDefendStat/100);
                 }else if(fightFunction::enemyLogic=="defend"){
                     std::cout<<"you inflicted "<<((PBD*enemyDefendStat/100)/4)<<std::endl;
-                    enemyHealth=enemyHealth-((PBD*enemyDefendStat/100)/4);
+                    enemyHealth = enemyHealth - ((PBD*enemyDefendStat/100)/4);
+                    std::cout<<enemyHealth<<std::endl;
                 }else if(fightFunction::enemyLogic=="jump"){
                     std::cout<<"you did no damage to "<<this->enemyName<<std::endl;
                 }
