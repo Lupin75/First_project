@@ -18,7 +18,7 @@ void cls()
     system("cls");
 }
 
-void displaySlow(string line, int speed = 10000, bool sleepStats = true)
+void displaySlow(string line, int speed = 100000, bool sleepStats = true)
 {
     // char ch;
     for (int i = 0; i < line.size(); i++)
@@ -1859,7 +1859,7 @@ woods:
     }
     GotoLine(story, 404);
     ln = 0;
-    while (ln < 12)
+    while (ln < 15)
     {
         string lin;
         getline(story, lin, '\n');
@@ -1867,16 +1867,46 @@ woods:
         ln++;
     }
     cls();
-    GotoLine(story,417);
-    ln=0;
-    while(ln<2)
+    cout<<"call fight function"<<endl;
+    cls();
+}
+void finding_princess()
+{
+    fstream story;
+    story.open("custom.txt");
+    fstream progress;
+    progress.open("progress.txt", ios::app);
+    progress << "FIND PRINCESS";
+    find_princess:
+    GotoLine(story,420);
+    int ln=0;
+    while(ln<12)
     {
         string lin;
         getline(story,lin,'\n');
         displaySlow(lin);
         ln++;
     }
-
+    cls();
+    GotoLine(story,433);
+    ln=0;
+    while(ln<15)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    cls();
+    GotoLine(story,450);
+    ln=0;
+    while(ln<21)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
 }
 int main()
 {
@@ -1918,7 +1948,7 @@ int main()
     //checkpnt.close();
     else
         prologue();
-
+    finding_princess();
     system("pause");
 
     return 0;

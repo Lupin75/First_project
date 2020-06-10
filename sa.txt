@@ -416,3 +416,55 @@ Podrick: (smiles) Good luck sir.
 
 (You start your journey. Before you reach the bottom of the cliff, the sun has already gone down and it's so dark. Finally, you reach the peak after a tough journey.)
 (You see a man waiting for you. You go near him and bend down to drop the bag with money. Suddenly the man drove his sword and starts to attack you.)
+
+$PN: Where is the princess? Who sent you? 
+Assassin: Who are you and why should I tell you?
+He spits the blood in his mouth nearby
+$PN: The name is "" and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
+You pull him up by his collar with cold calmness and ask him again
+Assassin: Don't kill me. I'll tell everything I know.
+You put him down.
+Assassin: They don't tell me the place where they hid the princess, but I know it was the prince that ordered to kill you.
+$PN: The Prince? Don't you dare lie (pressing the sword against his chest). 
+         Why would he kidnap his own sister and try to kill me?
+Assassin: I'm not lying (he screams). They didn't tell me the details. It's your job to find it. But one thing, it was never about the princess. You'll certainly have another combat. 
+You understand he is just a labour. You sit down on a rock near him and try to understand what's happening. You have heard about the prince in a good way and he could not have any intensions on kidnapping his own sister. You feel that someone else is involved.
+-----------------------
+Assassin: Leave the gold coins here and the princess will be released tonight.
+$PN: Why would the prince desire for a bag of coins when he has access to an entire treasury? Whoever wants it, ask them not to fight like a coward using the Princ's name.
+You take the money bag with you and ride down the cliff. You swiftly come towards the city and near the junction Podrick is waiting. You two start moving into the city.
+Podrick: What happened there? Weren't you supposed to hand over this bag to them?
+$PN: It was not about the money. I feel that they want my life more than the princess'. 
+Podrick: What are you talking about?
+$PN: This even feels strange for me. This is the first time I come to this city and with who could have such vengeance for me?
+
+Podrick: Do you say that you are their target, and nothing will happen to the kidnapped people?
+$PN: Yes, according to the assassin that tried to kill me.
+Podrick: What...? An assassin tried to kill you?
+$PN: Don't panic. It's all over. I need time to think. Can you arrange me a room?
+Podrick: I have already booked a room for you. I'll drop you there.
+$PN: Thanks, Podrick. Is there any lead from Ivan?
+Podrick: He said that there is a possibility of finding her in a specific location inside the forest. 
+--------------------
+
+(Now, you both reach the city. After a few minutes ride, Podrick takes you to a deluxe mansion and shows your room.)
+Podrick: Take some rest and then start thinking about the case.
+$PN: Take this bag of gold coins back to the kingdom. (You hand over that big black bag)
+         Can you do me a favour Podrick? Bring me a map of this country along with the place Ivan suspected marked on it.
+Podrick: Sure. I will bring it within one hour.
+As it was a hard day, you prefer to get yourself relaxed by taking a good bath. After you calm your mind, you start to think about the case again.
+
+It has been about half an hour since Podrick left. You look out the window to find a heavy downpour.
+You wonder if Podrick will be able to come to get you the map. You sigh and lie on the bed and wait for the rain to end for what seems like an eternity. Suddenly you hear a knock on the door, you find Podrick shivering and heavily drenched from the rain. You open the door and Podrick enters the room and removes his wet cloak. You start a fire for him to warm up
+Podrick: Here is the map, sorry it got wet.
+$PN: That's not a problem, but you could have waited for the rain to subside.
+Podrick: Finding the princess is of the utmost importance
+ Ivan will be here in a few minutes. We can together search the place Ivan suspected.
+$PN: Where is that place? 
+Podrick: It is a place deep inside the forest where there is no human activity for years.
+-----------------
+
+Someone knocks the door. You go and open the door. It is Ivan. You also notice a cover at the bottom of the door.
+You open it and the following words are written.
+"As the coward prince didn't get his ransom on time, a poor girl named Matilda lost her life."
+---------------
