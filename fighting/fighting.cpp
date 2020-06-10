@@ -1,6 +1,9 @@
 //  g++ -std=c++17 fighting.cpp -D_WIN32_WINNT=0x0A00
 /*
-    haven't tested if this works or not but , i hope it does.
+
+    (new)since im using random number generator for enemy movement patterns, the enemy has dumbest AI ever.
+
+    (old)haven't tested if this works or not but , i hope it does.
     i felt like keeping pokemon(original) style fighting here will be weird, so i added this, hope you guys like it.
     okay, this is how it works, we have a namespace called `fightFunction` (dont ask me why i named it function eventho it's not a function)
     this namespace contains fiveSeconds, doProceed , didFunctionQuit and countDown function and reset function.
@@ -10,17 +13,20 @@
     to counter this, we need a delay.             (EDIT:(this whole para symplified)Sleep to maintain syncronization between the two threads).
     the delay can be anything as long as the we have sync between the two threads.
 */
-#include"global.hpp"
+int playerHealth = 100;//remove this and include global.hpp
+int playerDefendStat = 50;
+//#include"global.hpp
+// #include"global.hpp"
 #include<iostream>
 #include "mingw.thread.h"
 #include<Windows.h>
 #include<ctime>
 namespace fightFunction{
     std::string didTheUserType = "NO";
-    std::string enemyLogic = NULL;
-    std::string playerLogic = NULL;
-    std::string enemyPreviousLogic = NULL;
-    std::string playerPreviousLogic = NULL;
+    std::string enemyLogic = "NULL";
+    std::string playerLogic =" NULL";
+    std::string enemyPreviousLogic = "NULL";
+    std::string playerPreviousLogic = "NULL";
     bool doProceed = false;
     bool didFunctionQuit = false;
     void countDown(){
@@ -82,6 +88,8 @@ class Fighting{
     public:
     //startBattle works both as a constructor and as a function.
     void startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int enemyHealth=100,bool isPlayerFirst = true){
+        int PBD = playerBaseDamage;
+        int EBD = enemyBaseDamage;
         this->enemyName=ename;
         //printing instructions for the battle
         std::cout<<"\t1:Type `attack` to attack the enemy."<<std::endl<<"\t2:Type `defend` to brace yourself for impact(you will take damage but extremely lower than usual.defending yourself will increase the attack power if you `attack` right after `defend`)"<<std::endl;
@@ -150,12 +158,68 @@ class Fighting{
             }
         }
         while(playerHealth>=0 || enemyHealth>=0){
-            this->generateEnemyLogic();\
+            this->generateEnemyLogic();
             //continue battle here
+            std::cout<<this->enemyName<<" is about to "<<fightFunction::enemyLogic<<std::endl;
+            this->getEvent();
+            if(fightFunction::playerPreviousLogic=="jump"){
+                PBD = PBD/4;
+            }else if(fightFunction::playerPreviousLogic=="defend"){
+                PBD=PBD + (PBD*3/4);
+            }
+            if(fightFunction::enemyPreviousLogic=="jump"){
+                EBD=EBD/4;
+            }else if(fightFunction::enemyPreviousLogic=="defend"){
+                EBD=EBD+(EBD*3/4);
+            }
+            if(fightFunction::playerLogic=="attack"){
+                if(fightFunction::enemyLogic=="attack"){
+                    std::cout<<"You inflicted "<<(PBD*enemyDefendStat/100)<<" on "<<this->enemyName<<std::endl;
+                    std::cout<<this->enemyName<<" inflicted "<<(EBD*playerDefendStat/100)<<" on YOU"<<std::endl;
+                    enemyHealth=enemyHealth-(PBD*enemyDefendStat/100);
+                    playerHealth=playerHealth-(EBD*playerDefendStat/100);
+                }else if(fightFunction::enemyLogic=="defend"){
+                    std::cout<<"you inflicted "<<((PBD*enemyDefendStat/100)/4)<<std::endl;
+                    enemyHealth=enemyHealth-((PBD*enemyDefendStat/100)/4);
+                }else if(fightFunction::enemyLogic=="jump"){
+                    std::cout<<"you did no damage to "<<this->enemyName<<std::endl;
+                }
+                fightFunction::playerPreviousLogic=fightFunction::playerLogic;
+                fightFunction::enemyPreviousLogic=fightFunction::enemyLogic;
+            }else if(fightFunction::playerLogic=="defend"){
+                if(fightFunction::enemyLogic=="attack"){
+                    std::cout<<this->enemyName<<" inflicted "<<(EBD*(playerDefendStat/100))/4<<" on you"<<std::endl;
+                    playerHealth=playerHealth-(EBD*(playerDefendStat/100))/4;
+                }else if(fightFunction::enemyLogic=="defend"){
+                    std::cout<<"both defended, really!"<<std::endl;
+                }else if(fightFunction::enemyLogic=="jump"){
+                    std::cout<<"nothing happened, it just felt like 2 magikarp fighting eachother(-_-)"<<std::endl;
+                }
+                fightFunction::playerPreviousLogic=fightFunction::playerLogic;
+                fightFunction::enemyPreviousLogic=fightFunction::enemyLogic;
+            }else if(fightFunction::playerLogic=="jump"){
+                if(fightFunction::enemyLogic=="attack"){
+                    std::cout<<"you evaded the attack!"<<std::endl;
+                }else if(fightFunction::enemyLogic=="defend"){
+                    std::cout<<"nothing happened, it just felt like 2 magikarp fighting eachother(-_-)"<<std::endl;
+                }else if(fightFunction::enemyLogic=="jump"){
+                    std::cout<<this->enemyName<<" and you both finished playing dance floor arcade machine,it was a tie"<<std::endl;
+                }
+                fightFunction::playerPreviousLogic=fightFunction::playerLogic;
+                fightFunction::enemyPreviousLogic=fightFunction::enemyLogic;
+            }else{
+                if(fightFunction::enemyLogic=="attack"){
+                    std::cout<<this->enemyName<<" inflicted "<<EBD*playerDefendStat/100<<" on you while you were staring at him"<<std::endl;
+                }else{
+                    std::cout<<this->enemyName<<" did nothing, due to your insane luck"<<std::endl;
+                }
+                fightFunction::playerPreviousLogic="NULL";
+                fightFunction::enemyPreviousLogic=fightFunction::enemyLogic;
+            }
         }
     }
 };
 int main(){
     Fighting f;
-    f.startBattle("hell");
+    f.startBattle("nirmalie");
 }
