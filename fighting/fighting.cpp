@@ -103,7 +103,7 @@ class Fighting{
     }
     public:
     //startBattle works both as a constructor and as a function.
-    void startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int eH=10,bool isPlayerFirst = true){
+    bool startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int eH=10,bool isPlayerFirst = true){
         int enemyHealth = eH;
         int PBD = playerBaseDamage;
         int EBD = enemyBaseDamage;
@@ -237,9 +237,18 @@ class Fighting{
                 fightFunction::enemyPreviousLogic=fightFunction::enemyLogic;
             }
         }
+        if(playerHealth>0 && enemyHealth <= 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 };
 int main(){
     Fighting f;
-    f.startBattle("nirmalie");
+    if(!f.startBattle("nirmalie")){
+        std::cout<<"you died"<<std::endl;
+    }else{
+        std::cout<<"success!"<<std::endl;
+    }
 }
