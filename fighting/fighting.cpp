@@ -1,6 +1,8 @@
 //  g++ -std=c++17 fighting.cpp -D_WIN32_WINNT=0x0A00
 /*
 
+    okay, new bug: the very first attack is not getting considered for no reason
+
     (new)since im using random number generator for enemy movement patterns, the enemy has dumbest AI ever.
 
     (old)haven't tested if this works or not but , i hope it does.
@@ -28,6 +30,7 @@ namespace fightFunction{
     std::string playerLogic = "NULL";
     std::string enemyPreviousLogic = "NULL";
     std::string playerPreviousLogic = "NULL";
+    bool didGetEventProceed = false;
     bool doProceed = false;
     bool didFunctionQuit = false;
     void countDown(){
@@ -36,24 +39,29 @@ namespace fightFunction{
         int plusFive = time + 5;
         // std::cout<<plusFive<<std::endl;
         while(time != plusFive && fightFunction::doProceed !=true){
-            fightFunction::didTheUserType=temporaryInput;
-            if(fightFunction::didTheUserType== "attack" ||fightFunction::didTheUserType == "defend"||fightFunction::didTheUserType == "jump"){
-                fightFunction::doProceed = true;
-                fightFunction::playerLogic = didTheUserType;
+            if(fightFunction::didGetEventProceed != true){
+                continue;
+            }else{
+                fightFunction::didTheUserType=temporaryInput;
+                if(fightFunction::didTheUserType== "attack" ||fightFunction::didTheUserType == "defend"||fightFunction::didTheUserType == "jump"){
+                    fightFunction::doProceed = true;
+                    fightFunction::playerLogic = didTheUserType;
+                }
+                else if(fightFunction::didTheUserType != "NO" && fightFunction::didTheUserType!="attack" && fightFunction::didTheUserType != "defend" && fightFunction::didTheUserType != "jump"){
+                    std::cout<<"nope!try again"<<std::endl;
+                    fightFunction::didTheUserType = "NO";
+                    temporaryInput="NO";
+                }
+                time = std::time(NULL);
+                fightFunction::didGetEventProceed = false;
             }
-            else if(fightFunction::didTheUserType != "NO" && fightFunction::didTheUserType!="attack" && fightFunction::didTheUserType != "defend" && fightFunction::didTheUserType != "jump"){
-                std::cout<<"nope!try again"<<std::endl;
-                fightFunction::didTheUserType = "NO";
-                temporaryInput="NO";
-            }
-            time = std::time(NULL);
         }
         // std::cout<<"this thread has been closed"<<std::endl;
         fightFunction::didFunctionQuit = true;
     }
     void reset(){
         fightFunction::didFunctionQuit = false;
-        fightFunction::didTheUserType="NO";
+        fightFunction::didTheUserType = "NO";
         fightFunction::doProceed = false;
         fightFunction::didFunctionQuit = false;
     }
@@ -77,7 +85,12 @@ class Fighting{
         std::thread th( fightFunction::countDown);
         while(fightFunction::didFunctionQuit == false){
             // std::cout<<"intput is going to be given"<<std::endl;
-            std::cin>>temporaryInput;
+            if(fightFunction::didGetEventProceed == false){
+                std::cin>>temporaryInput;
+                fightFunction::didGetEventProceed = true;
+            }else{
+                continue;
+            }
             // std::cout<<"input has been given"<<std::endl;
         }
         th.join();
@@ -102,8 +115,8 @@ class Fighting{
         if(isPlayerFirst == true){
             std::cout<<this->enemyName<<" is infront for you"<<std::endl;
             this->getEvent();
-            if(fightFunction::playerLogic== "attack" ){
-                std::cout<<"You attacked "<<this->enemyName<<" and inflicted "<<playerBaseDamage*(enemyDefendStat/100);
+            if(fightFunction::playerLogic == "attack" ){
+                std::cout<<"You attacked "<<this->enemyName<<" and inflicted "<<playerBaseDamage*(enemyDefendStat/100)<<std::endl;
                 enemyHealth=enemyHealth-(playerBaseDamage*(enemyDefendStat/100));
             }else if(fightFunction::playerLogic=="defend"){
                 std::cout<<"you proceeded with caution and the enemy saw you."<<std::endl;
@@ -117,7 +130,7 @@ class Fighting{
             this->generateEnemyLogic();
             std::cout<<"the enemy is about to "<<fightFunction::enemyLogic<<"   you: "<<std::endl;
             this->getEvent();
-            if(fightFunction::playerLogic=="attack"){
+            if(fightFunction::playerLogic == "attack"){
                 fightFunction::playerPreviousLogic=fightFunction::playerLogic;
                 if(fightFunction::enemyLogic=="attack"){
                     std::cout<<"you inflicted "<< playerBaseDamage*(enemyDefendStat/100) <<std::endl;
