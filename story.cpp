@@ -234,6 +234,7 @@ void group1();
 void group2();
 void group3();
 void woods();
+void finding_princess();
 void prologue()
 {
     fstream story;
@@ -1355,7 +1356,7 @@ void group3()
     fstream progress;
     progress.open("progress.txt", ios::app);
 
-    progress << "GROUP3";
+    progress << "GROUP3"<<endl;
 group3:
     int cobbler_talk = 0;
     GotoLine(story, 252);
@@ -1667,7 +1668,7 @@ void woods()
     fstream progress;
     progress.open("progress.txt", ios::app);
 
-    progress << "WOODS";
+    progress << "WOODS"<<endl;
 woods:
 
     GotoLine(story, 348);
@@ -1690,7 +1691,8 @@ woods:
         ln++;
     }
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
-    while (f2 == 0 && f5 == 0)
+    int ans = 0;
+    while (ans != 2)
     {
         cin >> option;
         option = check_penta(option);
@@ -1707,7 +1709,7 @@ woods:
             }
             f1++;
         }
-        else if (option == 2)
+        else if (option == 2 && f2 == 0)
         {
             GotoLine(story, 368);
             int ln = 0;
@@ -1719,6 +1721,7 @@ woods:
                 ln++;
             }
             f2++;
+            ans++;
         }
         else if (option == 3 && f3 == 0)
         {
@@ -1746,7 +1749,7 @@ woods:
             }
             f4++;
         }
-        else if (option == 5)
+        else if (option == 5 && f5==0)
         {
             GotoLine(story, 374);
             int ln = 0;
@@ -1758,14 +1761,15 @@ woods:
                 ln++;
             }
             f5++;
+            ans++;
         }
         else
             displaySlow("Podrick: We already talked about this");
-        if (f2 == 0 && f5 == 0)
+        if (f2 == 0 || f5 == 0)
         {
-            GotoLine(story, 318);
+            GotoLine(story, 359);
             ln = 0;
-            while (ln < 4)
+            while (ln < 6)
             {
                 string lin;
                 getline(story, lin, '\n');
@@ -1800,13 +1804,13 @@ woods:
         option = check_two(option);
         if (option == 1)
         {
-            cout << "Type your guess" << endl;
+            cout << "Type your guess:" << endl;
             cin.ignore();
             getline(cin, message);
             if (toSmall(message) == "heat the paper")
             {
                 f1 = 1;
-                cout << "Your guess is reight!" << endl;
+                cout << "Your guess is right!" << endl;
             }
             else
                 cout << "Your guess is wrong!" << endl;
@@ -1816,8 +1820,13 @@ woods:
             ++i;
             if (i == 1)
                 cout << "The paper is folded at the bottom left corner. You open it to see the number 5. Can you guess now?" << endl;
+            //Can add one more chance or player
             if (i == 2)
             {
+                cout << "***Hint: Shift the letter by -5, for example F->A" << endl;
+                f1 = 1;
+            }
+            if(i ==3){
                 cout << "After a few minutes, you finally decoded the message.(Or) Shift the letter by -5 for example F->A" << endl;
                 f1 = 1;
             }
@@ -1869,6 +1878,7 @@ woods:
     cls();
     cout<<"call fight function"<<endl;
     cls();
+    finding_princess();
 }
 void finding_princess()
 {
@@ -1876,7 +1886,7 @@ void finding_princess()
     story.open("custom.txt");
     fstream progress;
     progress.open("progress.txt", ios::app);
-    progress << "FIND PRINCESS";
+    progress << "FIND PRINCESS"<<endl;
     find_princess:
     GotoLine(story,420);
     int ln=0;
@@ -1929,26 +1939,36 @@ int main()
     while (checkpnt.good())
     {
         getline(checkpnt, checkpoint, '\n');
+        //cout<<checkpoint<<endl;
         checkp.push_back(checkpoint);
         c_p++;
     }
-    if (checkpoint != "")
+    //cout<<"Number of checkpoints: "<<c_p<<endl;
+    if (checkpoint == "")
     {
-        cout << "Last checkpoint: " << checkp[c_p - 2] << endl;
+        //cout << "Last checkpoint: " << checkp[c_p - 2] << endl;
         checkpoint = checkp[c_p - 2];
     }
+    cout << "Last checkpoint: " << checkpoint << endl;
+    system("pause");
     if (checkpoint == "GROUP1")
         group1();
     else if (checkpoint == "GROUP2")
         group2();
     else if (checkpoint == "TITLE")
         title();
-    else if (checkpoint == "TITLE")
+    else if (checkpoint == "MATILDA")
         matilda();
+    else if (checkpoint == "GROUP3")
+        group3();
+    else if (checkpoint == "WOODS")
+        woods();
+    else if (checkpoint == "FIND PRINCESS")
+        finding_princess();
     //checkpnt.close();
     else
         prologue();
-    finding_princess();
+    //finding_princess();
     system("pause");
 
     return 0;
