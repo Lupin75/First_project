@@ -2,7 +2,7 @@
 #include <string>
 #include <fstream>
 #include <Windows.h>
-#include "global.hpp"
+#include "./resources/hpps/global.hpp"
 /*
     Last modified by: Nirmal Kumar
     Created on      : 21 05, 2020
@@ -32,7 +32,7 @@ void displaySlow(string line, int speed = 100000, bool sleepStats = true)
 void pod_conv(int line_n, int choices)
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
     GotoLine(story, line_n);
 
     int option;
@@ -212,9 +212,9 @@ void pod_conv(int line_n, int choices)
 void customise_game()
 {
     ifstream templat;
-    templat.open("sa.txt");
+    templat.open("./resources/txtFiles/sa.txt");
     ofstream c_story;
-    c_story.open("custom.txt");
+    c_story.open("./resources/txtFiles/custom.txt");
     string s;
     string o = "$PN";
     while (getline(templat, s))
@@ -238,10 +238,10 @@ void finding_princess();
 void prologue()
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     int line_count = 0;
     GotoLine(story, 1);
@@ -290,10 +290,10 @@ void prologue()
 void title()
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
     progress << "TITLE" << endl;
     cls();
     while (line_count < 26)
@@ -518,10 +518,10 @@ void title()
 void matilda()
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     progress << "MATILDA" << endl;
     line_count = 70;
@@ -652,10 +652,10 @@ void matilda()
 void group1()
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     progress << "GROUP1" << endl;
     int SPYBAR = 0;
@@ -1085,10 +1085,10 @@ group1:
 void group2()
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     progress << "GROUP2" << endl;
 
@@ -1351,10 +1351,10 @@ void group3()
 {
     //cls();
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     progress << "GROUP3"<<endl;
 group3:
@@ -1663,10 +1663,10 @@ void woods()
 {
     string message;
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     progress << "WOODS"<<endl;
 woods:
@@ -1883,9 +1883,9 @@ woods:
 void finding_princess()
 {
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
     fstream progress;
-    progress.open("progress.txt", ios::app);
+    progress.open("./resources/txtFiles/progress.txt", ios::app);
     progress << "FIND PRINCESS"<<endl;
     find_princess:
     GotoLine(story,420);
@@ -1929,10 +1929,10 @@ int main()
     customise_game();
 
     fstream story;
-    story.open("custom.txt");
+    story.open("./resources/txtFiles/custom.txt");
 
     ifstream checkpnt;
-    checkpnt.open("progress.txt");
+    checkpnt.open("./resources/txtFiles/progress.txt");
     string checkpoint;
     int c_p = 0;
     std::vector<string> checkp;
