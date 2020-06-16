@@ -28,16 +28,52 @@ void displaySlow(string line, int speed = 100000, bool sleepStats = true)
     }
     cout << "\n";
 }
-void displayStory(fstream &fpr, int start, int end)
+void wrap(string text, size_t line_length = 110)
 {
+    std::istringstream words(text);
+    std::ostringstream wrapped;
+    std::string word;
+ 
+    if (words >> word) {
+        wrapped << word;
+        size_t space_left = line_length - word.length();
+        while (words >> word) {
+            if (space_left < word.length() + 1) {
+                wrapped << '\n' << word;
+                space_left = line_length - word.length();
+            } else {
+                wrapped << ' ' << word;
+                space_left -= word.length() + 1;
+            }
+        }
+    }
+     displaySlow(wrapped.str());
+}
+void displayStory(fstream &fpr, int start, int end, bool init_line_counter=false)
+{
+    if(init_line_counter==false)
+    {
     GotoLine(fpr, start);
     int ln = 0;
     while (ln < end)
     {
         string lin;
         getline(fpr, lin, '\n');
-        displaySlow(lin);
+        wrap(lin);
         ln++;
+    }
+    }
+    else if(init_line_counter==true)
+    {
+    GotoLine(fpr, start);
+    int ln = start;
+    while (ln < end)
+    {
+        string lin;
+        getline(fpr, lin, '\n');
+        wrap(lin);
+        ln++;
+    }
     }
 }
 void pod_conv(int line_n, int choices)
@@ -60,7 +96,7 @@ void pod_conv(int line_n, int choices)
                     f1++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 2)
             {
@@ -70,7 +106,7 @@ void pod_conv(int line_n, int choices)
                     f2++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 3)
             {
@@ -80,7 +116,7 @@ void pod_conv(int line_n, int choices)
                     f3++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 4)
             {
@@ -90,7 +126,7 @@ void pod_conv(int line_n, int choices)
                     f4++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else
             {
@@ -118,7 +154,7 @@ void pod_conv(int line_n, int choices)
                     f1++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 2)
             {
@@ -128,7 +164,7 @@ void pod_conv(int line_n, int choices)
                     f2++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 3)
             {
@@ -138,7 +174,7 @@ void pod_conv(int line_n, int choices)
                     f3++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             if (f1 == 0 || f2 == 0 || f3 == 0)
             {
@@ -191,7 +227,7 @@ void prologue()
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
-        displaySlow(line);
+        wrap(line);
         line_count++;
     }
     //line_count=0;
@@ -203,7 +239,7 @@ void prologue()
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
-        displaySlow(line);
+        wrap(line);
         line_count++;
     }
     //cout<<"linefawk"<<line_count;
@@ -242,10 +278,10 @@ void title()
         if (line_count == 13)
         {
             line = line + " " + playerName;
-            displaySlow(line);
+            wrap(line);
         }
         else
-            displaySlow(line);
+            wrap(line);
         line_count++;
     }
     pod_conv(27, 4);
@@ -264,13 +300,13 @@ void title()
                 {
                     string lin;
                     getline(story, lin, '\n');
-                    displaySlow(lin);
+                    wrap(lin);
                     ln++;
                 }
                 f1++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 2)
         {
@@ -282,13 +318,13 @@ void title()
                 {
                     string lin;
                     getline(story, lin, '\n');
-                    displaySlow(lin);
+                    wrap(lin);
                     ln++;
                 }
                 f2++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 3)
         {
@@ -300,13 +336,13 @@ void title()
                 {
                     string lin;
                     getline(story, lin, '\n');
-                    displaySlow(lin);
+                    wrap(lin);
                     ln++;
                 }
                 f3++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 4)
         {
@@ -318,28 +354,28 @@ void title()
                 {
                     string lin;
                     getline(story, lin, '\n');
-                    displaySlow(lin);
+                    wrap(lin);
                     ln++;
                 }
                 f4++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         cout << endl;
 
         if (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
         {
             for (int i = 22; i < 26; i++)
-                displaySlow(story_line[i]);
+                wrap(story_line[i]);
         }
     }*/
 
     cls();
     //line_count = 41;
-    displayStory(story,42,48);
+    displayStory(story,42,48,true);
     cls();
-    displayStory(story,50,57);
+    displayStory(story,50,57,true);
     int option;
     //option(58,3);
     //question(58,2);
@@ -356,7 +392,7 @@ void title()
                 f1++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 2)
         {
@@ -366,7 +402,7 @@ void title()
                 f2++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 3)
         {
@@ -376,7 +412,7 @@ void title()
                 f3++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else
         {
@@ -392,7 +428,7 @@ void title()
     // my code
     cls();
     line_count = 65;
-    displayStory(story,66,69);
+    displayStory(story,66,69,true);
     cls();
     matilda();
 }
@@ -406,10 +442,10 @@ void matilda()
 
     progress << "MATILDA" << endl;
     line_count = 70;
-    displayStory(story,71,96);
+    displayStory(story,71,96,true);
     cls();
     //line_count=98;
-    displayStory(story,98,102);
+    displayStory(story,98,102,true);
     cout << endl;
 
     int f1 = 0, f2 = 0, f3 = 0;
@@ -424,7 +460,7 @@ void matilda()
                 f1++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 2)
         {
@@ -434,7 +470,7 @@ void matilda()
                 f2++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else if (option == 3)
         {
@@ -444,7 +480,7 @@ void matilda()
                 f3++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
         }
         else
         {
@@ -459,11 +495,11 @@ void matilda()
         }
     }
     line_count = 111;
-    displayStory(story,112,115);
+    displayStory(story,112,115,true);
     cls();
 
     line_count = 116;
-    displayStory(story,117,126);
+    displayStory(story,117,126,true);
     cls();
     group1();
 }
@@ -483,7 +519,7 @@ group1:
     int tea_talk = 0;
 
     line_count = 131;
-    displayStory(story,132,137);
+    displayStory(story,132,137,true);
     cout << endl;
 
     char house;
@@ -611,7 +647,7 @@ group1:
                     {
                         string lin;
                         getline(story, lin, '\n');
-                        displaySlow(lin);
+                        wrap(lin);
                         line_count++;
                     }
                     cls();
@@ -646,7 +682,7 @@ group1:
             string line;
             getline(story, line, '\n');
             //story_line.push_back(line);
-            displaySlow(line);
+            wrap(line);
             line_count++;
         }
         int f1 = 0, f2 = 0, f3 = 0;
@@ -663,7 +699,7 @@ group1:
                     ans++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 2)
             {
@@ -673,7 +709,7 @@ group1:
                     f2++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 3)
             {
@@ -684,7 +720,7 @@ group1:
                     ans++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else
             {
@@ -707,7 +743,7 @@ group1:
             line.clear();
             getline(story, line, '\n');
             //story_line.push_back(line);
-            displaySlow(line);
+            wrap(line);
             line_count++;
         }
 
@@ -724,7 +760,7 @@ group1:
                     f1++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 2)
             {
@@ -735,7 +771,7 @@ group1:
                     ans++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else if (option == 3)
             {
@@ -746,7 +782,7 @@ group1:
                     ans++;
                 }
                 else
-                    displaySlow("Podrick: We already talked about this");
+                    wrap("Podrick: We already talked about this");
             }
             else
             {
@@ -770,7 +806,7 @@ group1:
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
-        displaySlow(line);
+        wrap(line);
         line_count++;
     }
     //cls();
@@ -779,7 +815,7 @@ group1:
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
-        displaySlow(line);
+        wrap(line);
         line_count++;
     }
     progress.close();
@@ -834,7 +870,7 @@ group2:
                     {
                         string lin;
                         getline(story, lin, '\n');
-                        displaySlow(lin);
+                        wrap(lin);
                         line_count++;
                     }
                     int f1 = 0, f2 = 0, f3 = 0;
@@ -849,7 +885,7 @@ group2:
                                 f1++;
                             }
                             else
-                                displaySlow("Podrick: We already talked about this");
+                                wrap("Podrick: We already talked about this");
                         }
                         else if (option == 2)
                         {
@@ -859,7 +895,7 @@ group2:
                                 f2++;
                             }
                             else
-                                displaySlow("Podrick: We already talked about this");
+                                wrap("Podrick: We already talked about this");
                         }
                         else if (option == 3)
                         {
@@ -869,7 +905,7 @@ group2:
                                 f3++;
                             }
                             else
-                                displaySlow("Podrick: We already talked about this");
+                                wrap("Podrick: We already talked about this");
                         }
                         else
                         {
@@ -917,9 +953,9 @@ group2:
                 GotoLine(story, 246);
                 string lin;
                 getline(story, lin, '\n');
-                displaySlow(lin);
+                wrap(lin);
                 getline(story, lin, '\n');
-                displaySlow(lin);
+                wrap(lin);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
@@ -1054,7 +1090,7 @@ group3:
                     while (line_count < 289)
                     {
                         getline(story, lin, '\n');
-                        displaySlow(lin);
+                        wrap(lin);
                         line_count++;
                     }
                 }
@@ -1095,7 +1131,7 @@ group3:
                 f3++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
             if (f2 == 0 && f3 == 0)
             {
                 displayStory(story,298,4);
@@ -1124,7 +1160,7 @@ group3:
                 f3++;
             }
             else
-                displaySlow("Podrick: We already talked about this");
+                wrap("Podrick: We already talked about this");
             if (f2 == 0)
             {
                 displayStory(story,318,4);
@@ -1197,7 +1233,7 @@ woods:
             ans++;
         }
         else
-            displaySlow("Podrick: We already talked about this");
+            wrap("Podrick: We already talked about this");
         if (f2 == 0 || f5 == 0)
         {
             displayStory(story,359,6);
@@ -1307,7 +1343,7 @@ void finding_princess()
             f3++;
         }
         else
-            displaySlow("Just now you thought of it!");
+            wrap("Just now you thought of it!");
         if(f3==0)
         {
             displayStory(story,501,4);
@@ -1338,7 +1374,7 @@ void finding_princess()
             f3++;
         }
         else
-            displaySlow("Podrick: We just talked about this");
+            wrap("Podrick: We just talked about this");
         if(f3==0)
         {
             displayStory(story,530,4);
@@ -1368,7 +1404,7 @@ void finding_princess()
             f3++;
         }
         else 
-            displaySlow("Podrick: We just talked about this");
+            wrap("Podrick: We just talked about this");
         if(f1==0 && f3==0)
         {
             displayStory(story,553,5);
