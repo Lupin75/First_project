@@ -958,7 +958,7 @@ void group3()
     progress << "GROUP3"<<endl;
 group3:
     int cobbler_talk = 0;
-    displayStory(story,252,6);
+    displayStory(story,252,258);
     int h1 = 0, h2 = 0, h3 = 0, h4 = 0;
     while (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
     {
@@ -967,12 +967,12 @@ group3:
         {
             if (h1 == 0)
             {
-                displayStory(story,259,1);
+                displayStory(story,259);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                   displayStory(story,260,1);
+                   displayStory(story,260);
                 }
                 h1++;
             }
@@ -985,12 +985,12 @@ group3:
         {
             if (h2 == 0)
             {
-                displayStory(story,262,6);
+                displayStory(story,262,267);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                    displayStory(story,268,1);
+                    displayStory(story,268);
                 }
                 h2++;
             }
@@ -1003,13 +1003,13 @@ group3:
         {
             if (h3 == 0)
             {
-                displayStory(story,270,1);
+                displayStory(story,270);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
                     SPYBAR += 100;
-                    displayStory(story,271,1);
+                    displayStory(story,271);
                 }
                 h3++;
             }
@@ -1022,13 +1022,14 @@ group3:
         {
             if (h4 == 0)
             {
-                displayStory(story,273,1);
+                displayStory(story,273);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
                     cobbler_talk++;
-                    GotoLine(story, 275);
+                    displayStory(story,274,289);
+                    /*GotoLine(story, 275);
                     string lin;
                     line_count = 274;
                     while (line_count < 289)
@@ -1036,7 +1037,7 @@ group3:
                         getline(story, lin, '\n');
                         displaySlow(lin);
                         line_count++;
-                    }
+                    }*/
                 }
                 h4++;
             }
@@ -1047,13 +1048,14 @@ group3:
         }
         if (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
         {
-            displayStory(story,252,6);
+            displayStory(story,252,257);
             cout << endl;
         }
     }
     if (cobbler_talk == 1)
     {
-        displayStory(story,291,11);
+        displayStory(story,291,301);
+        cout<<endl;
         int f1 = 0, f2 = 0, f3 = 0;
         while (f2 == 0 && f3 == 0)
         {
@@ -1061,28 +1063,30 @@ group3:
             option = check_tri(option);
             if (option == 1 && f1 == 0)
             {
-                displayStory(story,302,2);
+                displayStory(story,302,301);
                 f1++;
             }
             else if (option == 2)
             {
-                displayStory(story,304,2);
+                displayStory(story,304,305);
                 f2++;
             }
             else if (option == 3)
             {
-                displayStory(story,306,2);
+                displayStory(story,306,307);
                 f3++;
             }
             else
                 displaySlow("Podrick: We already talked about this");
             if (f2 == 0 && f3 == 0)
             {
-                displayStory(story,298,4);
+                displayStory(story,298,301);
+                cout<<endl;
             }
         }
         cls();
-        displayStory(story,308,14);
+        displayStory(story,308,321);
+        cout<<endl;
         f1 = 0, f2 = 0, f3 = 0;
         while (f2 == 0)
         {
@@ -1090,29 +1094,30 @@ group3:
             option = check_tri(option);
             if (option == 1 && f1 == 0)
             {
-                displayStory(story,322,2);
+                displayStory(story,322,323);
                 f1++;
             }
             else if (option == 2)
             {
-                displayStory(story,324,2);
+                displayStory(story,324,325);
                 f2++;
             }
             else if (option == 3 && f3 == 0)
             {
-                displayStory(story,326,2);
+                displayStory(story,326,327);
                 f3++;
             }
             else
                 displaySlow("Podrick: We already talked about this");
             if (f2 == 0)
             {
-                displayStory(story,318,4);
+                displayStory(story,318,321);
+                cout<<endl;
             }
         }
         //system("pause");
         cls();
-        displayStory(story,330,18);
+        displayStory(story,330,346);
         // system("pause");
         cls();
         woods();
@@ -1140,9 +1145,9 @@ void woods()
     progress << "WOODS"<<endl;
 woods:
 
-    displayStory(story,348,10);
+    displayStory(story,348,357);
     cls();
-    displayStory(story,359,6);
+    displayStory(story,359,365);
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
     int ans = 0;
     while (ans != 2)
@@ -1151,28 +1156,28 @@ woods:
         option = check_penta(option);
         if (option == 1 && f1 == 0)
         {
-            displayStory(story,366,2);
+            displayStory(story,366,367);
             f1++;
         }
         else if (option == 2 && f2 == 0)
         {
-            displayStory(story,368,2);
+            displayStory(story,368,369);
             f2++;
             ans++;
         }
         else if (option == 3 && f3 == 0)
         {
-            displayStory(story,370,2);
+            displayStory(story,370,371);
             f3++;
         }
         else if (option == 4 && f4 == 0)
         {
-            displayStory(story,372,2);
+            displayStory(story,372,373);
             f4++;
         }
         else if (option == 5 && f5==0)
         {
-            displayStory(story,374,2);
+            displayStory(story,374,375);
             f5++;
             ans++;
         }
@@ -1180,15 +1185,16 @@ woods:
             displaySlow("Podrick: We already talked about this");
         if (f2 == 0 || f5 == 0)
         {
-            displayStory(story,359,6);
+            displayStory(story,359,364);
+            cout<<endl;
         }
     }
-    displayStory(story,377,14);
+    displayStory(story,379,389);
     f1 = 0;
     int i = 0;
     while (f1 == 0)
     {
-        displayStory(story,391,3);
+        displayStory(story,390,393);
         cin >> option;
         option = check_two(option);
         if (option == 1)
@@ -1221,7 +1227,7 @@ woods:
             }
         }
     }
-    displayStory(story,394,9);
+    displayStory(story,394,403);
     f1 = 0;
     while (f1 == 0)
     {
@@ -1236,12 +1242,12 @@ woods:
         {
             cout << "Ivan fears that it could be Matilda who they will kill if you don’t go. For their sake, you accept to go." << endl;
             cout << "Game proceeds only if you accept the challenge" << endl;
-            displayStory(story,400,3);
+            displayStory(story,400,402);
         }
     }
-    displayStory(story,404,15);
+    displayStory(story,404,419);
     cls();
-    cout<<"call fight function"<<endl;
+    cout<<"***********call fight function************"<<endl;
     cls();
     finding_princess();
 }
@@ -1253,19 +1259,19 @@ void finding_princess()
     progress.open("./resources/txtFiles/progress.txt", ios::app);
     progress << "FIND PRINCESS"<<endl;
     find_princess:
-    displayStory(story,420,12);
+    displayStory(story,420,431);
     cls();
-    displayStory(story,433,15);
+    displayStory(story,433,447);
     cls();
-    displayStory(story,450,21);
+    displayStory(story,450,470);
     cls();
-    displayStory(story,472,3);
+    displayStory(story,472,474);
     // function to dodge
     // if dodge success
     cls();
-    displayStory(story,477,20);
+    displayStory(story,477,495);
     cls();
-    displayStory(story,498,7);
+    displayStory(story,498,505);
     int f1=0,f2=0,f3=0;
     while(f3==0)
     {
@@ -1273,30 +1279,30 @@ void finding_princess()
         option=check_tri(option);
         if(option==1&&f1==0)
         {
-            displayStory(story,506,2);
+            displayStory(story,506,507);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            displayStory(story,508,2);
+            displayStory(story,508,509);
             f2++;
         }
         else if(option==3)
         {
-            displayStory(story,511,3);
+            displayStory(story,511,513);
             f3++;
         }
         else
             displaySlow("Just now you thought of it!");
         if(f3==0)
         {
-            displayStory(story,501,4);
+            displayStory(story,501,505);
         }
     }
     cls();
-    displayStory(story,516,8);
+    displayStory(story,516,523);
     cls();
-    displayStory(story,526,8);
+    displayStory(story,526,534);
     f1=0,f2=0,f3=0;
     while(f3==0)
     {
@@ -1304,29 +1310,29 @@ void finding_princess()
         option=check_tri(option);
         if(option==1&&f1==0)
         {
-            displayStory(story,535,2);
+            displayStory(story,535,536);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            displayStory(story,537,2);
+            displayStory(story,537,538);
             f2++;
         }
         else if(option==3)
         {
-            displayStory(story,539,2);
+            displayStory(story,539,540);
             f3++;
         }
         else
             displaySlow("Podrick: We just talked about this");
         if(f3==0)
         {
-            displayStory(story,530,4);
+            displayStory(story,530,534);
         }
     }
-    displayStory(story,542,6);
+    displayStory(story,542,546);
     cls();
-    displayStory(story,549,9);
+    displayStory(story,549,558);
     f1=0,f2=0,f3=0;
     while(f1==0&&f3==0)
     {
@@ -1334,27 +1340,27 @@ void finding_princess()
         option=check_tri(option);
         if(option==1)
         {
-            displayStory(story,559,2);
+            displayStory(story,559,560);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            displayStory(story,561,2);
+            displayStory(story,561,562);
             f2++;
         }
         else if(option==3)
         {
-            displayStory(story,563,2);
+            displayStory(story,563,564);
             f3++;
         }
         else 
             displaySlow("Podrick: We just talked about this");
         if(f1==0 && f3==0)
         {
-            displayStory(story,553,5);
+            displayStory(story,553,558);
         }
     }
-    displayStory(story,566,4);
+    displayStory(story,566,569);
     cls();
     //maze();
 

@@ -252,14 +252,14 @@ Podrick: what he says confirms that someone else too has gone out of the main ci
 At the third group, you can see
 
 H: Textile shop
-I: Hair saloon
+I: Hair salon
 J: Grocery shop
 K: Cobbler's house
 
 It's the largest building you saw till now. This family is one of the oldest natives of the country. The owner and his three sons are running the shop. There are plenty of customers inside. 
 As they are busy running the shop, you could not develop a good conversation. So, you didn't get any information.
 
-You see the barber opening the shop as you approach it. There is a board hanging with words “Shop closed for 3 days”.
+You see the barber opening the shop as you approach it. There is a board hanging with words "Shop closed for 3 days".
 Another by-passer talks to the barber.
 By-passer: How is your health now?
 Barber: Much better pal.
@@ -508,7 +508,7 @@ Your inner voice: I feel that there is someone involved more
 $PN: Podrick
 Your inner voice: No, He seems a very loyal man. What made you think that?
 
-Podrick: Why did you stop?
+Podrick: Why are you silent?
 You: Did you notice the fact that both the letters from the kidnappers came to us through Ivan?
 Podrick: You suspect Ivan? He is already heartbroken. You are blabbering because of the stress.
 ------------------
