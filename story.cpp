@@ -4,11 +4,10 @@
 #include <Windows.h>
 #include "./resources/hpps/global.hpp"
 /*
-    Last modified by: Nirmal Kumar
-    Created on      : 21 05, 2020
-    Last modified   : 10/6/2020 1:40 AM
+    Last modified by: Abishek.r
+    Last modified   : 16-06-2020
     Filename        : &TM_FILENAME
-    Description     : 
+    Description     : Removed redundant code for displaying story
 */
 
 using namespace std;
@@ -29,11 +28,22 @@ void displaySlow(string line, int speed = 100000, bool sleepStats = true)
     }
     cout << "\n";
 }
+void displayStory(fstream &fpr, int start, int end)
+{
+    GotoLine(fpr, start);
+    int ln = 0;
+    while (ln < end)
+    {
+        string lin;
+        getline(fpr, lin, '\n');
+        displaySlow(lin);
+        ln++;
+    }
+}
 void pod_conv(int line_n, int choices)
 {
     fstream story;
     story.open("./resources/txtFiles/custom.txt");
-    GotoLine(story, line_n);
 
     int option;
     if (choices == 4)
@@ -46,15 +56,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f1 == 0)
                 {
-                    GotoLine(story, line_n);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n,2);
                     f1++;
                 }
                 else
@@ -64,15 +66,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f2 == 0)
                 {
-                    GotoLine(story, line_n + 2);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n+2,2);
                     f2++;
                 }
                 else
@@ -82,15 +76,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f3 == 0)
                 {
-                    GotoLine(story, line_n + 4);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n+4,2);
                     f3++;
                 }
                 else
@@ -100,15 +86,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f4 == 0)
                 {
-                    GotoLine(story, line_n + 6);
-                    int ln = 0;
-                    while (ln < 7)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n+6,7);
                     f4++;
                 }
                 else
@@ -122,15 +100,7 @@ void pod_conv(int line_n, int choices)
 
             if (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
             {
-                GotoLine(story, line_n - 5);
-                int ln = 0;
-                while (ln < 4)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,line_n-5,4);
             }
         }
     }
@@ -144,15 +114,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f1 == 0)
                 {
-                    GotoLine(story, line_n);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n,2);
                     f1++;
                 }
                 else
@@ -162,15 +124,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f2 == 0)
                 {
-                    GotoLine(story, line_n + 2);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n+2,2);
                     f2++;
                 }
                 else
@@ -180,15 +134,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f3 == 0)
                 {
-                    GotoLine(story, line_n + 4);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,line_n+4,2);
                     f3++;
                 }
                 else
@@ -196,15 +142,7 @@ void pod_conv(int line_n, int choices)
             }
             if (f1 == 0 || f2 == 0 || f3 == 0)
             {
-                GotoLine(story, line_n - 5);
-                int ln = 0;
-                while (ln < 4)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,line_n-5,4);
             }
         }
     }
@@ -398,27 +336,10 @@ void title()
     }*/
 
     cls();
-    line_count = 41;
-    GotoLine(story, 42);
-    while (line_count < 48)
-    {
-        line.clear();
-        getline(story, line, '\n');
-        //story_line.push_back(line);
-        displaySlow(line);
-        line_count++;
-    }
+    //line_count = 41;
+    displayStory(story,42,48);
     cls();
-    line_count = 49;
-    GotoLine(story, 50);
-    while (line_count < 57)
-    {
-        line.clear();
-        getline(story, line, '\n');
-        //story_line.push_back(line);
-        displaySlow(line);
-        line_count++;
-    }
+    displayStory(story,50,57);
     int option;
     //option(58,3);
     //question(58,2);
@@ -431,15 +352,7 @@ void title()
         {
             if (f1 == 0)
             {
-                GotoLine(story, 58);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,58,2);
                 f1++;
             }
             else
@@ -449,15 +362,7 @@ void title()
         {
             if (f2 == 0)
             {
-                GotoLine(story, 60);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,60,2);
                 f2++;
             }
             else
@@ -467,15 +372,7 @@ void title()
         {
             if (f3 == 0)
             {
-                GotoLine(story, 62);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,62,2);
                 f3++;
             }
             else
@@ -489,29 +386,13 @@ void title()
 
         if (f2 == 0)
         {
-            GotoLine(story, 54);
-            int ln = 0;
-            while (ln < 4)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,54,4);
         }
     }
     // my code
     cls();
     line_count = 65;
-    GotoLine(story, 66);
-    while (line_count < 69)
-    {
-        line.clear();
-        getline(story, line, '\n');
-        //story_line.push_back(line);
-        displaySlow(line);
-        line_count++;
-    }
+    displayStory(story,66,69);
     cls();
     matilda();
 }
@@ -525,27 +406,10 @@ void matilda()
 
     progress << "MATILDA" << endl;
     line_count = 70;
-    GotoLine(story, 71);
-    while (line_count < 96)
-    {
-        line.clear();
-        getline(story, line, '\n');
-        //story_line.push_back(line);
-        displaySlow(line);
-        line_count++;
-    }
-
+    displayStory(story,71,96);
     cls();
     //line_count=98;
-    GotoLine(story, 98);
-    while (line_count < 102)
-    {
-        line.clear();
-        getline(story, line, '\n');
-        //story_line.push_back(line);
-        displaySlow(line);
-        line_count++;
-    }
+    displayStory(story,98,102);
     cout << endl;
 
     int f1 = 0, f2 = 0, f3 = 0;
@@ -556,15 +420,7 @@ void matilda()
         {
             if (f1 == 0)
             {
-                GotoLine(story, 105);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+               displayStory(story,105,2);
                 f1++;
             }
             else
@@ -574,15 +430,7 @@ void matilda()
         {
             if (f2 == 0)
             {
-                GotoLine(story, 107);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,107,2);
                 f2++;
             }
             else
@@ -592,15 +440,7 @@ void matilda()
         {
             if (f3 == 0)
             {
-                GotoLine(story, 109);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,109,2);
                 f3++;
             }
             else
@@ -614,38 +454,16 @@ void matilda()
 
         if (f3 == 0)
         {
-            GotoLine(story, 100);
-            int ln = 0;
-            while (ln < 4)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,100,4);
             cout << endl;
         }
     }
     line_count = 111;
-    GotoLine(story, 112);
-    while (line_count < 115)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        line_count++;
-    }
+    displayStory(story,112,115);
     cls();
 
     line_count = 116;
-    GotoLine(story, 117);
-    while (line_count < 126)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        line_count++;
-    }
+    displayStory(story,117,126);
     cls();
     group1();
 }
@@ -665,14 +483,7 @@ group1:
     int tea_talk = 0;
 
     line_count = 131;
-    GotoLine(story, 132);
-    while (line_count < 137)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        line_count++;
-    }
+    displayStory(story,132,137);
     cout << endl;
 
     char house;
@@ -683,18 +494,12 @@ group1:
         {
             if (h1 == 0)
             {
-                GotoLine(story, 139);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,139,1);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                    GotoLine(story, 140);
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
+                   displayStory(story,140,1);
                 }
                 h1++;
             }
@@ -707,10 +512,7 @@ group1:
         {
             if (h2 == 0)
             {
-                GotoLine(story, 142);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,142,1);
                 h2++;
             }
             else
@@ -722,18 +524,12 @@ group1:
         {
             if (h3 == 0)
             {
-                GotoLine(story, 144);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,144,1);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                    GotoLine(story, 145);
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
+                    displayStory(story,145,1);
                 }
                 h3++;
             }
@@ -747,36 +543,21 @@ group1:
         {
             if (h4 == 0)
             {
-                GotoLine(story, 147);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,147,1);
                 cout << "\n 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
 
                     tea_talk++;
-                    GotoLine(story, 148);
-                    int ln = 0;
-                    while (ln < 3)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,148,3);
                     cout << "# What do you reply? \n1. Yes, of course. \n2. No, I am an atheist\n"
                          << endl;
                     int reply = check_binary(reply);
                     if (reply == 1)
                     {
                         cout << playerName + ": Yes, ofcourse." << endl;
-                        GotoLine(story, 152);
-                        //int ln=0;
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
+                        displayStory(story,152,1);
                         cout << "#What so you reply\n1. This universe must be created by someone. \n"
                              << "2. On the grounds of modesty, I believe the presence of something powerful than humans.\n"
                              << "3. I have experienced his goodness and mercy.\n"
@@ -802,11 +583,7 @@ group1:
                         //Atheist
 
                         cout << playerName + ": No, I am an atheist." << endl;
-                        GotoLine(story, 152);
-                        //int ln=0;
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
+                        displayStory(story,152,1);
                         cout << "#What do you reply? \n1. It's the easiest answer for complex questions.\n"
                              << "2. God is just a delusional companion during hardships in the form of faith and hope.\n"
                              << "3. He was created to bring fear and order among the people.\n"
@@ -849,15 +626,7 @@ group1:
 
         if (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
         {
-            GotoLine(story, 132);
-            int ln = 0;
-            while (ln < 6)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,132,6);
             cout << endl;
         }
     }
@@ -889,15 +658,7 @@ group1:
             {
                 if (f1 == 0)
                 {
-                    GotoLine(story, 176);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,176,2);
                     f1++;
                     ans++;
                 }
@@ -908,15 +669,7 @@ group1:
             {
                 if (f2 == 0)
                 {
-                    GotoLine(story, 178);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,178,2);
                     f2++;
                 }
                 else
@@ -926,15 +679,7 @@ group1:
             {
                 if (f3 == 0)
                 {
-                    GotoLine(story, 180);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,180,2);
                     f3++;
                     ans++;
                 }
@@ -949,15 +694,7 @@ group1:
 
             if (ans == 0)
             {
-                GotoLine(story, 171);
-                int ln = 0;
-                while (ln < 4)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,171,4);
                 cout << endl;
             }
         }
@@ -983,15 +720,7 @@ group1:
             {
                 if (f1 == 0)
                 {
-                    GotoLine(story, 190);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,190,2);
                     f1++;
                 }
                 else
@@ -1001,15 +730,7 @@ group1:
             {
                 if (f2 == 0)
                 {
-                    GotoLine(story, 192);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,192,2);
                     f2++;
                     ans++;
                 }
@@ -1020,15 +741,7 @@ group1:
             {
                 if (f3 == 0)
                 {
-                    GotoLine(story, 194);
-                    int ln = 0;
-                    while (ln < 2)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,194,2);
                     f3++;
                     ans++;
                 }
@@ -1043,15 +756,7 @@ group1:
 
             if (ans == 0)
             {
-                GotoLine(story, 185);
-                int ln = 0;
-                while (ln < 4)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,185,4);
                 cout << endl;
             }
         }
@@ -1094,15 +799,7 @@ void group2()
 
 group2:
     int h1 = 0, h2 = 0, h3 = 0;
-    GotoLine(story, 204);
-    int ln = 0;
-    while (ln < 5)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,204,5);
     cout << endl;
 
     int farmTalk = 0;
@@ -1113,10 +810,7 @@ group2:
         {
             if (h1 == 0)
             {
-                GotoLine(story, 209);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,209,1);
                 cout << "\n 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
@@ -1128,27 +822,11 @@ group2:
                     if (ans == 1)
                     {
                         SPYBAR += 50;
-                        GotoLine(story, 210);
-                        int ln = 0;
-                        while (ln < 2)
-                        {
-                            string lin;
-                            getline(story, lin, '\n');
-                            displaySlow(lin);
-                            ln++;
-                        }
+                        displayStory(story,210,2);
                     }
                     else if (ans == 2)
                     {
-                        GotoLine(story, 212);
-                        int ln = 0;
-                        while (ln < 2)
-                        {
-                            string lin;
-                            getline(story, lin, '\n');
-                            displaySlow(lin);
-                            ln++;
-                        }
+                        displayStory(story,212,2);
                     }
                     line_count = 213;
                     GotoLine(story, 214);
@@ -1167,15 +845,7 @@ group2:
                         {
                             if (f1 == 0)
                             {
-                                GotoLine(story, 232);
-                                int ln = 0;
-                                while (ln < 2)
-                                {
-                                    string lin;
-                                    getline(story, lin, '\n');
-                                    displaySlow(lin);
-                                    ln++;
-                                }
+                                displayStory(story,232,2);
                                 f1++;
                             }
                             else
@@ -1185,15 +855,7 @@ group2:
                         {
                             if (f2 == 0)
                             {
-                                GotoLine(story, 234);
-                                int ln = 0;
-                                while (ln < 2)
-                                {
-                                    string lin;
-                                    getline(story, lin, '\n');
-                                    displaySlow(lin);
-                                    ln++;
-                                }
+                               displayStory(story,234,2);
                                 f2++;
                             }
                             else
@@ -1203,15 +865,7 @@ group2:
                         {
                             if (f3 == 0)
                             {
-                                GotoLine(story, 236);
-                                int ln = 0;
-                                while (ln < 2)
-                                {
-                                    string lin;
-                                    getline(story, lin, '\n');
-                                    displaySlow(lin);
-                                    ln++;
-                                }
+                                displayStory(story,236,2);
                                 f3++;
                             }
                             else
@@ -1225,29 +879,13 @@ group2:
 
                         if (f2 == 0)
                         {
-                            GotoLine(story, 226);
-                            int ln = 0;
-                            while (ln < 5)
-                            {
-                                string lin;
-                                getline(story, lin, '\n');
-                                displaySlow(lin);
-                                ln++;
-                            }
+                            displayStory(story,226,5);
                             cout << endl;
                         }
                     }
                     cls();
 
-                    GotoLine(story, 238);
-                    int ln = 0;
-                    while (ln < 4)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                   displayStory(story,238,4);
                     cout << endl;
                 }
                 h1++;
@@ -1263,10 +901,7 @@ group2:
         {
             if (h2 == 0)
             {
-                GotoLine(story, 244);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,244,1);
                 h2++;
             }
             else
@@ -1291,15 +926,7 @@ group2:
                 {
                     SPYBAR += 100;
 
-                    GotoLine(story, 247);
-                    int ln = 0;
-                    while (ln < 3)
-                    {
-                        string lin;
-                        getline(story, lin, '\n');
-                        displaySlow(lin);
-                        ln++;
-                    }
+                    displayStory(story,247,3);
                 }
                 else if (choice == 2)
                 {
@@ -1315,15 +942,7 @@ group2:
 
         if (h1 == 0 || h2 == 0 || h3 == 0)
         {
-            GotoLine(story, 204);
-            int ln = 0;
-            while (ln < 5)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,204,5);
             cout << endl;
         }
     }
@@ -1359,15 +978,7 @@ void group3()
     progress << "GROUP3"<<endl;
 group3:
     int cobbler_talk = 0;
-    GotoLine(story, 252);
-    int ln = 0;
-    while (ln < 6)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,252,6);
     int h1 = 0, h2 = 0, h3 = 0, h4 = 0;
     while (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
     {
@@ -1376,18 +987,12 @@ group3:
         {
             if (h1 == 0)
             {
-                GotoLine(story, 259);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,259,1);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                    GotoLine(story, 260);
-                    lin.clear();
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
+                   displayStory(story,260,1);
                 }
                 h1++;
             }
@@ -1400,23 +1005,12 @@ group3:
         {
             if (h2 == 0)
             {
-                GotoLine(story, 262);
-                int ln = 0;
-                while (ln < 6)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,262,6);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                    GotoLine(story, 268);
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
+                    displayStory(story,268,1);
                 }
                 h2++;
             }
@@ -1429,19 +1023,13 @@ group3:
         {
             if (h3 == 0)
             {
-                GotoLine(story, 270);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,270,1);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
                     SPYBAR += 100;
-                    GotoLine(story, 271);
-                    lin.clear();
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
+                    displayStory(story,271,1);
                 }
                 h3++;
             }
@@ -1454,10 +1042,7 @@ group3:
         {
             if (h4 == 0)
             {
-                GotoLine(story, 273);
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
+                displayStory(story,273,1);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
@@ -1482,29 +1067,13 @@ group3:
         }
         if (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
         {
-            GotoLine(story, 252);
-            int ln = 0;
-            while (ln < 6)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,252,6);
             cout << endl;
         }
     }
     if (cobbler_talk == 1)
     {
-        GotoLine(story, 291);
-        ln = 0;
-        while (ln < 11)
-        {
-            string lin;
-            getline(story, lin, '\n');
-            displaySlow(lin);
-            ln++;
-        }
+        displayStory(story,291,11);
         int f1 = 0, f2 = 0, f3 = 0;
         while (f2 == 0 && f3 == 0)
         {
@@ -1512,68 +1081,28 @@ group3:
             option = check_tri(option);
             if (option == 1 && f1 == 0)
             {
-                GotoLine(story, 302);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,302,2);
                 f1++;
             }
             else if (option == 2)
             {
-                GotoLine(story, 304);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,304,2);
                 f2++;
             }
             else if (option == 3)
             {
-                GotoLine(story, 306);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,306,2);
                 f3++;
             }
             else
                 displaySlow("Podrick: We already talked about this");
             if (f2 == 0 && f3 == 0)
             {
-                GotoLine(story, 298);
-                ln = 0;
-                while (ln < 4)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,298,4);
             }
         }
         cls();
-        GotoLine(story, 308);
-        ln = 0;
-        while (ln < 14)
-        {
-            string lin;
-            getline(story, lin, '\n');
-            displaySlow(lin);
-            ln++;
-        }
+        displayStory(story,308,14);
         f1 = 0, f2 = 0, f3 = 0;
         while (f2 == 0)
         {
@@ -1581,69 +1110,29 @@ group3:
             option = check_tri(option);
             if (option == 1 && f1 == 0)
             {
-                GotoLine(story, 322);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,322,2);
                 f1++;
             }
             else if (option == 2)
             {
-                GotoLine(story, 324);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,324,2);
                 f2++;
             }
             else if (option == 3 && f3 == 0)
             {
-                GotoLine(story, 326);
-                int ln = 0;
-                while (ln < 2)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,326,2);
                 f3++;
             }
             else
                 displaySlow("Podrick: We already talked about this");
             if (f2 == 0)
             {
-                GotoLine(story, 318);
-                ln = 0;
-                while (ln < 4)
-                {
-                    string lin;
-                    getline(story, lin, '\n');
-                    displaySlow(lin);
-                    ln++;
-                }
+                displayStory(story,318,4);
             }
         }
         //system("pause");
         cls();
-        GotoLine(story, 330);
-        ln = 0;
-        while (ln < 18)
-        {
-            string lin;
-            getline(story, lin, '\n');
-            displaySlow(lin);
-            ln++;
-        }
+        displayStory(story,330,18);
         // system("pause");
         cls();
         woods();
@@ -1671,25 +1160,9 @@ void woods()
     progress << "WOODS"<<endl;
 woods:
 
-    GotoLine(story, 348);
-    int ln = 0;
-    while (ln < 10)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,348,10);
     cls();
-    GotoLine(story, 359);
-    ln = 0;
-    while (ln < 6)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,359,6);
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
     int ans = 0;
     while (ans != 2)
@@ -1698,68 +1171,28 @@ woods:
         option = check_penta(option);
         if (option == 1 && f1 == 0)
         {
-            GotoLine(story, 366);
-            int ln = 0;
-            while (ln < 2)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,366,2);
             f1++;
         }
         else if (option == 2 && f2 == 0)
         {
-            GotoLine(story, 368);
-            int ln = 0;
-            while (ln < 2)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,368,2);
             f2++;
             ans++;
         }
         else if (option == 3 && f3 == 0)
         {
-            GotoLine(story, 370);
-            int ln = 0;
-            while (ln < 2)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,370,2);
             f3++;
         }
         else if (option == 4 && f4 == 0)
         {
-            GotoLine(story, 372);
-            int ln = 0;
-            while (ln < 2)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,372,2);
             f4++;
         }
         else if (option == 5 && f5==0)
         {
-            GotoLine(story, 374);
-            int ln = 0;
-            while (ln < 2)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,374,2);
             f5++;
             ans++;
         }
@@ -1767,39 +1200,15 @@ woods:
             displaySlow("Podrick: We already talked about this");
         if (f2 == 0 || f5 == 0)
         {
-            GotoLine(story, 359);
-            ln = 0;
-            while (ln < 6)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,359,6);
         }
     }
-    GotoLine(story, 377);
-    ln = 0;
-    while (ln < 14)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,377,14);
     f1 = 0;
     int i = 0;
     while (f1 == 0)
     {
-        GotoLine(story, 391);
-        ln = 0;
-        while (ln < 3)
-        {
-            string lin;
-            getline(story, lin, '\n');
-            displaySlow(lin);
-            ln++;
-        }
+        displayStory(story,391,3);
         cin >> option;
         option = check_two(option);
         if (option == 1)
@@ -1832,15 +1241,7 @@ woods:
             }
         }
     }
-    GotoLine(story, 394);
-    ln = 0;
-    while (ln < 9)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,394,9);
     f1 = 0;
     while (f1 == 0)
     {
@@ -1855,26 +1256,10 @@ woods:
         {
             cout << "Ivan fears that it could be Matilda who they will kill if you don’t go. For their sake, you accept to go." << endl;
             cout << "Game proceeds only if you accept the challenge" << endl;
-            GotoLine(story, 400);
-            ln = 0;
-            while (ln < 3)
-            {
-                string lin;
-                getline(story, lin, '\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,400,3);
         }
     }
-    GotoLine(story, 404);
-    ln = 0;
-    while (ln < 15)
-    {
-        string lin;
-        getline(story, lin, '\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,404,15);
     cls();
     cout<<"call fight function"<<endl;
     cls();
@@ -1888,67 +1273,19 @@ void finding_princess()
     progress.open("./resources/txtFiles/progress.txt", ios::app);
     progress << "FIND PRINCESS"<<endl;
     find_princess:
-    GotoLine(story,420);
-    int ln=0;
-    while(ln<12)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,420,12);
     cls();
-    GotoLine(story,433);
-    ln=0;
-    while(ln<15)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,433,15);
     cls();
-    GotoLine(story,450);
-    ln=0;
-    while(ln<21)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,450,21);
     cls();
-    GotoLine(story,472);
-    ln=0;
-    while(ln<3)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,472,3);
     // function to dodge
     // if dodge success
     cls();
-    GotoLine(story,477);
-    ln=0;
-    while(ln<20)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,477,20);
     cls();
-    GotoLine(story,498);
-    ln=0;
-    while(ln<7)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,498,7);
     int f1=0,f2=0,f3=0;
     while(f3==0)
     {
@@ -1956,78 +1293,30 @@ void finding_princess()
         option=check_tri(option);
         if(option==1&&f1==0)
         {
-            GotoLine(story,506);
-            ln=0;
-            while(ln<2)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,506,2);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            GotoLine(story,508);
-            ln=0;
-            while(ln<2)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,508,2);
             f2++;
         }
         else if(option==3)
         {
-            GotoLine(story,511);
-            ln=0;
-            while(ln<3)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,511,3);
             f3++;
         }
         else
             displaySlow("Just now you thought of it!");
         if(f3==0)
         {
-            GotoLine(story,501);
-            ln=0;
-            while(ln<4)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;   
-            }
+            displayStory(story,501,4);
         }
     }
     cls();
-    GotoLine(story,516);
-    ln=0;
-    while(ln<8)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,516,8);
     cls();
-    GotoLine(story,526);
-    ln=0;
-    while(ln<8)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,526,8);
     f1=0,f2=0,f3=0;
     while(f3==0)
     {
@@ -2035,77 +1324,29 @@ void finding_princess()
         option=check_tri(option);
         if(option==1&&f1==0)
         {
-            GotoLine(story,535);
-            ln=0;
-            while(ln<2)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,535,2);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            GotoLine(story,537);
-            ln=0;
-            while(ln<2)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,537,2);
             f2++;
         }
         else if(option==3)
         {
-            GotoLine(story,539);
-            ln=0;
-            while(ln<2)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,539,2);
             f3++;
         }
         else
             displaySlow("Podrick: We just talked about this");
         if(f3==0)
         {
-            GotoLine(story,530);
-            ln=0;
-            while(ln<4)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,530,4);
         }
     }
-    GotoLine(story,542);
-    ln=0;
-    while(ln<6)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,542,6);
     cls();
-    GotoLine(story,549);
-    ln=0;
-    while(ln<9)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,549,9);
     f1=0,f2=0,f3=0;
     while(f1==0&&f3==0)
     {
@@ -2113,67 +1354,27 @@ void finding_princess()
         option=check_tri(option);
         if(option==1)
         {
-            GotoLine(story,559);
-            ln=0;
-            while(ln<2)
-            {
-               string lin;
-               getline(story,lin,'\n');
-               displaySlow(lin);
-               ln++; 
-            }
+            displayStory(story,559,2);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            GotoLine(story,561);
-            ln=0;
-            while(ln<2)
-            {
-               string lin;
-               getline(story,lin,'\n');
-               displaySlow(lin);
-               ln++; 
-            }
+            displayStory(story,561,2);
             f2++;
         }
         else if(option==3)
         {
-            GotoLine(story,563);
-            ln=0;
-            while(ln<2)
-            {
-               string lin;
-               getline(story,lin,'\n');
-               displaySlow(lin);
-               ln++; 
-            }
+            displayStory(story,563,2);
             f3++;
         }
         else 
             displaySlow("Podrick: We just talked about this");
         if(f1==0 && f3==0)
         {
-            GotoLine(story,553);
-            ln=0;
-            while(ln<5)
-            {
-                string lin;
-                getline(story,lin,'\n');
-                displaySlow(lin);
-                ln++;
-            }
+            displayStory(story,553,5);
         }
     }
-    GotoLine(story,566);
-    ln=0;
-    while(ln<4)
-    {
-        string lin;
-        getline(story,lin,'\n');
-        displaySlow(lin);
-        ln++;
-    }
+    displayStory(story,566,4);
     cls();
     //maze();
 
