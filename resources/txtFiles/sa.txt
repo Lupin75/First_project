@@ -468,3 +468,104 @@ Someone knocks the door. You go and open the door. It is Ivan. You also notice a
 You open it and the following words are written.
 "As the coward prince didn't get his ransom on time, a poor girl named Matilda lost her life."
 ---------------
+
+You stand devastated without any breath. By looking your reaction, Podrick and Ivan take that letter from your motion-less body and read it. After reading it, Iva's heart stopped. Everyone in the room looks stunned and cannot understand what has happened.
+Suddenly, Ivan is filled with extreme rage and draws his sword and furiously pounces to attack you.
+Save yourself!!
+-----------------
+
+You dodge the first swing successfully but land awkwardly so that you are not able to dodge the second swing properly and crash into the cupboard.
+Podrick holds back Ivan and asks him to calm down.
+Ivan: What have you done? What did you do in that cliff?
+You explain what happened there as """""""""""""""""""""""""""""""""""""""""""""""""""
+Ivan couldn't control his tears and he just runs away to his horse while the tears from his eyes drip all over his path.
+Podrick (to $PN): Come, we need to console Ivan.
+You both just started to run through that big hallway, when Ivan shouts at you.
+Ivan: STOP. Don't come any closer. If you take even a step, no one can stop me from killing you.
+Podrick: Ivan, listen. We can talk. Don't do anything stupid.
+Ivan: My only happiness in this world was killed by that vicious detective. What more do I have in this life? 
+He goes out of the hotel. You both go behind him and try to stop him. But he doesn't listen to you and gets on his horse. You can see a bag on his horse and along with it he hastily went outside the city.
+----------------
+
+Podrick: Please tell me what happened in the cliff.
+$PN: The assassin told me it was the prince that kidnapped them and tried to kill me. But I didn't believe it then.
+Podrick: For the past few months, the prince has some issues with the family. It can be his work. Why would you tell the prince as a coward? I think that's what aggravated him.
+$PN: No, I didn't. It was a miscommunication.
+Podrick: All right. We need to talk about this to the king.
+You both get on your horses and start moving to the palace quickly
+-------------
+
+$PN: Podrick, I didn't expect this at all. I didn't do this on purpose.
+Podrick: Don't worry too much. We can't be sure that he killed Matilda just by his words on a letter.
+You suddenly stop. Your feeling of guilt suddenly vanishes, and your mind becomes clear and open. You start to see the broader picture. You get doubts on people around you.
+# Can you think of anyone who might be the suspect
+1. Prince 
+2. Podrick 
+3. Ivan
+
+$PN: Prince
+Your inner voice: I feel that there is someone involved more
+$PN: Podrick
+Your inner voice: No, He seems a very loyal man. What made you think that?
+
+Podrick: Why did you stop?
+You: Did you notice the fact that both the letters from the kidnappers came to us through Ivan?
+Podrick: You suspect Ivan? He is already heartbroken. You are blabbering because of the stress.
+------------------
+
+At the end of the road, you can see some guards searching for something in a hurry. Podrick calls one of the guards and asks what happened. 
+Guard: Half of the treasury is missing including the bag of coins you brought an hour ago. The Prime minister is also missing in this important time.
+Podrick: What? From when is the prime minister missing?
+Guard1: One of our guards saw Prime minister Aron riding out of the city 2 hours ago. He was not carrying any bags. Hence, it's not the Prime minister who looted the treasury.
+Guard2: We also searched his chambers just in case and found this letter. It arrived in the evening.
+The guard hands you over the letter.
+"I have arranged 7 men. We will take of him. You don't worry Boris"
+Boris - It's an unforgettable name for you. 20 years back in the country of Shaer, you solved a case on serial killing of people above 30 and expensive robberies which took you about a year to solve. That was done by 2 brothers, Adonis and Boris. Adonis, a married man, was the head of a big network involved in killings and young Boris was the mastermind in robbery. After you found the criminals, Adonis was hanged, and Boris flew the country along with Adonis' son.
+------------------
+
+You: Boris? 
+         Podrick, Is Boris, I mean Prime Minister Aron a native citizen?
+Podrick: Aron came to this country 20 years ago. Due to his extreme intelligence and loyalty, he gained the position of the Prime minister a few years back. Why do you ask that now?
+You: I guess Prime minister is involved in the robbery. But before explaining you why, we need to find where he could have gone.
+# Where could the Prime minister be?
+1. Hiding somewhere inside the city. 
+2. Fleeing out through Jawad. 
+3. Escaping through sea. 
+
+$PN: Hiding somewhere inside the city.
+Your inner voice: Guards are searching everywhere. He is an intelligent man and should have planned to flee the city.
+$PN: Fleeing out through Jawad.
+Podrick: It is possible, but we can’t be sure
+$PN: Escaping through sea.
+Podrick: We even saw a guard getting a boat ready
+
+$PN: Ask your guards to go to the port quickly. The Prime minister is escaping through sea.
+Podrick: How can you say so sure? He didn’t even carry any bag.
+$PN: But Ivan did. 
+         We both need to go to that place Ivan told. I'll explain you on the way.
+Can you guess what could have happened? You and Podrick ride that place in the deep forest.
+--------------
+
+Podrick: Explain me what's happening.
+$PN: The kidnap, missing treasury, men trying to kill me, everything is Aron’s plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan’s father guilty for which he was hanged. Boris along with Ivan fled that city. 
+        As I came to the neighboring city Jawad, they found this opportunity the best to give revenge. So, they kidnapped the princess and recommended me to be involved in this case. By creating a chaos in the palace, they found it easy to loot this large amount.
+
+Podrick: Are you serious? Then what about Matilda’s death?
+
+1. They could have lied to create tension and slow me down.
+2. Ivan could have lied on loving Matilda. 
+3. They plan to take Matilda forcefully with them and blame her missing as death due to me. 
+
+$PN: They could have lied to create tension and slow me down. 
+     They plan to take Matilda forcefully with them and blame her missing as death due to me.
+$PN: Ivan could have lied on loving Matilda.
+     No, he really loved her and made many attempts to impress her
+$PN: They plan to take Matilda forcefully with them and blame her missing as death due to me.
+     They could have lied to create tension and slow me down.
+
+$PN: Even though Adonis and Boris were killers and thieves they never harmed a child's life. So I am sure that nothing happened to Matilda also given the fact that Ivan loves Matilda.
+Podrick: If Ivan kidnapped them, why would he tell me the right location? 
+$PN: He thought the assassin would kill me. As he has no vengeance with the princess, you could find them later at that location. But before this they would have fled the city and you couldn’t have caught them.
+Podrick: Okay. Now I get it.
+
+

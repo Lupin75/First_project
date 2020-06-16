@@ -1917,6 +1917,266 @@ void finding_princess()
         displaySlow(lin);
         ln++;
     }
+    cls();
+    GotoLine(story,472);
+    ln=0;
+    while(ln<3)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    // function to dodge
+    // if dodge success
+    cls();
+    GotoLine(story,477);
+    ln=0;
+    while(ln<20)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    cls();
+    GotoLine(story,498);
+    ln=0;
+    while(ln<7)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    int f1=0,f2=0,f3=0;
+    while(f3==0)
+    {
+        cin>>option;
+        option=check_tri(option);
+        if(option==1&&f1==0)
+        {
+            GotoLine(story,506);
+            ln=0;
+            while(ln<2)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+            f1++;
+        }
+        else if(option==2&&f2==0)
+        {
+            GotoLine(story,508);
+            ln=0;
+            while(ln<2)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+            f2++;
+        }
+        else if(option==3)
+        {
+            GotoLine(story,511);
+            ln=0;
+            while(ln<3)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+            f3++;
+        }
+        else
+            displaySlow("Just now you thought of it!");
+        if(f3==0)
+        {
+            GotoLine(story,501);
+            ln=0;
+            while(ln<4)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;   
+            }
+        }
+    }
+    cls();
+    GotoLine(story,516);
+    ln=0;
+    while(ln<8)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    cls();
+    GotoLine(story,526);
+    ln=0;
+    while(ln<8)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    f1=0,f2=0,f3=0;
+    while(f3==0)
+    {
+        cin>>option;
+        option=check_tri(option);
+        if(option==1&&f1==0)
+        {
+            GotoLine(story,535);
+            ln=0;
+            while(ln<2)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+            f1++;
+        }
+        else if(option==2&&f2==0)
+        {
+            GotoLine(story,537);
+            ln=0;
+            while(ln<2)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+            f2++;
+        }
+        else if(option==3)
+        {
+            GotoLine(story,539);
+            ln=0;
+            while(ln<2)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+            f3++;
+        }
+        else
+            displaySlow("Podrick: We just talked about this");
+        if(f3==0)
+        {
+            GotoLine(story,530);
+            ln=0;
+            while(ln<4)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+        }
+    }
+    GotoLine(story,542);
+    ln=0;
+    while(ln<6)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    cls();
+    GotoLine(story,549);
+    ln=0;
+    while(ln<9)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    f1=0,f2=0,f3=0;
+    while(f1==0&&f3==0)
+    {
+        cin>>option;
+        option=check_tri(option);
+        if(option==1)
+        {
+            GotoLine(story,559);
+            ln=0;
+            while(ln<2)
+            {
+               string lin;
+               getline(story,lin,'\n');
+               displaySlow(lin);
+               ln++; 
+            }
+            f1++;
+        }
+        else if(option==2&&f2==0)
+        {
+            GotoLine(story,561);
+            ln=0;
+            while(ln<2)
+            {
+               string lin;
+               getline(story,lin,'\n');
+               displaySlow(lin);
+               ln++; 
+            }
+            f2++;
+        }
+        else if(option==3)
+        {
+            GotoLine(story,563);
+            ln=0;
+            while(ln<2)
+            {
+               string lin;
+               getline(story,lin,'\n');
+               displaySlow(lin);
+               ln++; 
+            }
+            f3++;
+        }
+        else 
+            displaySlow("Podrick: We just talked about this");
+        if(f1==0 && f3==0)
+        {
+            GotoLine(story,553);
+            ln=0;
+            while(ln<5)
+            {
+                string lin;
+                getline(story,lin,'\n');
+                displaySlow(lin);
+                ln++;
+            }
+        }
+    }
+    GotoLine(story,566);
+    ln=0;
+    while(ln<4)
+    {
+        string lin;
+        getline(story,lin,'\n');
+        displaySlow(lin);
+        ln++;
+    }
+    cls();
+    //maze();
+
 }
 int main()
 {
