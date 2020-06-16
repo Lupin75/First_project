@@ -6,7 +6,7 @@
 /*
     Last modified by: Abishek.r
     Last modified   : 16-06-2020
-    Filename        : &TM_FILENAME
+    Filename        : story.cpp
     Description     : Removed redundant code for displaying story
 */
 
@@ -31,8 +31,8 @@ void displaySlow(string line, int speed = 100000, bool sleepStats = true)
 void displayStory(fstream &fpr, int start, int end)
 {
     GotoLine(fpr, start);
-    int ln = 0;
-    while (ln < end)
+    int ln = start;
+    while (ln <= end)
     {
         string lin;
         getline(fpr, lin, '\n');
@@ -40,7 +40,17 @@ void displayStory(fstream &fpr, int start, int end)
         ln++;
     }
 }
-void pod_conv(int line_n, int choices)
+//Overloaded to display 1 line
+void displayStory(fstream &fpr, int start)
+{
+    GotoLine(fpr, start);
+    //int ln = start;
+    string lin;
+    getline(fpr, lin, '\n');
+    displaySlow(lin);
+}
+
+void pod_conv(int line_n=27, int choices=4)
 {
     fstream story;
     story.open("./resources/txtFiles/custom.txt");
@@ -56,7 +66,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f1 == 0)
                 {
-                    displayStory(story,line_n,2);
+                    displayStory(story,line_n,28);
                     f1++;
                 }
                 else
@@ -66,7 +76,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f2 == 0)
                 {
-                    displayStory(story,line_n+2,2);
+                    displayStory(story,line_n+2,30);
                     f2++;
                 }
                 else
@@ -76,7 +86,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f3 == 0)
                 {
-                    displayStory(story,line_n+4,2);
+                    displayStory(story,line_n+4,32);
                     f3++;
                 }
                 else
@@ -86,7 +96,7 @@ void pod_conv(int line_n, int choices)
             {
                 if (f4 == 0)
                 {
-                    displayStory(story,line_n+6,7);
+                    displayStory(story,line_n+6,39);
                     f4++;
                 }
                 else
@@ -100,49 +110,7 @@ void pod_conv(int line_n, int choices)
 
             if (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
             {
-                displayStory(story,line_n-5,4);
-            }
-        }
-    }
-    if (choices == 3)
-    {
-        int f1 = 0, f2 = 0, f3 = 0;
-        while (f1 == 0 || f2 == 0 || f3 == 0)
-        {
-            option = check_tri(option);
-            if (option == 1)
-            {
-                if (f1 == 0)
-                {
-                    displayStory(story,line_n,2);
-                    f1++;
-                }
-                else
-                    displaySlow("Podrick: We already talked about this");
-            }
-            else if (option == 2)
-            {
-                if (f2 == 0)
-                {
-                    displayStory(story,line_n+2,2);
-                    f2++;
-                }
-                else
-                    displaySlow("Podrick: We already talked about this");
-            }
-            else if (option == 3)
-            {
-                if (f3 == 0)
-                {
-                    displayStory(story,line_n+4,2);
-                    f3++;
-                }
-                else
-                    displaySlow("Podrick: We already talked about this");
-            }
-            if (f1 == 0 || f2 == 0 || f3 == 0)
-            {
-                displayStory(story,line_n-5,4);
+                displayStory(story,line_n-5,26);
             }
         }
     }
@@ -182,30 +150,32 @@ void prologue()
     progress.open("./resources/txtFiles/progress.txt", ios::app);
 
     int line_count = 0;
-    GotoLine(story, 1);
+    //GotoLine(story, 1);
 
     cls();
 
-    while (line_count < 3)
+    displayStory(story,1,3);
+    /*while (line_count < 3)
     {
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
         displaySlow(line);
         line_count++;
-    }
+    }*/
     //line_count=0;
     cout << endl;
     cls();
     //cout<<"    ";
-    while (line_count < 10)
+    displayStory(story,4,10);
+    /*while (line_count < 10)
     {
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
         displaySlow(line);
         line_count++;
-    }
+    }*/
     //cout<<"linefawk"<<line_count;
     int status;
     status = check_binary(status);
@@ -234,6 +204,8 @@ void title()
     progress.open("./resources/txtFiles/progress.txt", ios::app);
     progress << "TITLE" << endl;
     cls();
+    displayStory(story,12,26);
+    /*
     while (line_count < 26)
     {
         line.clear();
@@ -247,8 +219,8 @@ void title()
         else
             displaySlow(line);
         line_count++;
-    }
-    pod_conv(27, 4);
+    }*/
+    pod_conv();
     /*int option;
     int f1 = 0, f2 = 0, f3 = 0, f4 = 0;
     while (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
@@ -337,9 +309,9 @@ void title()
 
     cls();
     //line_count = 41;
-    displayStory(story,42,48);
+    displayStory(story,41,47);
     cls();
-    displayStory(story,50,57);
+    displayStory(story,49,57);
     int option;
     //option(58,3);
     //question(58,2);
@@ -352,7 +324,7 @@ void title()
         {
             if (f1 == 0)
             {
-                displayStory(story,58,2);
+                displayStory(story,58,59);
                 f1++;
             }
             else
@@ -362,7 +334,7 @@ void title()
         {
             if (f2 == 0)
             {
-                displayStory(story,60,2);
+                displayStory(story,60,61);
                 f2++;
             }
             else
@@ -372,7 +344,7 @@ void title()
         {
             if (f3 == 0)
             {
-                displayStory(story,62,2);
+                displayStory(story,62,63);
                 f3++;
             }
             else
@@ -386,7 +358,7 @@ void title()
 
         if (f2 == 0)
         {
-            displayStory(story,54,4);
+            displayStory(story,54,57);
         }
     }
     // my code
@@ -409,7 +381,7 @@ void matilda()
     displayStory(story,71,96);
     cls();
     //line_count=98;
-    displayStory(story,98,102);
+    displayStory(story,98,103);
     cout << endl;
 
     int f1 = 0, f2 = 0, f3 = 0;
@@ -420,7 +392,7 @@ void matilda()
         {
             if (f1 == 0)
             {
-               displayStory(story,105,2);
+               displayStory(story,105,106);
                 f1++;
             }
             else
@@ -430,7 +402,7 @@ void matilda()
         {
             if (f2 == 0)
             {
-                displayStory(story,107,2);
+                displayStory(story,107,108);
                 f2++;
             }
             else
@@ -440,7 +412,7 @@ void matilda()
         {
             if (f3 == 0)
             {
-                displayStory(story,109,2);
+                displayStory(story,109,110);
                 f3++;
             }
             else
@@ -454,7 +426,7 @@ void matilda()
 
         if (f3 == 0)
         {
-            displayStory(story,100,4);
+            displayStory(story,100,103);
             cout << endl;
         }
     }
@@ -463,7 +435,7 @@ void matilda()
     cls();
 
     line_count = 116;
-    displayStory(story,117,126);
+    displayStory(story,117,125);
     cls();
     group1();
 }
@@ -483,7 +455,7 @@ group1:
     int tea_talk = 0;
 
     line_count = 131;
-    displayStory(story,132,137);
+    displayStory(story,132,138);
     cout << endl;
 
     char house;
@@ -494,12 +466,12 @@ group1:
         {
             if (h1 == 0)
             {
-                displayStory(story,139,1);
+                displayStory(story,139);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                   displayStory(story,140,1);
+                   displayStory(story,140);
                 }
                 h1++;
             }
@@ -512,7 +484,7 @@ group1:
         {
             if (h2 == 0)
             {
-                displayStory(story,142,1);
+                displayStory(story,142);
                 h2++;
             }
             else
@@ -524,12 +496,12 @@ group1:
         {
             if (h3 == 0)
             {
-                displayStory(story,144,1);
+                displayStory(story,144);
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
-                    displayStory(story,145,1);
+                    displayStory(story,145);
                 }
                 h3++;
             }
@@ -543,21 +515,21 @@ group1:
         {
             if (h4 == 0)
             {
-                displayStory(story,147,1);
+                displayStory(story,147);
                 cout << "\n 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
 
                     tea_talk++;
-                    displayStory(story,148,3);
+                    displayStory(story,148,149);
                     cout << "# What do you reply? \n1. Yes, of course. \n2. No, I am an atheist\n"
                          << endl;
                     int reply = check_binary(reply);
                     if (reply == 1)
                     {
                         cout << playerName + ": Yes, ofcourse." << endl;
-                        displayStory(story,152,1);
+                        displayStory(story,152);
                         cout << "#What so you reply\n1. This universe must be created by someone. \n"
                              << "2. On the grounds of modesty, I believe the presence of something powerful than humans.\n"
                              << "3. I have experienced his goodness and mercy.\n"
@@ -576,14 +548,14 @@ group1:
                         {
                             cout << playerName + ": I have experienced his goodness and mercy." << endl;
                         }
-                        cout << "Customer4: See, even this foreigner believes in god." << endl;
+                        cout << "Customer 4: See, even this foreigner believes in god." << endl;
                     }
                     else if (reply == 2)
                     {
                         //Atheist
 
                         cout << playerName + ": No, I am an atheist." << endl;
-                        displayStory(story,152,1);
+                        displayStory(story,152);
                         cout << "#What do you reply? \n1. It's the easiest answer for complex questions.\n"
                              << "2. God is just a delusional companion during hardships in the form of faith and hope.\n"
                              << "3. He was created to bring fear and order among the people.\n"
@@ -602,18 +574,20 @@ group1:
                         {
                             cout << playerName + ": He was created to bring fear and order among the people." << endl;
                         }
-                        cout << "Customer4: See, even this foreigner is an atheist." << endl;
+                        cout << "Customer 4: See, even this foreigner is an atheist." << endl;
                     }
                     line_count = 159;
                     GotoLine(story, 160);
                     //int ln=0;
+                    displayStory(story,160,165);
+                    /*
                     while (line_count < 165)
                     {
                         string lin;
                         getline(story, lin, '\n');
                         displaySlow(lin);
                         line_count++;
-                    }
+                    }*/
                     cls();
                 }
                 h4++;
@@ -626,7 +600,7 @@ group1:
 
         if (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
         {
-            displayStory(story,132,6);
+            displayStory(story,132,137);
             cout << endl;
         }
     }
@@ -639,16 +613,17 @@ group1:
     }
     else if (tea_talk == 1)
     {
-        line_count = 166;
-        GotoLine(story, 167);
-        while (line_count < 174)
+        //line_count = 166;
+        //GotoLine(story, 167);
+        displayStory(story,167,174);
+        /*while (line_count < 174)
         {
             string line;
             getline(story, line, '\n');
             //story_line.push_back(line);
             displaySlow(line);
             line_count++;
-        }
+        }*/
         int f1 = 0, f2 = 0, f3 = 0;
         int ans = 0;
         while (ans == 0)
@@ -658,7 +633,7 @@ group1:
             {
                 if (f1 == 0)
                 {
-                    displayStory(story,176,2);
+                    displayStory(story,176,177);
                     f1++;
                     ans++;
                 }
@@ -669,7 +644,7 @@ group1:
             {
                 if (f2 == 0)
                 {
-                    displayStory(story,178,2);
+                    displayStory(story,178,179);
                     f2++;
                 }
                 else
@@ -679,7 +654,7 @@ group1:
             {
                 if (f3 == 0)
                 {
-                    displayStory(story,180,2);
+                    displayStory(story,180,181);
                     f3++;
                     ans++;
                 }
@@ -694,13 +669,14 @@ group1:
 
             if (ans == 0)
             {
-                displayStory(story,171,4);
+                displayStory(story,171,174);
                 cout << endl;
             }
         }
         //pod_conv(175,3);
         cls();
-        line_count = 182,
+        displayStory(story,183,188);
+        /*line_count = 182,
         GotoLine(story, 183);
         while (line_count < 188)
         {
@@ -709,7 +685,7 @@ group1:
             //story_line.push_back(line);
             displaySlow(line);
             line_count++;
-        }
+        }*/
 
         f1 = 0, f2 = 0, f3 = 0;
         ans = 0;
@@ -720,7 +696,7 @@ group1:
             {
                 if (f1 == 0)
                 {
-                    displayStory(story,190,2);
+                    displayStory(story,190,191);
                     f1++;
                 }
                 else
@@ -730,7 +706,7 @@ group1:
             {
                 if (f2 == 0)
                 {
-                    displayStory(story,192,2);
+                    displayStory(story,192,193);
                     f2++;
                     ans++;
                 }
@@ -741,7 +717,7 @@ group1:
             {
                 if (f3 == 0)
                 {
-                    displayStory(story,194,2);
+                    displayStory(story,194,195);
                     f3++;
                     ans++;
                 }
@@ -756,14 +732,15 @@ group1:
 
             if (ans == 0)
             {
-                displayStory(story,185,4);
+                displayStory(story,185,188);
                 cout << endl;
             }
         }
         //pod_conv(189,3);
         cls();
     }
-    line_count = 199,
+    displayStory(story,200,202);
+    /*line_count = 199,
     GotoLine(story, 200);
     while (line_count < 202)
     {
@@ -772,16 +749,16 @@ group1:
         //story_line.push_back(line);
         displaySlow(line);
         line_count++;
-    }
+    }*/
     //cls();
-    while (line_count < 203)
+    /*while (line_count < 203)
     {
         line.clear();
         getline(story, line, '\n');
         //story_line.push_back(line);
         displaySlow(line);
         line_count++;
-    }
+    }*/
     progress.close();
     story.close();
     cls();
@@ -799,7 +776,7 @@ void group2()
 
 group2:
     int h1 = 0, h2 = 0, h3 = 0;
-    displayStory(story,204,5);
+    displayStory(story,204,208);
     cout << endl;
 
     int farmTalk = 0;
@@ -810,7 +787,7 @@ group2:
         {
             if (h1 == 0)
             {
-                displayStory(story,209,1);
+                displayStory(story,209);
                 cout << "\n 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
@@ -822,13 +799,15 @@ group2:
                     if (ans == 1)
                     {
                         SPYBAR += 50;
-                        displayStory(story,210,2);
+                        displayStory(story,211,212);
                     }
                     else if (ans == 2)
                     {
-                        displayStory(story,212,2);
+                        displayStory(story,213,214);
                     }
-                    line_count = 213;
+                    displayStory(story,215,231);
+                    cout<<endl;
+                    /*line_count = 213;
                     GotoLine(story, 214);
                     while (line_count < 231)
                     {
@@ -836,7 +815,7 @@ group2:
                         getline(story, lin, '\n');
                         displaySlow(lin);
                         line_count++;
-                    }
+                    }*/
                     int f1 = 0, f2 = 0, f3 = 0;
                     while (f2 == 0)
                     {
@@ -845,7 +824,7 @@ group2:
                         {
                             if (f1 == 0)
                             {
-                                displayStory(story,232,2);
+                                displayStory(story,232,233);
                                 f1++;
                             }
                             else
@@ -855,7 +834,7 @@ group2:
                         {
                             if (f2 == 0)
                             {
-                               displayStory(story,234,2);
+                                displayStory(story,234,235);
                                 f2++;
                             }
                             else
@@ -865,7 +844,7 @@ group2:
                         {
                             if (f3 == 0)
                             {
-                                displayStory(story,236,2);
+                                displayStory(story,236,237);
                                 f3++;
                             }
                             else
@@ -879,13 +858,13 @@ group2:
 
                         if (f2 == 0)
                         {
-                            displayStory(story,226,5);
+                            displayStory(story,227,231);
                             cout << endl;
                         }
                     }
                     cls();
 
-                   displayStory(story,238,4);
+                    displayStory(story,239,242);
                     cout << endl;
                 }
                 h1++;
@@ -901,7 +880,7 @@ group2:
         {
             if (h2 == 0)
             {
-                displayStory(story,244,1);
+                displayStory(story,244);
                 h2++;
             }
             else
@@ -914,19 +893,20 @@ group2:
         {
             if (h3 == 0)
             {
-                GotoLine(story, 246);
+                displayStory(story,246,247);
+                /*GotoLine(story, 246);
                 string lin;
                 getline(story, lin, '\n');
                 displaySlow(lin);
                 getline(story, lin, '\n');
-                displaySlow(lin);
+                displaySlow(lin);*/
                 cout << " 1. Talk\n 2. Move" << endl;
                 int choice = check_binary(choice);
                 if (choice == 1)
                 {
                     SPYBAR += 100;
 
-                    displayStory(story,247,3);
+                    displayStory(story,248,250);
                 }
                 else if (choice == 2)
                 {
@@ -942,7 +922,7 @@ group2:
 
         if (h1 == 0 || h2 == 0 || h3 == 0)
         {
-            displayStory(story,204,5);
+            displayStory(story,204,208);
             cout << endl;
         }
     }
@@ -1388,13 +1368,13 @@ int main()
     cin >> playerName;
 
     customise_game();
-
     fstream story;
     story.open("./resources/txtFiles/custom.txt");
 
     ifstream checkpnt;
     checkpnt.open("./resources/txtFiles/progress.txt");
     string checkpoint;
+    
     int c_p = 0;
     std::vector<string> checkp;
     while (checkpnt.good())
@@ -1404,14 +1384,18 @@ int main()
         checkp.push_back(checkpoint);
         c_p++;
     }
+    //cout<<"CHECK !";
+    
     //cout<<"Number of checkpoints: "<<c_p<<endl;
-    if (checkpoint == "")
+    if (checkpoint == ""&& checkp.size()>1)
     {
         //cout << "Last checkpoint: " << checkp[c_p - 2] << endl;
         checkpoint = checkp[c_p - 2];
     }
+    //cout<<"CHECK @";
+    
     cout << "Last checkpoint: " << checkpoint << endl;
-    system("pause");
+    //system("pause");
     if (checkpoint == "GROUP1")
         group1();
     else if (checkpoint == "GROUP2")

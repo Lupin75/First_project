@@ -1,5 +1,5 @@
 	You just woke up from a comfortable sleep. You sit upon the heavenly mattress and look outside your bedside window to find the Sun rising above the horizon. You get up from the bed and scan your room the King of Jawad provided you, in the most luxurious mansion in the kingdom. You find the brown bag of 1000 gold coins and the note from the King of Jawad that reads: 
-	We are deeply honoured to have you, Abi the Greatest Detective in all kingdoms to participate in our annual festival. Enjoy your stay.
+	We are deeply honoured to have you, Mason the Greatest Detective in all kingdoms to participate in our annual festival. Enjoy your stay.
  ~Annual festival: The richest festival of all kingdoms which goes on for a month. Anyone from any kingdom can come, participate and enjoy. You were one of the chief guests for their inaugural function which held last week.
 	As you walk towards the balcony, you hear a sudden knocking on the door. You rush to the door and open to find nobody in the corridor. When you look down, you find a white cover. You open the cover and a letter is there with the following words.
 	An important person is missing. We need your help. Come quickly to Jade City and do not tell anyone.
@@ -11,11 +11,11 @@ Enter 1 or 2
 //********TITLE**********
 Understanding the emergency, you get on your horse and start galloping towards Jade City. All alone in the scorching highways with not much trees around you to cast shadow from hot sunrays you maintain a steady pace through the rough terrains. Finally, you see a big arch welcoming you to the city of Jadeite after three hours of ride. When you go closer you find the arch looking in a bad state of maintenance and there are no guards at the entrance. As you ride through the outskirts for some ten minutes, you finally approach a junction with a nearby stall for travelers to refresh themselves.
 So you decide to take a small break and let your horse take some rest. After few minutes as you are starting to resume your journey after asking the stall owner directions to the city, you see a blonde man on a white horse coming that way taking a right at the junction (the direction of the main city/ palace).As you observe his clothes, you think that he is a foreign traveler but something seems suspicious about him. But you see that man slowing down his horse as if he was coming for you.
-Traveler: Hello, Detective Abi. I am a chief intelligence agent of Jade City. This is for you.   (He offers you a letter)
+Traveler: Hello, Detective Mason. I am a chief intelligence agent of Jade City. This is for you.   (He offers you a letter)
 It reads: 
    This is a secret operation of utmost importance. I apologize for not being able to meet you directly. Podrick the one with the letter will explain you everything about the issue and see to your needs. If it is of any help I completely trust him.
 		King George
-Abi: So you are Podrick huh?
+Mason: So you are Podrick huh?
 Podrick: Yes. We should move quickly. Let us move towards the mainland. Meanwhile, you can ask your questions to understand what's happening.
 
 You get on your horse and follow Podrick
@@ -24,13 +24,13 @@ You get on your horse and follow Podrick
 3.	What makes this a right opportunity?
 4.	About the people.
 
-Abi: So what happened and who is missing?
+Mason: So what happened and who is missing?
 Podrick: Her honor the princess "Name" has gone missing. The princess, her two friends along with two important generals in top military positions, who went for their safety, have gone missing yesterday.
-Abi: So why is the fact that the princess is missing, is being kept a secret?
+Mason: So why is the fact that the princess is missing, is being kept a secret?
 Podrick: If you have not heard, there was a famine 6 months ago, due to which the economy and military of the kingdom went down drastically. Due to such issues there was also a small people's rebellion which was quickly solves as the King accepted the plea of the people. Due to the current political situation, every other country is waiting for the right opportunity to hit us.
-Abi: What makes this a right opportunity for the invaders?
+Mason: What makes this a right opportunity for the invaders?
 Podrick: Due to increasing political tension, the princess was engaged to Prince Clarke of Raken for military support. But the ambassador of Raken got to know about the princess missing. To ease the tension, he asked for the prince Clarke to come here to Jade City. It takes around 2 days for the prince to come from Raken. If the prince Clarke finds that she is missing he will call off any further relationship with our country. So, our country will become more vulnerable to war.
-Abi: And what about the people?
+Mason: And what about the people?
 Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum possible interactions possible. Type SPYBAR.
  ~SPYBAR:
   1.Every interaction of yours increases a certain amount of value in a SPYBAR.
@@ -38,16 +38,16 @@ Podrick: The number of spies in the country has increased drastically. Even inve
   3.The SPYBAR value can reach directly over 100 if you interact with even one of the spies.
   4.This SPYBAR value is revealed only after the end of that level.
 ---------------------------
-Abi: So how did the princess go missing?
+Mason: So how did the princess go missing?
 Podrick: The princess and others started very early this morning around 5 am for a picnic. We are not sure where they went. But they should have returned by 7pm. But even after searching all night, they couldn't be found anywhere. The Prime minister somehow knew of your presence in the next country and recommended you in order to fasten the searching process.
  ~Others: Two best friends of princess (i.e. a girl named Matilda, a boy named Phil), Chief General of Cavalry and General of right wing of infantry.
-Abi: Where would they go that early in the morning?
+Mason: Where would they go that early in the morning?
 Podrick: We don't know. But when we searched for evidences in princess' room, a letter was found.
    Letter: You say on going to Jawad's festival. Matilda recommends the beach. I wish to go to the cliffs. So, we need to meet up and finalize one place and save the rest for other trips.
                 There is no name written on the bottom. The handwriting and the writing style don't seem to belong to a well-educated person.
 ------------------------------
 Podrick: The letter should be from Phil. He is the son of a poor pet shop owner from whom princess bought her parrot a year ago. Matilda is the princess' childhood friend.
-Abi: If they did actually go to Jawad, can those people at the refreshment stall whom we saw earlier have a possibility of knowing that they crossed?
+Mason: If they did actually go to Jawad, can those people at the refreshment stall whom we saw earlier have a possibility of knowing that they crossed?
 Podrick: No, not probably. Their houses are on the way to the main city. They open those shops only after 10am. We also couldn't place guards 24/7 on the entrance of the country due to internal problems. So, we don't have idea on whether they went to Jawad.
 
 # Can you identify anything from the letter
@@ -55,17 +55,17 @@ Podrick: No, not probably. Their houses are on the way to the main city. They op
  2) They should have gone to any one of the three places only 
  3) They should have planned to go to all three places 
 
-Abi: As per the princess' wish, they should have gone to Jawad's festival 
+Mason: As per the princess' wish, they should have gone to Jawad's festival 
 Podrick: No, they valued each other
-Abi: They should have gone to any one of the three places only 
+Mason: They should have gone to any one of the three places only 
 Podrick: That could be right. Each place is worth spending a day
-Abi: They should have planned to go to all three places 
+Mason: They should have planned to go to all three places 
 Podrick: Traveling time will be lot and the purpose of picnic won't be fulfilled
 ------------------------------
 Despite the famine you are surrounded by trees on your way to the main city. After riding for around 15 mins you can faintly see the huge gates of the main city.
-Abi: Did you investigate in her friend's houses?
+Mason: Did you investigate in her friend's houses?
 Podrick: Due to spies' problem, we haven't even told Matilda's parents about them missing. We told them she is staying in the palace. We don't yet know the exact location of where the boy lives. The princess has known him for less than a year. His father died due to the famine. The pet shop and their previous house have been closed for months.
-Abi: He seems suspicious and smart. Within a year, he has become the best friend of princess. Where are we going now?
+Mason: He seems suspicious and smart. Within a year, he has become the best friend of princess. Where are we going now?
 Podrick: I thought of starting to investigate at Matilda's house with your help first as we need to start the investigation quickly. We can come back to the junction later to investigate more.
 
 You are now at the entrance of the city gates. There are guards observing everyone who passes by. The city is densely populated, and the houses look modern but not in their best state. Also the famine seems to have affected the life of the people adversely.
@@ -95,24 +95,24 @@ Matilda's mother: Don't come to such conclusions. Even Matilda kept that a secre
 Podrick: Still, keeping an eye on them is better. Then we'll take leave madam.
 						(You both leave the house)	
 ----------------------------
-Abi: The only thing that might help in investigation is that the sunscreen lotion was on the table.
+Mason: The only thing that might help in investigation is that the sunscreen lotion was on the table.
 
 # Do you infer anything from that 
 1.	They should have gone to Jawad's festival because this is the place where they'll need least sunscreen.
 2.	They must have gone either to beach or cliff 
 3.	We can't conclude anything strongly.
 
-Abi: They should have gone to Jawad's festival because this is the place where they'll need least sunscreen.
+Mason: They should have gone to Jawad's festival because this is the place where they'll need least sunscreen.
 Podrick: Maybe she wanted it but forgot to take it.
-Abi: They must have gone either to beach or cliff 
+Mason: They must have gone either to beach or cliff 
 Podrick: We can't be so sure. Maybe she just applied it and kept it on the table as she doesn't need it anymore)
-Abi: But we can't conclude anything strongly just from the sunscreen lotion. 
+Mason: But we can't conclude anything strongly just from the sunscreen lotion. 
 Podrick: So it seems
 
-Abi: Well that was not much useful. It is common to not find clues immediately. So don't get disheartened.
+Mason: Well that was not much useful. It is common to not find clues immediately. So don't get disheartened.
 	 Let's head back to the junction. 
 Podrick: Let's pray that at least they know something
-Abi: This could help us retrace their steps hopefully.
+Mason: This could help us retrace their steps hopefully.
 
 			You then ride back to the junction to investigate the people 
 
@@ -158,14 +158,14 @@ You: 1.It's the easiest answer for complex questions.
      3.He was created to bring fear and order among the people.
 Customer 4: See, even this foreigner believes in god/is an atheist.
 Customer 5: Basically, there was a debate on God's existence. No native Jade believes in God. But this business man was talking on how other country citizens believe in God.
-Abi: All right. But I think everybody have equal rights to have their own beliefs. 
+Mason: All right. But I think everybody have equal rights to have their own beliefs. 
 -------------
 (You now order something and after other customers went, you got time to create a conversation with the owner)
 You get acquainted that the shop owner heard sounds of a pack of horses while he was about to wake up at around 6 am. They were going in a direction opposite to the city.
 -----------------------
 
 Podrick (to you): The tea stall owner must be referring to the princess and others along with her.
-Abi: You said that princess started at 5am. But this man heard sounds near 6am. Will it take 1 hour to reach here from the palace?
+Mason: You said that princess started at 5am. But this man heard sounds near 6am. Will it take 1 hour to reach here from the palace?
 Podrick: No. It takes less than 30 minutes. But who else could travel with pack of horses?
 
 #What do you deduce?
@@ -173,11 +173,11 @@ Podrick: No. It takes less than 30 minutes. But who else could travel with pack 
  2.Some group of travelers. 
  3.Somebody else from the kingdom 
 
-Abi: The princess might have gotten there late?
+Mason: The princess might have gotten there late?
 Podrick: Her friends stayed in the palace the night before. So, there's no need to spend time anywhere.That's possible but the reason for delay is still unclear
-Abi: Could it be some other group of travelers?
+Mason: Could it be some other group of travelers?
 Podrick: After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.
-Abi: It could also be somebody else from the kingdom. 
+Mason: It could also be somebody else from the kingdom. 
 Podrick: As far as I know, no one had any official meetings and any need to come this early, but it is possible
 ----------------
 This reminds you of another unsolved question
@@ -187,11 +187,11 @@ This reminds you of another unsolved question
  2.In order to reach on time for the Jawad's festival that starts at 7am.
  3.To see the sunrise.
 
-Abi: Did they start so early to maximize the total time of picnic?
+Mason: Did they start so early to maximize the total time of picnic?
 Podrick: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep
-Abi: In order to reach on time for the Jawad's festival that starts at 7am
+Mason: In order to reach on time for the Jawad's festival that starts at 7am
 Podrick: That's is more probable
-Abi: Could it be to see the sunrise
+Mason: Could it be to see the sunrise
 Podrick: That's a possible solution. The sunrise looks magnificent in our country compared to others
 --------------
 Type next to go to the next group of buildings
@@ -199,7 +199,7 @@ Type next to go to the next group of buildings
 The player should have visited the poet's house and the tea shop. Then only the game proceeds. (Else game tells 'you're missing a clue')
 While riding to the next group,
 Podrick: If they wanted to watch the sunrise, the sunrise looks great from both the cliffs and the beach.
-Abi: We might get more information on investigation. Then we can decide.
+Mason: We might get more information on investigation. Then we can decide.
 ------------------
 At the second group, you can see
 
@@ -208,21 +208,21 @@ F: Refresher's house
 G: Antique store
      A weak building made of straws and twigs. An old man (who is the farmer) siting on the entrance of the house, is shouting to his wife inside the house in a bit irritated voice.  You hear him saying, "you talk as if I do nothing for this house. Who is the one that goes to the farm every day at first light in the morning?". Then he just angrily walks out of the house.
 Talk: 
-Abi: Excuse me sir. We are travelers from another country. Which way is the Palace?
+Mason: Excuse me sir. We are travelers from another country. Which way is the Palace?
 Farmer: Follow this road and it will lead you to the palace.
-Abi: The weather is good , looks like there will be a good harvest here this year.
-Famer: Yes sir, he weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
-Abi: Thank you sir.
+Mason: The weather is good , looks like there will be a good harvest here this year.
+Farmer: Yes sir, the weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
+Mason: Thank you sir.
 	 (As you drink your coconut)I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
 Farmer: (smilingly replies) Yes sir. But to be honest, I work lot more than her. I go to the farm everyday as early as 5. It takes me half an hour to walk there. There won't be anyone even to talk at that time. For three hours my only companion will be my two bullocks.
-Abi: Did you say that you go to the farms at 5am! You really are much younger than you look.
+Mason: Did you say that you go to the farms at 5am! You really are much younger than you look.
          But do not tell that you will be alone with bullocks. There must be some people around your fields.
 Farmer: My field is on the way to the cliffs, a lonely path. There was another farmer who accompanied me before. But after the famine, he gave up on farming and left the country. I am not exaggerating in telling you that I have never seen anybody during my first 3 hours of the day after that. My first encounter will be with any of the colony men when they open their shops around 9 when I return to my home.
 Podrick: I heard that the famine came last year. Have you not seen even one person in the entire year during the morning?
 Farmer: No. As I say there are no houses on that way and no need for anyone to go there that early in the morning.
 (A faint voice from his wife comes out of the house and calls him for some help)
                My wife is calling me to lift some weight. I need to go.
-Abi: Nice to meet you, sir.   
+Mason: Nice to meet you, sir.   
 You leave the place---------------
 Podrick: The princess started at 5am. She should have reached the cliffs at least by 6, if they had planned to go there. According to the farmer, no one has crossed his field before 9am. But one must cross his field to reach the cliff. 
 #What can you infer?
@@ -230,11 +230,11 @@ Podrick: The princess started at 5am. She should have reached the cliffs at leas
  2.	They didn't reach the cliffs before 9am. 
  3.	The farmer might not have noticed them passing. 
 ----------------
-Abi: So the princess didn't go to the cliffs.
+Mason: So the princess didn't go to the cliffs.
 Podrick: It is possible that due to some unknown reason, they might have needed more time to go or they could have done something else before they went to cliffs.
-Abi: So the princess didn't reach the cliffs before 9 am.
+Mason: So the princess didn't reach the cliffs before 9 am.
 Podrick: That's the only thing we can be sure of.
-Abi: The farmer might not have noticed them passing. 
+Mason: The farmer might not have noticed them passing. 
 Podrick: They were 5 horses. He should have seen them. Moreover, he had a sharp ear. We saw how he recognized that feeble call from his wife.
 Podrick: If we summarize what we got till now, 
  * They could have either gone to Jawad.
@@ -272,17 +272,17 @@ You didn't get anything related to the missing.
 
 The cobbler is sitting just outside his humble looking house and repairing some footwear. His 5 years old daughter is playing on the road. You can see an expensive set of bangles on the child. It also seems brand new.
 You approach the cobbler to polish your shoes. While he is polishing, you entertain that kid.
-Abi (to the kid): These bangles look nice. Can I see them?
+Mason (to the kid): These bangles look nice. Can I see them?
 Child: No, you can't.  (She covers her hand) 
        This was given by the princess. I won't even let you to touch it. It's mine.
-Abi: You want me to believe you that the princess gave you that?
+Mason: You want me to believe you that the princess gave you that?
 Child: I don't care whether you believe.   (She runs inside the house)
 Cobbler: Don't take it as an offence sir. She's always like that.
-Abi: It's all right. Anyways, those bangles look cute on her hands.
+Mason: It's all right. Anyways, those bangles look cute on her hands.
 Cobbler: 2 days back, the princess came here to stitch a slipper. She saw my daughter looking at her bangles and right away, she took it off and gave to my child. I tried to return it to the princess, but she was happier to see those bangles on my child and just walked away in the direction that leads to the city. She is so generous.
-Abi: That's so great of her. But are you saying that the princess herself came here to stitch a slipper?
+Mason: That's so great of her. But are you saying that the princess herself came here to stitch a slipper?
 Cobbler: Yes, but not alone. Along with her, a boy came. They looked like good friends. It must be his slippers. I could tell that by its ordinary look.
-Abi: You said they were friends. Then the boy should also be rich. Then...
+Mason: You said they were friends. Then the boy should also be rich. Then...
 Cobbler: (interrupting you) No. The boy is the son of a poor pet shop owner, a widower. His father died in this famine and he came to the streets. The princess gave him accommodation inside the palace until he earns enough money.
 Podrick: This princess might be the most kind-hearted woman in the history. He is lucky. Now he'll be enjoying his time in the palace.
 Cobbler: That boy is not like others. I have seen him work so hard even after he lost his father at such a young age. So even if he is staying in Palace, he won't be simply enjoying.
@@ -290,25 +290,25 @@ Cobbler: That boy is not like others. I have seen him work so hard even after he
 -----------------------
 You have finished investigating the colony.
 
-Abi: Does the boy Phil stay in the palace?
+Mason: Does the boy Phil stay in the palace?
 Podrick: No. He does not stay in the palace. But the princess did offer him accommodation.
-Abi: But these people think he stays in the palace. (Then you pause for a moment)     
+Mason: But these people think he stays in the palace. (Then you pause for a moment)     
          Think of this. The princess came herself to this simple cobbler this far from the palace. Doesn't this point irk you? 
 Podrick: Yes. Even I noticed it.
 # Can you find a reason?
 1. As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more. 
 2. This was the nearest cobbler shop from the place where his slipper got torn 
 3. Phil might be a regular customer to this shop 
-Abi: As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more.
+Mason: As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more.
 Podrick: But there are few shops in the main city where the prices are lower than this
-Abi: This was the nearest cobbler shop from the place where his slipper got torn
+Mason: This was the nearest cobbler shop from the place where his slipper got torn
 Podrick: Could be probable
-Abi: Phil might be a regular customer to this shop
+Mason: Phil might be a regular customer to this shop
 Podrick: Could be probable
 (Suddenly something strikes)
-Abi: Didn't the cobbler mention that the princess walked away?
+Mason: Didn't the cobbler mention that the princess walked away?
 Podrick: Yes. But he could not have meant it. This place is so far from the palace to have come by walk.
-Abi: No. The way he told, his gesture, his tone ... I don't know for sure, but I do feel that the princess did walk away.
+Mason: No. The way he told, his gesture, his tone ... I don't know for sure, but I do feel that the princess did walk away.
 Podrick: What could this possibly mean?
 You: Wait. We still didn't find a valid reason why they came to this small colony.
 Podrick: They might be taking some ride.
@@ -319,11 +319,11 @@ Podrick: This sounds like a good deduction.
 1.  In the vast empty land behind this colony.
 2.  In the poet's house 
 3.  In the refresher's house 
-Abi: In the vast empty land behind this colony.
+Mason: In the vast empty land behind this colony.
 Podrick: He cannot stay there at night due to excessive snakes on those lands
-Abi: In the poet's house
+Mason: In the poet's house
 Podrick: We even saw some palm impressions on the compound wall. He could be secretly staying in that house.
-Abi: In the refresher's house
+Mason: In the refresher's house
 Podrick: No, that can't be the best guess
 
 Investigating Phil's  hideout
@@ -338,22 +338,22 @@ Statues - It looks like Phil has a hobby of sculpting. There are few stones lyin
 Covered - You remove the cloth to see brand new fancy footwear, probably gifted by the princess.
 
 Podrick: I do't think we made any progress here.
-Abi: Did you notice the shoes? The one that cobbler mentioned was not there.
+Mason: Did you notice the shoes? The one that cobbler mentioned was not there.
 Podrick: Yes. Then that should be the slipper he wore for the picnic. But wait. Why would he wear that when he had a better-looking shoe?
-Abi: Jawad's festival is the richest in the world. If they really went there, he would have worn this.
+Mason: Jawad's festival is the richest in the world. If they really went there, he would have worn this.
 Podrick: Fantastic. Then this eliminated Jawad from our list.
-Abi: They could have either gone to the beach or gone to the cliffs after 9am.
+Mason: They could have either gone to the beach or gone to the cliffs after 9am.
 Podrick: Yes. But we need to go find that directly as we can't investigate inside the city.
 
 You and Podrick reach the junction. You need to decide on whether you turn right and search in the cliffs or straight into the forest to search the beach. Suddenly you hear some sound from the direction of the forest.
 Podrick: The sound should be from the wood cutter family living on the edge of the forest. We might get some information from them.
 You both talk to the woodcutter and get to know that he heard some unclear noises few of which that sounded like muffled human voices inside the forest yesterday morning.
 -------------------
-Abi: I think he is referring the princess. It is better to start searching from the forest.
+Mason: I think he is referring the princess. It is better to start searching from the forest.
 Podrick: As you say.
 You get into the forest and look for some clues. 
 -------------
-Abi: My inner voice tells that they have been kidnapped inside this forest.
+Mason: My inner voice tells that they have been kidnapped inside this forest.
 Podrick: We can't act based on our inner voices, we need evidence.
 
 # What can you show as evidences among these?
@@ -363,15 +363,15 @@ Podrick: We can't act based on our inner voices, we need evidence.
 4. A piece of ordinary brown cloth. 
 5. Blood stains on a leaf 
 
-Abi: A deep cut on one of the trees
+Mason: A deep cut on one of the trees
 Podrick: That must be an incomplete work of the wood cutter
-Abi: A bag full of packed food items.
+Mason: A bag full of packed food items.
 Podrick: This looks like the bag of the princess
-Abi: A broken branch
+Mason: A broken branch
 Podrick: You must be joking
-Abi: A piece of ordinary brown cloth.
+Mason: A piece of ordinary brown cloth.
 Podrick: This cloth doesn't look like it came from a dress worn for picnic from the color of the cloth.
-Abi: Blood stains on a leaf 
+Mason: Blood stains on a leaf 
 Podrick: This could have happened while defending the kidnap
 
 After detective found one, Pod says "It can't be enough to prove the kidnap." 2 evidences needed.
@@ -379,19 +379,19 @@ After detective found one, Pod says "It can't be enough to prove the kidnap." 2 
 Podrick: The evidences show that the princess is indeed kidnapped. But who did this? Where are they hiding her?
 You hear sound of a horse approaching you. A tall fair man on a black fiery horse is coming towards you. 
 Podrick: It is Sir Ivan.
-Ivan: You must be the Great detective Abi. I am Ivan, nephew of the Prime minister. I too am searching for them.
+Ivan: You must be the Great detective Mason. I am Ivan, nephew of the Prime minister. I too am searching for them.
 Podrick (to you): He loves Matilda sincerely, but she rejected him.
 Ivan: I have loved her from when I was still a child, but she never even considered me as a friend. If I rescue her, then she might understand this orphan's love.
-Abi: Have you got any clues on where they might be?
+Mason: Have you got any clues on where they might be?
 Ivan: I searched the entire forest in the morning but could find them nowhere. Instead, I found this sheet of cover.
 (He hands it over to you)
-On the cover, it was written "meant for detective Abi". You open the cover. It has 2 sheets one blank sheet, and another has letters in a random way and gives you no meaning. You realize it is encoded.
+On the cover, it was written "meant for detective Mason". You open the cover. It has 2 sheets one blank sheet, and another has letters in a random way and gives you no meaning. You realize it is encoded.
 The words are:
 "MJFY YMJ UFUJW"
 Can you decode it?
 1. Yes
 2. No
-Abi: It says "heat the paper"
+Mason: It says "heat the paper"
 You understand that this means that the other paper has some invisible words and need to be heated for those words to appear. You make fire out of stones and heat the paper. As you suspected, the words started to appear.
 "You need to come alone to the death pitch at 7pm with 50,000 gold coins. Or else, one of our captives will die today"
 
@@ -402,7 +402,7 @@ Accept the challenge?
 2. No
 
 Podrick: Please be careful sir. It could be a trap and we can't help you
-Abi: I know. It's already around 5pm. I'll search here for some more time while you go to the King and tell him about the ransom. It must be a high amount in this current economic situation.
+Mason: I know. It's already around 5pm. I'll search here for some more time while you go to the King and tell him about the ransom. It must be a high amount in this current economic situation.
 Podrick: It's about quarter of the current treasury. But the princess' life is more important. I will arrange for the money and wait at the junction by 6:30.
 -------------------
 They both leave. As Ivan searched the forests, you go to the beach. You see a guard cleaning a caravel and readying a sail. You couldn't find anything related to the missing. Possibly due to the mild anxiety caused by that letter.
@@ -411,45 +411,45 @@ Caravel - a small highly maneuverable ship.
 You come to the junction to see Podrick waiting for you with a bag
 Podrick: Here is the money. You might also need this. (He hands over a sword)
                 It was a pleasure working with you.
-Abi: Don't mean as if I am going to die there. We will meet again in 2 hours.
+Mason: Don't mean as if I am going to die there. We will meet again in 2 hours.
 Podrick: (smiles) Good luck sir.
 
 (You start your journey. Before you reach the bottom of the cliff, the sun has already gone down and it's so dark. Finally, you reach the peak after a tough journey.)
 (You see a man waiting for you. You go near him and bend down to drop the bag with money. Suddenly the man drove his sword and starts to attack you.)
 
-Abi: Where is the princess? Who sent you? 
+Mason: Where is the princess? Who sent you? 
 Assassin: Who are you and why should I tell you?
 He spits the blood in his mouth nearby
-Abi: So you have been attacking me even though you don't know who I am? Listen carefullly. The name is Abi and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
+Mason: So you have been attacking me even though you don't know who I am? Listen carefullly. The name is Mason and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
 You pull him up by his collar with cold calmness and ask him again
 Assassin: Don't kill me. I'll tell everything I know.
 You put him down.
 Assassin: They don't tell me the place where they hid the princess, but I know it was the prince that ordered to kill you.
-Abi: The Prince? Don't you dare lie (pressing the sword against his chest). 
+Mason: The Prince? Don't you dare lie (pressing the sword against his chest). 
          Why would he kidnap his own sister and try to kill me?
 Assassin: I'm not lying (he screams). They didn't tell me the details. It's your job to find it. But one thing, it was never about the princess. You'll certainly have another combat. 
 You understand he is just a labour. You sit down on a rock near him and try to understand what's happening. You have heard about the prince in a good way and he could not have any intensions on kidnapping his own sister. You feel that someone else is involved.
 -----------------------
 Assassin: Leave the gold coins here and the princess will be released tonight.
-Abi: Why would the prince desire for a bag of coins when he has access to an entire treasury? Whoever wants it, ask them not to fight like a coward using the Princ's name.
+Mason: Why would the prince desire for a bag of coins when he has access to an entire treasury? Whoever wants it, ask them not to fight like a coward using the Princ's name.
 You take the money bag with you and ride down the cliff. You swiftly come towards the city and near the junction Podrick is waiting. You two start moving into the city.
 Podrick: What happened there? Weren't you supposed to hand over this bag to them?
-Abi: It was not about the money. I feel that they want my life more than the princess'. 
+Mason: It was not about the money. I feel that they want my life more than the princess'. 
 Podrick: What are you talking about?
-Abi: This even feels strange for me. This is the first time I come to this city and with who could have such vengeance for me?
+Mason: This even feels strange for me. This is the first time I come to this city and with who could have such vengeance for me?
 
 Podrick: Do you say that you are their target, and nothing will happen to the kidnapped people?
-Abi: Yes, according to the assassin that tried to kill me.
+Mason: Yes, according to the assassin that tried to kill me.
 Podrick: What...? An assassin tried to kill you?
-Abi: Don't panic. It's all over. I need time to think. Can you arrange me a room?
+Mason: Don't panic. It's all over. I need time to think. Can you arrange me a room?
 Podrick: I have already booked a room for you. I'll drop you there.
-Abi: Thanks, Podrick. Is there any lead from Ivan?
+Mason: Thanks, Podrick. Is there any lead from Ivan?
 Podrick: He said that there is a possibility of finding her in a specific location inside the forest. 
 --------------------
 
 (Now, you both reach the city. After a few minutes ride, Podrick takes you to a deluxe mansion and shows your room.)
 Podrick: Take some rest and then start thinking about the case.
-Abi: Take this bag of gold coins back to the kingdom. (You hand over that big black bag)
+Mason: Take this bag of gold coins back to the kingdom. (You hand over that big black bag)
          Can you do me a favour Podrick? Bring me a map of this country along with the place Ivan suspected marked on it.
 Podrick: Sure. I will bring it within one hour.
 As it was a hard day, you prefer to get yourself relaxed by taking a good bath. After you calm your mind, you start to think about the case again.
@@ -457,10 +457,10 @@ As it was a hard day, you prefer to get yourself relaxed by taking a good bath. 
 It has been about half an hour since Podrick left. You look out the window to find a heavy downpour.
 You wonder if Podrick will be able to come to get you the map. You sigh and lie on the bed and wait for the rain to end for what seems like an eternity. Suddenly you hear a knock on the door, you find Podrick shivering and heavily drenched from the rain. You open the door and Podrick enters the room and removes his wet cloak. You start a fire for him to warm up
 Podrick: Here is the map, sorry it got wet.
-Abi: That's not a problem, but you could have waited for the rain to subside.
+Mason: That's not a problem, but you could have waited for the rain to subside.
 Podrick: Finding the princess is of the utmost importance
  Ivan will be here in a few minutes. We can together search the place Ivan suspected.
-Abi: Where is that place? 
+Mason: Where is that place? 
 Podrick: It is a place deep inside the forest where there is no human activity for years.
 -----------------
 
@@ -479,7 +479,7 @@ Podrick holds back Ivan and asks him to calm down.
 Ivan: What have you done? What did you do in that cliff?
 You explain what happened there as """""""""""""""""""""""""""""""""""""""""""""""""""
 Ivan couldn't control his tears and he just runs away to his horse while the tears from his eyes drip all over his path.
-Podrick (to Abi): Come, we need to console Ivan.
+Podrick (to Mason): Come, we need to console Ivan.
 You both just started to run through that big hallway, when Ivan shouts at you.
 Ivan: STOP. Don't come any closer. If you take even a step, no one can stop me from killing you.
 Podrick: Ivan, listen. We can talk. Don't do anything stupid.
@@ -488,14 +488,14 @@ He goes out of the hotel. You both go behind him and try to stop him. But he doe
 ----------------
 
 Podrick: Please tell me what happened in the cliff.
-Abi: The assassin told me it was the prince that kidnapped them and tried to kill me. But I didn't believe it then.
+Mason: The assassin told me it was the prince that kidnapped them and tried to kill me. But I didn't believe it then.
 Podrick: For the past few months, the prince has some issues with the family. It can be his work. Why would you tell the prince as a coward? I think that's what aggravated him.
-Abi: No, I didn't. It was a miscommunication.
+Mason: No, I didn't. It was a miscommunication.
 Podrick: All right. We need to talk about this to the king.
 You both get on your horses and start moving to the palace quickly
 -------------
 
-Abi: Podrick, I didn't expect this at all. I didn't do this on purpose.
+Mason: Podrick, I didn't expect this at all. I didn't do this on purpose.
 Podrick: Don't worry too much. We can't be sure that he killed Matilda just by his words on a letter.
 You suddenly stop. Your feeling of guilt suddenly vanishes, and your mind becomes clear and open. You start to see the broader picture. You get doubts on people around you.
 # Can you think of anyone who might be the suspect
@@ -503,9 +503,9 @@ You suddenly stop. Your feeling of guilt suddenly vanishes, and your mind become
 2. Podrick 
 3. Ivan
 
-Abi: Prince
+Mason: Prince
 Your inner voice: I feel that there is someone involved more
-Abi: Podrick
+Mason: Podrick
 Your inner voice: No, He seems a very loyal man. What made you think that?
 
 Podrick: Why did you stop?
@@ -532,22 +532,22 @@ You: I guess Prime minister is involved in the robbery. But before explaining yo
 2. Fleeing out through Jawad. 
 3. Escaping through sea. 
 
-Abi: Hiding somewhere inside the city.
+Mason: Hiding somewhere inside the city.
 Your inner voice: Guards are searching everywhere. He is an intelligent man and should have planned to flee the city.
-Abi: Fleeing out through Jawad.
+Mason: Fleeing out through Jawad.
 Podrick: It is possible, but we can’t be sure
-Abi: Escaping through sea.
+Mason: Escaping through sea.
 Podrick: We even saw a guard getting a boat ready
 
-Abi: Ask your guards to go to the port quickly. The Prime minister is escaping through sea.
+Mason: Ask your guards to go to the port quickly. The Prime minister is escaping through sea.
 Podrick: How can you say so sure? He didn’t even carry any bag.
-Abi: But Ivan did. 
+Mason: But Ivan did. 
          We both need to go to that place Ivan told. I'll explain you on the way.
 Can you guess what could have happened? You and Podrick ride that place in the deep forest.
 --------------
 
 Podrick: Explain me what's happening.
-Abi: The kidnap, missing treasury, men trying to kill me, everything is Aron’s plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan’s father guilty for which he was hanged. Boris along with Ivan fled that city. 
+Mason: The kidnap, missing treasury, men trying to kill me, everything is Aron’s plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan’s father guilty for which he was hanged. Boris along with Ivan fled that city. 
         As I came to the neighboring city Jawad, they found this opportunity the best to give revenge. So, they kidnapped the princess and recommended me to be involved in this case. By creating a chaos in the palace, they found it easy to loot this large amount.
 
 Podrick: Are you serious? Then what about Matilda’s death?
@@ -556,16 +556,16 @@ Podrick: Are you serious? Then what about Matilda’s death?
 2. Ivan could have lied on loving Matilda. 
 3. They plan to take Matilda forcefully with them and blame her missing as death due to me. 
 
-Abi: They could have lied to create tension and slow me down. 
+Mason: They could have lied to create tension and slow me down. 
      They plan to take Matilda forcefully with them and blame her missing as death due to me.
-Abi: Ivan could have lied on loving Matilda.
+Mason: Ivan could have lied on loving Matilda.
      No, he really loved her and made many attempts to impress her
-Abi: They plan to take Matilda forcefully with them and blame her missing as death due to me.
+Mason: They plan to take Matilda forcefully with them and blame her missing as death due to me.
      They could have lied to create tension and slow me down.
 
-Abi: Even though Adonis and Boris were killers and thieves they never harmed a child's life. So I am sure that nothing happened to Matilda also given the fact that Ivan loves Matilda.
+Mason: Even though Adonis and Boris were killers and thieves they never harmed a child's life. So I am sure that nothing happened to Matilda also given the fact that Ivan loves Matilda.
 Podrick: If Ivan kidnapped them, why would he tell me the right location? 
-Abi: He thought the assassin would kill me. As he has no vengeance with the princess, you could find them later at that location. But before this they would have fled the city and you couldn’t have caught them.
+Mason: He thought the assassin would kill me. As he has no vengeance with the princess, you could find them later at that location. But before this they would have fled the city and you couldn’t have caught them.
 Podrick: Okay. Now I get it.
 
 

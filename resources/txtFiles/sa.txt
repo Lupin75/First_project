@@ -211,14 +211,14 @@ Talk:
 $PN: Excuse me sir. We are travelers from another country. Which way is the Palace?
 Farmer: Follow this road and it will lead you to the palace.
 $PN: The weather is good , looks like there will be a good harvest here this year.
-Famer: Yes sir, he weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
+Farmer: Yes sir, the weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
 $PN: Thank you sir.
 	 (As you drink your coconut)I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
 Farmer: (smilingly replies) Yes sir. But to be honest, I work lot more than her. I go to the farm everyday as early as 5. It takes me half an hour to walk there. There won't be anyone even to talk at that time. For three hours my only companion will be my two bullocks.
 $PN: Did you say that you go to the farms at 5am! You really are much younger than you look.
          But do not tell that you will be alone with bullocks. There must be some people around your fields.
 Farmer: My field is on the way to the cliffs, a lonely path. There was another farmer who accompanied me before. But after the famine, he gave up on farming and left the country. I am not exaggerating in telling you that I have never seen anybody during my first 3 hours of the day after that. My first encounter will be with any of the colony men when they open their shops around 9 when I return to my home.
-Podrick: I heard that the famine came last year. Have you not seen even one person in the entire year during the morning?
+Podrick: I heard that there was a famine last year. Have you not seen even one person in the entire year during the morning?
 Farmer: No. As I say there are no houses on that way and no need for anyone to go there that early in the morning.
 (A faint voice from his wife comes out of the house and calls him for some help)
                My wife is calling me to lift some weight. I need to go.
