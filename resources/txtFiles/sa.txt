@@ -534,22 +534,22 @@ You: I guess Prime minister is involved in the robbery. But before explaining yo
 $PN: Hiding somewhere inside the city.
 Your inner voice: Guards are searching everywhere. He is an intelligent man and should have planned to flee the city.
 $PN: Fleeing out through Jawad.
-Podrick: It is possible, but we can’t be sure
+Podrick: It is possible, but we can't be sure
 $PN: Escaping through sea.
 Podrick: We even saw a guard getting a boat ready
 
 $PN: Ask your guards to go to the port quickly. The Prime minister is escaping through sea.
-Podrick: How can you say so sure? He didn’t even carry any bag.
+Podrick: How can you say so sure? He didn't even carry any bag.
 $PN: But Ivan did. 
          We both need to go to that place Ivan told. I'll explain you on the way.
 Can you guess what could have happened? You and Podrick ride that place in the deep forest.
 --------------
 
 Podrick: Explain me what's happening.
-$PN: The kidnap, missing treasury, men trying to kill me, everything is Aron’s plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan’s father guilty for which he was hanged. Boris along with Ivan fled that city. 
+$PN: The kidnap, missing treasury, men trying to kill me, everything is Aron's plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan’s father guilty for which he was hanged. Boris along with Ivan fled that city. 
         As I came to the neighboring city Jawad, they found this opportunity the best to give revenge. So, they kidnapped the princess and recommended me to be involved in this case. By creating a chaos in the palace, they found it easy to loot this large amount.
 
-Podrick: Are you serious? Then what about Matilda’s death?
+Podrick: Are you serious? Then what about Matilda's death?
 
 1. They could have lied to create tension and slow me down.
 2. Ivan could have lied on loving Matilda. 
@@ -564,7 +564,39 @@ $PN: They plan to take Matilda forcefully with them and blame her missing as dea
 
 $PN: Even though Adonis and Boris were killers and thieves they never harmed a child's life. So I am sure that nothing happened to Matilda also given the fact that Ivan loves Matilda.
 Podrick: If Ivan kidnapped them, why would he tell me the right location? 
-$PN: He thought the assassin would kill me. As he has no vengeance with the princess, you could find them later at that location. But before this they would have fled the city and you couldn’t have caught them.
+$PN: He thought the assassin would kill me. As he has no vengeance with the princess, you could find them later at that location. But before this they would have fled the city and you couldn't have caught them.
 Podrick: Okay. Now I get it.
 
+You and Podrick reach that place in the deep forest. You see a cave there. 
+Podrick: The princess should be ...
+Suddenly a bunch of arrows are being fired at you from archers hidden at tree tops. Two of those arrows pierce your horse's head and you fall on the ground. You quickly hide behind a nearby tree. Podrick retreats and goes a few meters behind. 
+Podrick: This must be the kidnappers. 
+$PN: She must be inside that cave. You go and bring some men.
+Podrick: How can I leave you alone here?
+$PN: At least one of us must be alive to tell them where the princess is. Nothing will happen to me if you bring some guards quickly.
+Podrick, who cannot help you alone against these invisible archers in the dark, goes quickly to get some help
+-------------
+Within a few moments after Podrick went, 7 archers climbed down from the tree tops and come towards you. Knowing that you can't fight these trained archers, you surrender on your knees.
+Archer 1: Do you remember Sir Adonis? Entire Shaer will tremble on hearing that name even now.
+$PN: So... you must be those assassins who worked under him.
+Archer 2: He was feared and respected more than any king. But you tricky bastard fooled our leader and humiliated his pride.
+$PN: I was just doing my job.
+Archer 1: And for that we are here to offer you death, a very painful one.
+Archer 2: You won't see death for the next few weeks but would have already experienced the hell waiting for you.
 
+You hear a horse approaching you from behind. You turn and look hoping it is Podrick but to see Ivan.
+Archer 1: Young master, why are you here? We will take care of this puny man. You please leave the city.
+Ivan: No. You must have understood by now that I am the reason for all this. By now, I should be at the docks but suddenly I felt that it must be me who kills the man who was the reason for my father's death. Do you know who these archers were? They were the loyal assassins who worked under my father. All my life, I had only one dream, to trick this pig-head the same way he did to my father and make him realize he is not the most intelligent man. But suddenly now I feel that it should be my hands which rip his ribs apart. It should be me who should defend my father's death.
+Archer 2: Then what about Prime minister?
+Ivan: I asked him to go to England. The future superpower. I am going to stay with you people. But quick we need to get away from this place before anyone comes.
+
+They tied your hands, and everybody is about to move with their horses. To your delight, Podrick comes with an army. But still those archers are so skilled that even that army can't come any closer.
+Archer 2: We can't keep this up for a long time. Forget about us, you take that bastard and go away.
+Ivan: They are slowly closing in. It is not good to postpone his killing. 
+He drags you inside that cave. You see the princess and others tied there except Matilda, who should be with the prime minister. There is also a big grey wolf which comes and stands beside Ivan. Ivan shouts 'attack' and both him and the wolf attack you.
+
+By the time you defeat them, Podrick comes inside the cave.
+
+Podrick: Are you fine? At least we got the princess back. The guards couldn't go on time to catch the Prime minister.
+You: I know where the prime minister is.
+The princess is safely returned to the kingdom. After 3 days prime minister and Matilda are found. Both prime minster and Ivan are imprisoned. The king gave you rewards, and you happily leave the country.
