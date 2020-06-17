@@ -1239,6 +1239,9 @@ public:
                 displayStory(story, 359, 364);
                 cout << endl;
             }
+            if(ans==1){
+                cout<<"Podrick: That's fine but we need another clue to be sure"<<endl;
+            }
         }
         displayStory(story, 379, 389);
         f1 = 0;
@@ -1246,8 +1249,7 @@ public:
         while (f1 == 0)
         {
             displayStory(story, 390, 393);
-            cin >> option;
-            option = check_two(option);
+            option=check_binary(option);
             if (option == 1)
             {
                 cout << "Type your guess:" << endl;
@@ -1274,7 +1276,7 @@ public:
                 }
                 if (i == 3)
                 {
-                    cout << "After a few minutes, you finally decoded the message.(Or) Shift the letter by -5 for example F->A" << endl;
+                    cout << "After a few minutes, you finally decoded the message." << endl;
                     f1 = 1;
                 }
             }
@@ -1283,8 +1285,7 @@ public:
         f1 = 0;
         while (f1 == 0)
         {
-            cin >> option;
-            option = check_two(option);
+            option=check_binary(option);
             if (option == 1)
             {
                 cout << "Challenge Accepted" << endl;
@@ -1417,22 +1418,24 @@ public:
         cls();
         maze();
     }
-    void maze()
+    void climax()
     {
         fstream story;
         story.open("./resources/txtFiles/custom.txt");
         fstream progress;
         progress.open("./resources/txtFiles/progress.txt", ios::app);
-        progress << "MAZE" << endl;
-    maze:
+        progress << "CLIMAX" << endl;
+    climax:
         displayStory(story, 570, 585);
         cls();
         displayStory(story, 587, 596);
         cls();
         cout << "*****Fight*****" << endl;
         cls();
-        displayStory(story, 600, 602);
+        displayStory(story, 600, 609);
         cls();
+        displayStory(stroy,610,615);
+        //The End function like some logo maybe?
     }
 };
 int main()
@@ -1457,22 +1460,17 @@ int main()
     while (checkpnt.good())
     {
         getline(checkpnt, checkpoint, '\n');
-        //cout<<checkpoint<<endl;
         checkp.push_back(checkpoint);
         c_p++;
     }
-    //cout<<"CHECK !";
-
-    //cout<<"Number of checkpoints: "<<c_p<<endl;
+    
     if (checkpoint == "" && checkp.size() > 1)
     {
-        //cout << "Last checkpoint: " << checkp[c_p - 2] << endl;
         checkpoint = checkp[c_p - 2];
     }
-    //cout<<"CHECK @";
-
+    
     cout << "Last checkpoint: " << checkpoint << endl;
-    //system("pause");
+    
     if (checkpoint == "GROUP1")
         storyPlot.group1();
     else if (checkpoint == "GROUP2")
@@ -1487,8 +1485,8 @@ int main()
         storyPlot.woods();
     else if (checkpoint == "FIND PRINCESS")
         storyPlot.finding_princess();
-    else if (checkpoint == "MAZE")
-        storyPlot.maze();
+    else if (checkpoint == "CLIMAX")
+        storyPlot.climax();
     //checkpnt.close();
     else
         storyPlot.prologue();
