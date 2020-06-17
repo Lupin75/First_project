@@ -36,22 +36,24 @@ int fiveSeconds = 5 ;
 std::string typeJump = "heDidNotType";
 bool doProceed = false;
 bool didFunctionQuit = false;
-void countDown(){
-    while(fiveSeconds != 0 && doProceed !=true){
-        std::cout<<fiveSeconds<<std::endl;
-        fiveSeconds--;
-        Sleep(1000);
-        if(typeJump == "jump"){
-            doProceed = true;
-        }else if(typeJump != "heDidNotType"){
-            std::cout<<"nope!try again"<<std::endl;
-            typeJump = "heDidNotType";
+namespace typing{
+    void countDown(){
+        while(fiveSeconds != 0 && doProceed !=true){
+            std::cout<<fiveSeconds<<std::endl;
+            fiveSeconds--;
+            Sleep(1000);
+            if(typeJump == "jump"){
+                doProceed = true;
+            }else if(typeJump != "heDidNotType"){
+                std::cout<<"nope!try again"<<std::endl;
+                typeJump = "heDidNotType";
+            }
+            didFunctionQuit = true;
         }
-        didFunctionQuit = true;
     }
 }
-int main(){
-    std::thread th(countDown);
+bool jumpFunction(){
+    std::thread th(typing::countDown);
     while(didFunctionQuit == false){
         std::cin>>typeJump;
         Sleep(1000);
@@ -59,8 +61,9 @@ int main(){
     th.join();
     if(doProceed != true){
         std::cout<<"you failed"<<std::endl;
+        return false;
     }else{
         std::cout<<"you have passed"<<std::endl;
+        return true;
     }
-    return 0;
 }

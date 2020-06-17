@@ -1,3 +1,5 @@
+# this file is outdated
+
 AT = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
 INC = -I"include"
 LI = -L"lib"
