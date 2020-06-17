@@ -1416,7 +1416,7 @@ public:
         }
         displayStory(story, 566, 568);
         cls();
-        maze();
+        //maze();
     }
     void climax()
     {
@@ -1434,7 +1434,7 @@ public:
         cls();
         displayStory(story, 600, 609);
         cls();
-        displayStory(stroy,610,615);
+        displayStory(story,610,615);
         //The End function like some logo maybe?
     }
 };
