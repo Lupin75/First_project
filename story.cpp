@@ -13,6 +13,21 @@
 using namespace std;
 class StoryPlot
 {
+private:
+    int ln;
+    string lin;
+    int option;
+    int line_count;
+    int status;
+    int SPYBAR;
+    int h1, h2, h3, h4;
+    int tea_talk;
+    char house;
+    int choice;
+    int f1, f2, f3, f4, f5;
+    int farmTalk;
+    int cobbler_talk;
+
 public:
     void cls()
     {
@@ -63,10 +78,10 @@ public:
         if (init_line_counter == false)
         {
             GotoLine(fpr, start);
-            int ln = 0;
+            ln = 0;
             while (ln < end)
             {
-                string lin;
+                lin.clear();
                 getline(fpr, lin, '\n');
                 wrap(lin);
                 ln++;
@@ -78,7 +93,7 @@ public:
             int ln = start;
             while (ln <= end)
             {
-                string lin;
+                lin.clear();
                 getline(fpr, lin, '\n');
                 wrap(lin);
                 ln++;
@@ -90,7 +105,7 @@ public:
     {
         GotoLine(fpr, start);
         //int ln = start;
-        string lin;
+        lin.clear();
         getline(fpr, lin, '\n');
         //displaySlow(lin);
         wrap(lin);
@@ -101,10 +116,10 @@ public:
         fstream story;
         story.open("./resources/txtFiles/custom.txt");
 
-        int option;
+        option;
         if (choices == 4)
         {
-            int f1 = 0, f2 = 0, f3 = 0, f4 = 0;
+            f1 = 0, f2 = 0, f3 = 0, f4 = 0;
             while (f1 == 0 || f2 == 0 || f3 == 0 || f4 == 0)
             {
                 option = check_tetra(getInputAsInt(option));
@@ -179,7 +194,7 @@ public:
         templat.close();
         c_story.close();
     }
-void prologue()
+    void prologue()
     {
         fstream story;
         story.open("./resources/txtFiles/custom.txt");
@@ -187,7 +202,7 @@ void prologue()
         fstream progress;
         progress.open("./resources/txtFiles/progress.txt", ios::app);
 
-        int line_count = 0;
+        line_count = 0;
         //GotoLine(story, 1);
 
         cls();
@@ -215,7 +230,6 @@ void prologue()
         line_count++;
     }*/
         //cout<<"linefawk"<<line_count;
-        int status;
         status = check_binary(status);
 
         if (status == 1)
@@ -354,7 +368,7 @@ void prologue()
         //option(58,3);
         //question(58,2);
 
-        int f1 = 0, f2 = 0, f3 = 0;
+        f1 = 0, f2 = 0, f3 = 0;
         while (f2 == 0)
         {
             option = check_tri(getInputAsInt(option));
@@ -422,7 +436,7 @@ void prologue()
         displayStory(story, 98, 103);
         cout << endl;
 
-        int f1 = 0, f2 = 0, f3 = 0;
+        f1 = 0, f2 = 0, f3 = 0;
         while (f3 == 0)
         {
             option = check_tri(getInputAsInt(option));
@@ -486,17 +500,16 @@ void prologue()
         progress.open("./resources/txtFiles/progress.txt", ios::app);
 
         progress << "GROUP1" << endl;
-        int SPYBAR = 0;
+        SPYBAR = 0;
 
     group1:
-        int h1 = 0, h2 = 0, h3 = 0, h4 = 0;
-        int tea_talk = 0;
+        h1 = 0, h2 = 0, h3 = 0, h4 = 0;
+        tea_talk = 0;
 
         line_count = 131;
         displayStory(story, 132, 138);
         cout << endl;
 
-        char house;
         while (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
         {
             cin >> house;
@@ -536,7 +549,7 @@ void prologue()
                 {
                     displayStory(story, 144);
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         displayStory(story, 145);
@@ -555,7 +568,7 @@ void prologue()
                 {
                     displayStory(story, 147);
                     cout << "\n 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
 
@@ -662,11 +675,11 @@ void prologue()
             wrap(line);
             line_count++;
         }*/
-            int f1 = 0, f2 = 0, f3 = 0;
+            f1 = 0, f2 = 0, f3 = 0;
             int ans = 0;
             while (ans == 0)
             {
-                int option = check_tri(getInputAsInt(option));
+                option = check_tri(getInputAsInt(option));
                 if (option == 1)
                 {
                     if (f1 == 0)
@@ -813,11 +826,11 @@ void prologue()
         progress << "GROUP2" << endl;
 
     group2:
-        int h1 = 0, h2 = 0, h3 = 0;
+        h1 = 0, h2 = 0, h3 = 0;
         displayStory(story, 204, 208);
         cout << endl;
 
-        int farmTalk = 0;
+        farmTalk = 0;
         while (h1 == 0 || h2 == 0 || h3 == 0)
         {
             cin >> house;
@@ -827,7 +840,7 @@ void prologue()
                 {
                     displayStory(story, 209);
                     cout << "\n 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
 
@@ -854,10 +867,10 @@ void prologue()
                         wrap(lin);
                         line_count++;
                     }*/
-                        int f1 = 0, f2 = 0, f3 = 0;
+                        f1 = 0, f2 = 0, f3 = 0;
                         while (f2 == 0)
                         {
-                            int option = check_tri(getInputAsInt(option));
+                            option = check_tri(getInputAsInt(option));
                             if (option == 1)
                             {
                                 if (f1 == 0)
@@ -939,7 +952,7 @@ void prologue()
                 getline(story, lin, '\n');
                 displaySlow(lin);*/
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         SPYBAR += 100;
@@ -995,9 +1008,9 @@ void prologue()
 
         progress << "GROUP3" << endl;
     group3:
-        int cobbler_talk = 0;
+        cobbler_talk = 0;
         displayStory(story, 252, 258);
-        int h1 = 0, h2 = 0, h3 = 0, h4 = 0;
+        h1 = 0, h2 = 0, h3 = 0, h4 = 0;
         while (h1 == 0 || h2 == 0 || h3 == 0 || h4 == 0)
         {
             cin >> house;
@@ -1094,7 +1107,7 @@ void prologue()
         {
             displayStory(story, 291, 301);
             cout << endl;
-            int f1 = 0, f2 = 0, f3 = 0;
+            f1 = 0, f2 = 0, f3 = 0;
             while (f2 == 0 && f3 == 0)
             {
                 cin >> option;
@@ -1186,7 +1199,7 @@ void prologue()
         displayStory(story, 348, 357);
         cls();
         displayStory(story, 359, 365);
-        int f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
+        f1 = 0, f2 = 0, f3 = 0, f4 = 0, f5 = 0;
         int ans = 0;
         while (ans != 2)
         {
