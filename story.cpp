@@ -4,10 +4,10 @@
 #include <Windows.h>
 #include "./resources/hpps/global.hpp"
 /*
-    Last modified by: Nirmal K
-    Last modified   : 18-06-2020
-    Filename        : story.cpp
-    Description     : Story completed
+    Last modified by: Abishek.r
+    Last modified   : 16-06-2020
+    Filename        : &TM_FILENAME
+    Description     : Removed redundant code for displaying story
 */
 
 using namespace std;
