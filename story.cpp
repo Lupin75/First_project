@@ -1339,7 +1339,7 @@ void finding_princess()
     cls();
     displayStory(story,516,523,true);
     cls();
-    displayStory(story,526,534,true);
+    displayStory(story,526,532,true);
     f1=0,f2=0,f3=0;
     while(f3==0)
     {
@@ -1347,29 +1347,29 @@ void finding_princess()
         option=check_tri(option);
         if(option==1&&f1==0)
         {
-            displayStory(story,535,536,true);
+            displayStory(story,534,535,true);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            displayStory(story,537,538,true);
+            displayStory(story,536,537,true);
             f2++;
         }
         else if(option==3)
         {
-            displayStory(story,539,540,true);
+            displayStory(story,538,539,true);
             f3++;
         }
         else
             wrap("Podrick: We just talked about this");
         if(f3==0)
         {
-            displayStory(story,530,534,true);
+            displayStory(story,529,532,true);
         }
     }
-    displayStory(story,542,546,true);
+    displayStory(story,541,546,true);
     cls();
-    displayStory(story,549,558,true);
+    displayStory(story,548,556,true);
     f1=0,f2=0,f3=0;
     while(f1==0&&f3==0)
     {
@@ -1377,27 +1377,27 @@ void finding_princess()
         option=check_tri(option);
         if(option==1)
         {
-            displayStory(story,559,560,true);
+            displayStory(story,558,559,true);
             f1++;
         }
         else if(option==2&&f2==0)
         {
-            displayStory(story,561,562,true);
+            displayStory(story,560,561,true);
             f2++;
         }
         else if(option==3)
         {
-            displayStory(story,563,564,true);
+            displayStory(story,562,563,true);
             f3++;
         }
         else 
             wrap("Podrick: We just talked about this");
         if(f1==0 && f3==0)
         {
-            displayStory(story,553,558,true);
+            displayStory(story,552,556,true);
         }
     }
-    displayStory(story,566,569);
+    displayStory(story,566,568);
     cls();
     //maze();
 

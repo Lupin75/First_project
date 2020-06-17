@@ -1,4 +1,4 @@
 a.exe
 ./fighting/a.exe
-./txtFiles/custom.txt
-./txtFiles/progress.txt
+./resources/txtFiles/custom.txt
+./resources/txtFiles/progress.txt
