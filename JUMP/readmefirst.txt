@@ -1,3 +1,3 @@
-these versions of the jump has a lot of delay added to them for sync between threads
-if the player types wrong , he/she needs to wait for 1 second to give an another input
-if you dont like it,ping me , i'll update it , but the later version has sync issues.
+The contents in the folder withoutMusic can be added to the game directly.
+The contents in the folder withMusic work independent. and to add them in the game the library directory needs to be changed in the makefile.
+for futher info cantact me.
