@@ -89,7 +89,7 @@ int check_binary(int status) {
     if (status != 1 && status != 2 ) {
         cout << "Error...No such option available" << endl
             << "Enter option (1/2): ";
-        cin >> status;
+        //cin >> status;
         return check_binary(status);
 
     }

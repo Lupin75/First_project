@@ -602,10 +602,10 @@ He takes his sword and cuts out his throat. Ivan died.
 -------
 You untie the princess and rescue everyone with her. You come out of the cave. You see the last of the archer fall after an arrow pierced his chest. Podrick comes running after seeing you and the others. 
 Podrick: Did anything happen to you princess? Are you safe?
-Princess: I am fine. Ivan didn’t hurt me or anybody else. But Matilda was taken away by a guard. Do you know where Matilda is?
+Princess: I am fine. Ivan didn't hurt me or anybody else. But Matilda was taken away by a guard. Do you know where Matilda is?
 Podrick: Uh... About that, $PN, we couldn’t catch the prime minister.
 $PN: Prime minster is headed to England. Matilda is with him.
-Podrick: Wow. That’s a great news. Raken and England are good friends. We can catch them.
+Podrick: Wow. That's a great news. Raken and England are good friends. We can catch them.
 	 We won detective $PN!!
 
 The princess is safely returned to the kingdom. After 3 days prime minister and Matilda are found. Both prime minster and Ivan are imprisoned. The king gave you rewards, and you happily leave the country.

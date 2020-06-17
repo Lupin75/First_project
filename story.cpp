@@ -1234,14 +1234,16 @@ public:
             }
             else
                 wrap("Podrick: We already talked about this");
+            
+            if(ans==1){
+                cout<<"Podrick: That's fine but we need another clue to be sure"<<endl;
+            }
             if (f2 == 0 || f5 == 0)
             {
                 displayStory(story, 359, 364);
                 cout << endl;
             }
-            if(ans==1){
-                cout<<"Podrick: That's fine but we need another clue to be sure"<<endl;
-            }
+            
         }
         displayStory(story, 379, 389);
         f1 = 0;
@@ -1272,7 +1274,7 @@ public:
                 if (i == 2)
                 {
                     cout << "***Hint: Shift the letter by -5, for example F->A" << endl;
-                    f1 = 1;
+                    //f1 = 1;
                 }
                 if (i == 3)
                 {
