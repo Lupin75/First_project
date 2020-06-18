@@ -546,7 +546,7 @@ Can you guess what could have happened? You and Podrick ride that place in the d
 --------------
 
 Podrick: Explain me what's happening.
-$PN: The kidnap, missing treasury, men trying to kill me, everything is Aron's plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan’s father guilty for which he was hanged. Boris along with Ivan fled that city. 
+$PN: The kidnap, missing treasury, men trying to kill me, everything is Aron's plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan's father guilty for which he was hanged. Boris along with Ivan fled that city. 
         As I came to the neighboring city Jawad, they found this opportunity the best to give revenge. So, they kidnapped the princess and recommended me to be involved in this case. By creating a chaos in the palace, they found it easy to loot this large amount.
 
 Podrick: Are you serious? Then what about Matilda's death?
@@ -603,7 +603,7 @@ He takes his sword and cuts out his throat. Ivan died.
 You untie the princess and rescue everyone with her. You come out of the cave. You see the last of the archer fall after an arrow pierced his chest. Podrick comes running after seeing you and the others. 
 Podrick: Did anything happen to you princess? Are you safe?
 Princess: I am fine. Ivan didn't hurt me or anybody else. But Matilda was taken away by a guard. Do you know where Matilda is?
-Podrick: Uh... About that, $PN, we couldn’t catch the prime minister.
+Podrick: Uh... About that, $PN, we couldn't catch the prime minister.
 $PN: Prime minster is headed to England. Matilda is with him.
 Podrick: Wow. That's a great news. Raken and England are good friends. We can catch them.
 	 We won detective $PN!!

@@ -1295,7 +1295,7 @@ public:
             }
             else
             {
-                cout << "Ivan fears that it could be Matilda who they will kill if you don’t go. For their sake, you accept to go." << endl;
+                cout << "Ivan fears that it could be Matilda who they will kill if you don't go. For their sake, you accept to go." << endl;
                 cout << "Game proceeds only if you accept the challenge" << endl;
                 displayStory(story, 400, 402);
             }
