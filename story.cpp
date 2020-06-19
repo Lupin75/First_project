@@ -448,9 +448,21 @@ public:
 
         progress << "MATILDA" << endl;
         line_count = 70;
-        displayStory(story, 71, 96);
+
+        displayStory(story, 71, 73);
+        sf::Music music;
+        music.openFromFile("resources/audio/Knocking-on-wall-five-knocks-www.fesliyanstudios.com.ogg");
+        music.setLoop(false);
+        music.setVolume(10);
+        music.play();
+        displayStory(story, 74, 75);
         cls();
         //line_count=98;
+        music.stop();
+        displayStory(story, 75, 96);
+        music.openFromFile("resources/audio/Medieval city market sound effect.ogg");
+        music.setLoop(true);
+        music.play();
         displayStory(story, 98, 103);
         cout << endl;
 
@@ -507,6 +519,7 @@ public:
         line_count = 116;
         displayStory(story, 117, 125);
         cls();
+        music.stop();
         group1();
     }
     void group1()
@@ -523,8 +536,12 @@ public:
     group1:
         h1 = 0, h2 = 0, h3 = 0, h4 = 0;
         tea_talk = 0;
-
+        sf::Music music;
         line_count = 131;
+        music.openFromFile("resources/audio/Medieval city market sound effect.ogg");
+        music.setLoop(true);
+        music.setVolume(10);
+        music.play();
         displayStory(story, 132, 138);
         cout << endl;
 
@@ -678,6 +695,7 @@ public:
         {
             cout << "You do not have enough clues" << endl;
             h4 = 0;
+            music.stop();
             goto group1;
         }
         else if (tea_talk == 1)
@@ -831,6 +849,7 @@ public:
         progress.close();
         story.close();
         cls();
+        music.stop();
         group2();
     }
     void group2()
@@ -844,6 +863,11 @@ public:
         progress << "GROUP2" << endl;
 
     group2:
+        sf::Music music;
+        music.openFromFile("resources/audio/Medieval city market sound effect.ogg");
+        music.setLoop(true);
+        music.setVolume(10);
+        music.play();
         h1 = 0, h2 = 0, h3 = 0;
         displayStory(story, 204, 208);
         cout << endl;
@@ -999,11 +1023,13 @@ public:
         {
             cout << "You don't have necessary clues" << endl;
             h1 = 0;
+            music.stop();
             goto group2;
         }
         cout << "SPYBAR: " << SPYBAR << endl;
         if (SPYBAR >= 100)
         {
+            music.stop();
             cout << "You talked with spies or caused discomfort among people... "
                  << "\nRestarting investigation in the colonies" << endl;
             SPYBAR = 0,
@@ -1026,6 +1052,11 @@ public:
 
         progress << "GROUP3" << endl;
     group3:
+        sf::Music music;
+        music.openFromFile("resources/audio/Medieval city market sound effect.ogg");
+        music.setLoop(true);
+        music.setVolume(10);
+        music.play();
         cobbler_talk = 0;
         displayStory(story, 252, 258);
         h1 = 0, h2 = 0, h3 = 0, h4 = 0;
@@ -1184,6 +1215,7 @@ public:
                     cout << endl;
                 }
             }
+            music.stop();
             //system("pause");
             cls();
             displayStory(story, 330, 346);
@@ -1194,6 +1226,7 @@ public:
         else
         {
             cout << "Not enough clues to move on." << endl;
+            music.stop();
             goto group3;
         }
         cout << "SPYBAR: " << SPYBAR << endl;
