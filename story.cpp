@@ -1,3 +1,8 @@
+#include<SFML/Audio.hpp>
+#include<SFML/Graphics.hpp>
+#include<SFML/Window.hpp>
+#include<SFML/Network.hpp>
+#include<SFML/System.hpp>
 #include <iostream>
 #include <string>
 #include <fstream>
@@ -9,7 +14,6 @@
     Filename        : story.cpp
     Description     : Removed redundant code for displaying story
 */
-
 using namespace std;
 class StoryPlot
 {
@@ -87,7 +91,7 @@ public:
                 ln++;
             }
         }
-        else if (init_line_counter == true)
+        else
         {
             GotoLine(fpr, start);
             int ln = start;
@@ -206,7 +210,11 @@ public:
         //GotoLine(story, 1);
 
         cls();
-
+        sf::Music music;
+        music.openFromFile("resources/audio/Skill_Borrower_-_Heartstring_Hotel.flac");
+        music.setLoop(true);
+        music.setVolume(5);
+        music.play();
         displayStory(story, 1, 3);
         /*while (line_count < 3)
     {
@@ -220,6 +228,11 @@ public:
         cout << endl;
         cls();
         //cout<<"    ";
+        music.stop();
+        music.setLoop(false);
+        music.setVolume(10);
+        music.openFromFile("resources/audio/Knocking-on-wall-five-knocks-www.fesliyanstudios.com.ogg");
+        music.play();
         displayStory(story, 4, 10);
         /*while (line_count < 10)
     {
@@ -234,7 +247,7 @@ public:
 
         if (status == 1)
         {
-            title();
+            this->title();
         }
         else if (status == 2)
         {
@@ -256,6 +269,11 @@ public:
         progress.open("./resources/txtFiles/progress.txt", ios::app);
         progress << "TITLE" << endl;
         cls();
+        sf::Music music;
+        music.setLoop(true);
+        music.setVolume(10);
+        music.openFromFile("resources/audio/Horse-hooves-sound.ogg");
+        music.play();
         displayStory(story, 12, 26);
         /*
     while (line_count < 26)
@@ -418,6 +436,7 @@ public:
         line_count = 65;
         displayStory(story, 66, 69);
         cls();
+        music.stop();
         matilda();
     }
     void matilda()

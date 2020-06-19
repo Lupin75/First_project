@@ -2,3 +2,5 @@ a.exe
 ./fighting/a.exe
 ./resources/txtFiles/custom.txt
 ./resources/txtFiles/progress.txt
+BUILD/game.exe
+story.o
