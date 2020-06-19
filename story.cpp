@@ -1351,10 +1351,16 @@ public:
                 displayStory(story, 400, 402);
             }
         }
+        sf::Music music;
+        music.openFromFile("resources/audio/forest.ogg");
+        music.setLoop(true);
+        music.setVolume(10);
+        music.play();
         displayStory(story, 404, 419);
         cls();
         cout << "***********call fight function************" << endl;
         cls();
+        music.stop();
         finding_princess();
     }
 
@@ -1366,12 +1372,26 @@ public:
         progress.open("./resources/txtFiles/progress.txt", ios::app);
         progress << "FIND PRINCESS" << endl;
     find_princess:
+        sf::Music music;
+        music.openFromFile("resources/audio/forest.ogg");
+        music.setLoop(true);
+        music.setVolume(10);
+        music.play();
         displayStory(story, 420, 431);
         cls();
         displayStory(story, 433, 447);
         cls();
-        displayStory(story, 450, 470);
+        music.stop();
+        music.openFromFile("resources/audio/Skill_Borrower_-_Heartstring_Hotel.flac");
+        music.play();
+        displayStory(story, 450, 464);
         cls();
+        music.stop();
+        music.openFromFile("resources/audio/Knocking-on-wall-five-knocks-www.fesliyanstudios.com.ogg");
+        music.play();
+        displayStory(story,465,470);
+        cls();
+        music.stop();
         displayStory(story, 472, 474);
         // function to dodge
         // if dodge success
@@ -1439,6 +1459,8 @@ public:
         }
         displayStory(story, 541, 546);
         cls();
+        music.openFromFile("resources/audio/Horse-hooves-sound.ogg");
+        music.play();
         displayStory(story, 548, 556);
         f1 = 0, f2 = 0, f3 = 0;
         while (f1 == 0 && f3 == 0)
@@ -1469,6 +1491,7 @@ public:
         }
         displayStory(story, 566, 568);
         cls();
+        music.stop();
         //maze();
     }
     void climax()
