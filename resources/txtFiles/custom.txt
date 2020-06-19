@@ -1,0 +1,615 @@
+	You just woke up from a comfortable sleep. You sit upon the heavenly mattress and look outside your bedside window to find the Sun rising above the horizon. You get up from the bed and scan your room the King of Jawad provided you, in the most luxurious mansion in the kingdom. You find the brown bag of 1000 gold coins and the note from the King of Jawad that reads: 
+	We are deeply honoured to have you, iLive the Greatest Detective in all kingdoms to participate in our annual festival. Enjoy your stay.
+ ~Annual festival: The richest festival of all kingdoms which goes on for a month. Anyone from any kingdom can come, participate and enjoy. You were one of the chief guests for their inaugural function which held last week.
+	As you walk towards the balcony, you hear a sudden knocking on the door. You rush to the door and open to find nobody in the corridor. When you look down, you find a white cover. You open the cover and a letter is there with the following words.
+	An important person is missing. We need your help. Come quickly to Jade City and do not tell anyone.
+			-King George
+Do you accept the invitation?
+	1: Yes 
+	2: No
+Enter 1 or 2
+//********TITLE**********
+Understanding the emergency, you get on your horse and start galloping towards Jade City. All alone in the scorching highways with not much trees around you to cast shadow from hot sunrays you maintain a steady pace through the rough terrains. Finally, you see a big arch welcoming you to the city of Jadeite after three hours of ride. When you go closer you find the arch looking in a bad state of maintenance and there are no guards at the entrance. As you ride through the outskirts for some ten minutes, you finally approach a junction with a nearby stall for travelers to refresh themselves.
+So you decide to take a small break and let your horse take some rest. After few minutes as you are starting to resume your journey after asking the stall owner directions to the city, you see a blonde man on a white horse coming that way taking a right at the junction (the direction of the main city/ palace).As you observe his clothes, you think that he is a foreign traveler but something seems suspicious about him. But you see that man slowing down his horse as if he was coming for you.
+Traveler: Hello, Detective iLive. I am a chief intelligence agent of Jade City. This is for you.   (He offers you a letter)
+It reads: 
+   This is a secret operation of utmost importance. I apologize for not being able to meet you directly. Podrick the one with the letter will explain you everything about the issue and see to your needs. If it is of any help I completely trust him.
+		King George
+iLive: So you are Podrick huh?
+Podrick: Yes. We should move quickly. Let us move towards the mainland. Meanwhile, you can ask your questions to understand what's happening.
+
+You get on your horse and follow Podrick
+1.	What happened?
+2.	Why is it a secret?
+3.	What makes this a right opportunity?
+4.	About the people.
+
+iLive: So what happened and who is missing?
+Podrick: Her honor the princess "Name" has gone missing. The princess, her two friends along with two important generals in top military positions, who went for their safety, have gone missing yesterday.
+iLive: So why is the fact that the princess is missing, is being kept a secret?
+Podrick: If you have not heard, there was a famine 6 months ago, due to which the economy and military of the kingdom went down drastically. Due to such issues there was also a small people's rebellion which was quickly solves as the King accepted the plea of the people. Due to the current political situation, every other country is waiting for the right opportunity to hit us.
+iLive: What makes this a right opportunity for the invaders?
+Podrick: Due to increasing political tension, the princess was engaged to Prince Clarke of Raken for military support. But the ambassador of Raken got to know about the princess missing. To ease the tension, he asked for the prince Clarke to come here to Jade City. It takes around 2 days for the prince to come from Raken. If the prince Clarke finds that she is missing he will call off any further relationship with our country. So, our country will become more vulnerable to war.
+iLive: And what about the people?
+Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum possible interactions possible. Type SPYBAR.
+ ~SPYBAR:
+  1.Every interaction of yours increases a certain amount of value in a SPYBAR.
+  2.Once this value reached 100, this means that spies in the city knew about the missing. This results in a war in which King George loses. Hence you lost and need to restart the level.
+  3.The SPYBAR value can reach directly over 100 if you interact with even one of the spies.
+  4.This SPYBAR value is revealed only after the end of that level.
+---------------------------
+iLive: So how did the princess go missing?
+Podrick: The princess and others started very early this morning around 5 am for a picnic. We are not sure where they went. But they should have returned by 7pm. But even after searching all night, they couldn't be found anywhere. The Prime minister somehow knew of your presence in the next country and recommended you in order to fasten the searching process.
+ ~Others: Two best friends of princess (i.e. a girl named Matilda, a boy named Phil), Chief General of Cavalry and General of right wing of infantry.
+iLive: Where would they go that early in the morning?
+Podrick: We don't know. But when we searched for evidences in princess' room, a letter was found.
+   Letter: You say on going to Jawad's festival. Matilda recommends the beach. I wish to go to the cliffs. So, we need to meet up and finalize one place and save the rest for other trips.
+                There is no name written on the bottom. The handwriting and the writing style don't seem to belong to a well-educated person.
+------------------------------
+Podrick: The letter should be from Phil. He is the son of a poor pet shop owner from whom princess bought her parrot a year ago. Matilda is the princess' childhood friend.
+iLive: If they did actually go to Jawad, can those people at the refreshment stall whom we saw earlier have a possibility of knowing that they crossed?
+Podrick: No, not probably. Their houses are on the way to the main city. They open those shops only after 10am. We also couldn't place guards 24/7 on the entrance of the country due to internal problems. So, we don't have idea on whether they went to Jawad.
+
+# Can you identify anything from the letter
+ 1) As per the princess' wish, they should have gone to Jawad's festival 
+ 2) They should have gone to any one of the three places only 
+ 3) They should have planned to go to all three places 
+
+iLive: As per the princess' wish, they should have gone to Jawad's festival 
+Podrick: No, they valued each other
+iLive: They should have gone to any one of the three places only 
+Podrick: That could be right. Each place is worth spending a day
+iLive: They should have planned to go to all three places 
+Podrick: Traveling time will be lot and the purpose of picnic won't be fulfilled
+------------------------------
+Despite the famine you are surrounded by trees on your way to the main city. After riding for around 15 mins you can faintly see the huge gates of the main city.
+iLive: Did you investigate in her friend's houses?
+Podrick: Due to spies' problem, we haven't even told Matilda's parents about them missing. We told them she is staying in the palace. We don't yet know the exact location of where the boy lives. The princess has known him for less than a year. His father died due to the famine. The pet shop and their previous house have been closed for months.
+iLive: He seems suspicious and smart. Within a year, he has become the best friend of princess. Where are we going now?
+Podrick: I thought of starting to investigate at Matilda's house with your help first as we need to start the investigation quickly. We can come back to the junction later to investigate more.
+
+You are now at the entrance of the city gates. There are guards observing everyone who passes by. The city is densely populated, and the houses look modern but not in their best state. Also the famine seems to have affected the life of the people adversely.
+Finally, you are now in front of Matilda's house.
+--------------------------
+Podrick: I know these people. I will handle them. Never ask anything that'll make them think they are missing
+                            (He knocks the door)
+Matilda's mother: Welcome Mr. Podrick. Come in.
+					(You both enter the house. It's not a huge house but a well-furnished one.)
+Podrick (to her mother): I came to inform you that Matilda wishes to stay in the palace till tomorrow.
+Matilda's mother: You need not have come so far to tell this. Anyways, I will bring  you two something to eat.
+Podrick: No, it's fine. She also asked me to bring her book which is in her room.
+Matilda's mother: Oh fine. I'll bring that book.
+Podrick (to the player): I bought you some time. Try to find any clue.
+(There are some clothes lying around. Some papers on a table. On the wall, a painting is framed.)
+
+ ~Clothes: they are mostly cotton clothes and threads. Her mother should be weaving as a hobby.
+ ~Table: Sheets with unfinished drawings are lying. Among the sheets, you can see an olive oil bottle. It could also be used as a sunscreen lotion
+ ~Painting: A beautiful painting of a white unicorn. It was painted by Matilda herself it has her sign in the bottom corner.
+
+Matilda's mother: This should be the book she mentioned.
+
+			She hands Podrick a book named "Title (some Easter egg)"
+
+Podrick: Thank you madam. It seems our princess avoids the family. You know, she didn't even tell anyone about the place they were going for picnic.
+Matilda's mother: Don't come to such conclusions. Even Matilda kept that a secret.
+Podrick: Still, keeping an eye on them is better. Then we'll take leave madam.
+						(You both leave the house)	
+----------------------------
+iLive: The only thing that might help in investigation is that the sunscreen lotion was on the table.
+
+# Do you infer anything from that 
+1.	They should have gone to Jawad's festival because this is the place where they'll need least sunscreen.
+2.	They must have gone either to beach or cliff 
+3.	We can't conclude anything strongly.
+
+iLive: They should have gone to Jawad's festival because this is the place where they'll need least sunscreen.
+Podrick: Maybe she wanted it but forgot to take it.
+iLive: They must have gone either to beach or cliff 
+Podrick: We can't be so sure. Maybe she just applied it and kept it on the table as she doesn't need it anymore)
+iLive: But we can't conclude anything strongly just from the sunscreen lotion. 
+Podrick: So it seems
+
+iLive: Well that was not much useful. It is common to not find clues immediately. So don't get disheartened.
+	 Let's head back to the junction. 
+Podrick: Let's pray that at least they know something
+iLive: This could help us retrace their steps hopefully.
+
+			You then ride back to the junction to investigate the people 
+
+You have reached the colony. As Podrick describes the buildings are not continuous and spread in 3 clusters. The door numbers of shops and houses are in the order 221A, 221B and so on till 221K.
+1.	To take a closer look on the house, type the alphabet. (This will tell about the way the house/shop looks from outside along with Podrick's perspective, if any.)
+2.	//You can only go in order. (i.e. you can't type B after you typed C)
+3.	If you feel that you could get some information, type talk. Due to SPYBAR restriction, you can maximum enter any 5 houses or shops in this entire colony.
+4.	Remember, you are not investigating directly. You create a conversation and channel the talk in a way you get some information related to missing.
+5.	Also remember not to talk with spies.
+6.	Choose 'move' if you don't want to get in the shop.
+7.	If you finished investigation, type 'end'.
+
+						If you want to recall, type SPYBAR.
+
+---------------------------------------
+
+At the first group, you can see
+
+A: Potter's house 
+B: Poet's house
+C: Hotel
+D: Tea shop
+
+The house is a small one. He makes the pots inside his house. He everyday goes to the main city at around 10am to sell them and returns on the evening.
+You find that the potter has gone to sell. You made a conversation with his wife. You don't think she has any useful information
+-----------
+It is a modern-looking stone house with a small area in front of the house left for garden. But the poet and his family have gone for an international trip 7 months ago. So, the house is pale and dusty without proper maintenance. You can notice an impression of a palm among those dusts on the low-height compound wall. There is no one to talk to here.
+---------
+It is a poor looking building. A pale old man is walking outside slowly, due to his age, and throwing some wasted food in the dustbin near roadside. There are no customers inside the hotel.
+You get to know that this hotel was once the best in this area. After famine, he saw the extreme poverty and decided to give free meals. This took all his money but still he is very happy about it. He still gives free meals on every Saturday.
+-----------
+It's a small road-side shop with a bunch of customers sitting on the bench outside the shop. Podrick tells you that this is the shop that opens first in this colony around 6am. He insists on going in as he thinks we might get some clues
+Before even entering the shop, you see the customers outside are arguing on something.
+Customer 1: Here come two foreigners. Let's ask their opinion.
+Customer 2 (talking to you): Sir, do you think God is real?
+You: 1. Yes, of course.           2. No, I am an atheist
+Customer 3: Why do you think that?
+You: 1.This universe must be created by someone.
+     2. On the grounds of modesty, I believe the presence of something powerful than humans.
+     3.I have experienced his goodness and mercy.
+You: 1.It's the easiest answer for complex questions.
+     2.God is just a delusional companion during hardships in the form of faith and hope.
+     3.He was created to bring fear and order among the people.
+Customer 4: See, even this foreigner believes in god/is an atheist.
+Customer 5: Basically, there was a debate on God's existence. No native Jade believes in God. But this business man was talking on how other country citizens believe in God.
+iLive: All right. But I think everybody have equal rights to have their own beliefs. 
+-------------
+(You now order something and after other customers went, you got time to create a conversation with the owner)
+You get acquainted that the shop owner heard sounds of a pack of horses while he was about to wake up at around 6 am. They were going in a direction opposite to the city.
+-----------------------
+
+Podrick (to you): The tea stall owner must be referring to the princess and others along with her.
+iLive: You said that princess started at 5am. But this man heard sounds near 6am. Will it take 1 hour to reach here from the palace?
+Podrick: No. It takes less than 30 minutes. But who else could travel with pack of horses?
+
+#What do you deduce?
+ 1.The princess got there late. 
+ 2.Some group of travelers. 
+ 3.Somebody else from the kingdom 
+
+iLive: The princess might have gotten there late?
+Podrick: Her friends stayed in the palace the night before. So, there's no need to spend time anywhere.That's possible but the reason for delay is still unclear
+iLive: Could it be some other group of travelers?
+Podrick: After the famine, the travelers count reduced to 2 per week. It's unlikely for the travelers to travel in a group.
+iLive: It could also be somebody else from the kingdom. 
+Podrick: As far as I know, no one had any official meetings and any need to come this early, but it is possible
+----------------
+This reminds you of another unsolved question
+
+# Why would they go that early in the morning for a picnic?
+ 1.To maximize the total time of picnic
+ 2.In order to reach on time for the Jawad's festival that starts at 7am.
+ 3.To see the sunrise.
+
+iLive: Did they start so early to maximize the total time of picnic?
+Podrick: Our princess used to sleep till 8am every day. An extra 2 hours of picnic might not be worth sacrificing early morning sleep
+iLive: In order to reach on time for the Jawad's festival that starts at 7am
+Podrick: That's is more probable
+iLive: Could it be to see the sunrise
+Podrick: That's a possible solution. The sunrise looks magnificent in our country compared to others
+--------------
+Type next to go to the next group of buildings
+
+The player should have visited the poet's house and the tea shop. Then only the game proceeds. (Else game tells 'you're missing a clue')
+While riding to the next group,
+Podrick: If they wanted to watch the sunrise, the sunrise looks great from both the cliffs and the beach.
+iLive: We might get more information on investigation. Then we can decide.
+------------------
+At the second group, you can see
+
+E: Farmer's house
+F: Refresher's house
+G: Antique store
+     A weak building made of straws and twigs. An old man (who is the farmer) siting on the entrance of the house, is shouting to his wife inside the house in a bit irritated voice.  You hear him saying, "you talk as if I do nothing for this house. Who is the one that goes to the farm every day at first light in the morning?". Then he just angrily walks out of the house.
+Talk: 
+iLive: Excuse me sir. We are travelers from another country. Which way is the Palace?
+Farmer: Follow this road and it will lead you to the palace.
+iLive: The weather is good , looks like there will be a good harvest here this year.
+Farmer: Yes sir, the weather this year has been wonderful compared to the famine last year. Here please take this ( He offer you two some coconuts). I got those from the trees just this morning.
+iLive: Thank you sir.
+	 (As you drink your coconut)I heard you fight with your wife. You took the right decision to come out. No one can win an argument with a woman. (You say in a joking way)
+Farmer: (smilingly replies) Yes sir. But to be honest, I work lot more than her. I go to the farm everyday as early as 5. It takes me half an hour to walk there. There won't be anyone even to talk at that time. For three hours my only companion will be my two bullocks.
+iLive: Did you say that you go to the farms at 5am! You really are much younger than you look.
+         But do not tell that you will be alone with bullocks. There must be some people around your fields.
+Farmer: My field is on the way to the cliffs, a lonely path. There was another farmer who accompanied me before. But after the famine, he gave up on farming and left the country. I am not exaggerating in telling you that I have never seen anybody during my first 3 hours of the day after that. My first encounter will be with any of the colony men when they open their shops around 9 when I return to my home.
+Podrick: I heard that there was a famine last year. Have you not seen even one person in the entire year during the morning?
+Farmer: No. As I say there are no houses on that way and no need for anyone to go there that early in the morning.
+(A faint voice from his wife comes out of the house and calls him for some help)
+               My wife is calling me to lift some weight. I need to go.
+iLive: Nice to meet you, sir.   
+You leave the place---------------
+Podrick: The princess started at 5am. She should have reached the cliffs at least by 6, if they had planned to go there. According to the farmer, no one has crossed his field before 9am. But one must cross his field to reach the cliff. 
+#What can you infer?
+ 1.	Princess didn't go to the cliffs 
+ 2.	They didn't reach the cliffs before 9am. 
+ 3.	The farmer might not have noticed them passing. 
+----------------
+iLive: So the princess didn't go to the cliffs.
+Podrick: It is possible that due to some unknown reason, they might have needed more time to go or they could have done something else before they went to cliffs.
+iLive: So the princess didn't reach the cliffs before 9 am.
+Podrick: That's the only thing we can be sure of.
+iLive: The farmer might not have noticed them passing. 
+Podrick: They were 5 horses. He should have seen them. Moreover, he had a sharp ear. We saw how he recognized that feeble call from his wife.
+Podrick: If we summarize what we got till now, 
+ * They could have either gone to Jawad.
+ * They could have gone to the beach.
+ * They did something else and after 9am, they could have gone to the cliffs.
+
+It is a small house where every family member works. The door is locked on the outside. So, they must have gone for sales. There is no one here to enquire.
+
+This shop was the first among its 3 branches; the other two are in the main city. It was opened by a hitherto unknown foreign man 1 year ago but soon gained so much popularity. The owner was sweeping the entrance of the shop and sees you coming.
+Store owner: Hello tourists. You might want to check out on some valuable antiques. From high-class business men to the royal kingdom, everyone has bought items from my shop.
+You learn that he had heard 2 different sets of horses going yesterday morning.
+After that you leave the store...
+Podrick: what he says confirms that someone else too has gone out of the main city with a pack of horse. It probably must be someone from the kingdom. But we don't have enough facts to confirm whether it is even related to the missing.
+------------------
+At the third group, you can see
+
+H: Textile shop
+I: Hair salon
+J: Grocery shop
+K: Cobbler's house
+
+It's the largest building you saw till now. This family is one of the oldest natives of the country. The owner and his three sons are running the shop. There are plenty of customers inside. 
+As they are busy running the shop, you could not develop a good conversation. So, you didn't get any information.
+
+You see the barber opening the shop as you approach it. There is a board hanging with words "Shop closed for 3 days".
+Another by-passer talks to the barber.
+By-passer: How is your health now?
+Barber: Much better pal.
+By-passer: Very good. I'll come in the evening for a shave. Don't close the shop before that.
+Barber: I won't wait for you. Come before 6.
+You didn't get anything useful other than the fact that he has once done haircut for the Prince (elder brother of the princess)
+
+This family was a goldsmith for generations. But recently the 2 brothers turned it into a grocery shop. Podrick says he doesn't know why they changed because changing their business didn't make them any richer. One of the brothers is inside the shop and the other is carrying something heavily into the shop. Oops! He slipped and fell. The brother inside the shop shouts after hearing the noise of the fall, "What happened? Jesus Christ! Do you know the value of these spices? Arrange it properly again and bring it inside, you fool."
+You didn't get anything related to the missing.
+
+The cobbler is sitting just outside his humble looking house and repairing some footwear. His 5 years old daughter is playing on the road. You can see an expensive set of bangles on the child. It also seems brand new.
+You approach the cobbler to polish your shoes. While he is polishing, you entertain that kid.
+iLive (to the kid): These bangles look nice. Can I see them?
+Child: No, you can't.  (She covers her hand) 
+       This was given by the princess. I won't even let you to touch it. It's mine.
+iLive: You want me to believe you that the princess gave you that?
+Child: I don't care whether you believe.   (She runs inside the house)
+Cobbler: Don't take it as an offence sir. She's always like that.
+iLive: It's all right. Anyways, those bangles look cute on her hands.
+Cobbler: 2 days back, the princess came here to stitch a slipper. She saw my daughter looking at her bangles and right away, she took it off and gave to my child. I tried to return it to the princess, but she was happier to see those bangles on my child and just walked away in the direction that leads to the city. She is so generous.
+iLive: That's so great of her. But are you saying that the princess herself came here to stitch a slipper?
+Cobbler: Yes, but not alone. Along with her, a boy came. They looked like good friends. It must be his slippers. I could tell that by its ordinary look.
+iLive: You said they were friends. Then the boy should also be rich. Then...
+Cobbler: (interrupting you) No. The boy is the son of a poor pet shop owner, a widower. His father died in this famine and he came to the streets. The princess gave him accommodation inside the palace until he earns enough money.
+Podrick: This princess might be the most kind-hearted woman in the history. He is lucky. Now he'll be enjoying his time in the palace.
+Cobbler: That boy is not like others. I have seen him work so hard even after he lost his father at such a young age. So even if he is staying in Palace, he won't be simply enjoying.
+(By this time, he had polished your shoe and you take your leave)
+-----------------------
+You have finished investigating the colony.
+
+iLive: Does the boy Phil stay in the palace?
+Podrick: No. He does not stay in the palace. But the princess did offer him accommodation.
+iLive: But these people think he stays in the palace. (Then you pause for a moment)     
+         Think of this. The princess came herself to this simple cobbler this far from the palace. Doesn't this point irk you? 
+Podrick: Yes. Even I noticed it.
+# Can you find a reason?
+1. As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more. 
+2. This was the nearest cobbler shop from the place where his slipper got torn 
+3. Phil might be a regular customer to this shop 
+iLive: As it was the boy's slipper, he didn't want to waste money on cobblers in cities who costs more.
+Podrick: But there are few shops in the main city where the prices are lower than this
+iLive: This was the nearest cobbler shop from the place where his slipper got torn
+Podrick: Could be probable
+iLive: Phil might be a regular customer to this shop
+Podrick: Could be probable
+(Suddenly something strikes)
+iLive: Didn't the cobbler mention that the princess walked away?
+Podrick: Yes. But he could not have meant it. This place is so far from the palace to have come by walk.
+iLive: No. The way he told, his gesture, his tone ... I don't know for sure, but I do feel that the princess did walk away.
+Podrick: What could this possibly mean?
+You: Wait. We still didn't find a valid reason why they came to this small colony.
+Podrick: They might be taking some ride.
+You: (after thinking for a moment) Or perhaps, the boy's house could be somewhere near here, and the princess came to visit him. After which they both went to the cobbler with the princess' horse parked at the boy's house.
+Podrick: This sounds like a good deduction. 
+                But where could the boy stay in this small colony without this cobbler noticing it?
+# Your guesses on where he could be
+1.  In the vast empty land behind this colony.
+2.  In the poet's house 
+3.  In the refresher's house 
+iLive: In the vast empty land behind this colony.
+Podrick: He cannot stay there at night due to excessive snakes on those lands
+iLive: In the poet's house
+Podrick: We even saw some palm impressions on the compound wall. He could be secretly staying in that house.
+iLive: In the refresher's house
+Podrick: No, that can't be the best guess
+
+Investigating Phil's  hideout
+You turn your horses around.
+To clear your doubts, you go back to the poet's house. On your way, Podrick recalls a small basement behind the poet's house which has no lock. 
+Podrick: I think I might know where Phil stays. (He guides you on another path to enter the house without any colony men noticing.
+As you both suspected, Phil was secretly staying in the basement of the poet's house.
+You enter the basement to find any clues. It's a poor compact room yet tidy. You find some books spread on the floor, small statues on one corner and something covered with a piece of cloth.
+
+Books   - It is mostly book on history.
+Statues - It looks like Phil has a hobby of sculpting. There are few stones lying around and few that have been sculpted to beautiful statues.
+Covered - You remove the cloth to see brand new fancy footwear, probably gifted by the princess.
+
+Podrick: I do't think we made any progress here.
+iLive: Did you notice the shoes? The one that cobbler mentioned was not there.
+Podrick: Yes. Then that should be the slipper he wore for the picnic. But wait. Why would he wear that when he had a better-looking shoe?
+iLive: Jawad's festival is the richest in the world. If they really went there, he would have worn this.
+Podrick: Fantastic. Then this eliminated Jawad from our list.
+iLive: They could have either gone to the beach or gone to the cliffs after 9am.
+Podrick: Yes. But we need to go find that directly as we can't investigate inside the city.
+
+You and Podrick reach the junction. You need to decide on whether you turn right and search in the cliffs or straight into the forest to search the beach. Suddenly you hear some sound from the direction of the forest.
+Podrick: The sound should be from the wood cutter family living on the edge of the forest. We might get some information from them.
+You both talk to the woodcutter and get to know that he heard some unclear noises few of which that sounded like muffled human voices inside the forest yesterday morning.
+-------------------
+iLive: I think he is referring the princess. It is better to start searching from the forest.
+Podrick: As you say.
+You get into the forest and look for some clues. 
+-------------
+iLive: My inner voice tells that they have been kidnapped inside this forest.
+Podrick: We can't act based on our inner voices, we need evidence.
+
+# What can you show as evidences among these?
+1. A deep cut on one of the trees 
+2. A bag full of packed food items. 
+3. A broken branch 
+4. A piece of ordinary brown cloth. 
+5. Blood stains on a leaf 
+
+iLive: A deep cut on one of the trees
+Podrick: That must be an incomplete work of the wood cutter
+iLive: A bag full of packed food items.
+Podrick: This looks like the bag of the princess
+iLive: A broken branch
+Podrick: You must be joking
+iLive: A piece of ordinary brown cloth.
+Podrick: This cloth doesn't look like it came from a dress worn for picnic from the color of the cloth.
+iLive: Blood stains on a leaf 
+Podrick: This could have happened while defending the kidnap
+
+After detective found one, Pod says "It can't be enough to prove the kidnap." 2 evidences needed.
+-------------
+Podrick: The evidences show that the princess is indeed kidnapped. But who did this? Where are they hiding her?
+You hear sound of a horse approaching you. A tall fair man on a black fiery horse is coming towards you. 
+Podrick: It is Sir Ivan.
+Ivan: You must be the Great detective iLive. I am Ivan, nephew of the Prime minister. I too am searching for them.
+Podrick (to you): He loves Matilda sincerely, but she rejected him.
+Ivan: I have loved her from when I was still a child, but she never even considered me as a friend. If I rescue her, then she might understand this orphan's love.
+iLive: Have you got any clues on where they might be?
+Ivan: I searched the entire forest in the morning but could find them nowhere. Instead, I found this sheet of cover.
+(He hands it over to you)
+On the cover, it was written "meant for detective iLive". You open the cover. It has 2 sheets one blank sheet, and another has letters in a random way and gives you no meaning. You realize it is encoded.
+The words are:
+"MJFY YMJ UFUJW"
+Can you decode it?
+1. Yes
+2. No
+iLive: It says "heat the paper"
+You understand that this means that the other paper has some invisible words and need to be heated for those words to appear. You make fire out of stones and heat the paper. As you suspected, the words started to appear.
+"You need to come alone to the death pitch at 7pm with 50,000 gold coins. Or else, one of our captives will die today"
+
+Death pitch: The land at the peak of the steepest cliff. It will be covered with dense trees to make it the most dangerous in the entire cliff belt.
+
+Accept the challenge?
+1. Yes
+2. No
+
+Podrick: Please be careful sir. It could be a trap and we can't help you
+iLive: I know. It's already around 5pm. I'll search here for some more time while you go to the King and tell him about the ransom. It must be a high amount in this current economic situation.
+Podrick: It's about quarter of the current treasury. But the princess' life is more important. I will arrange for the money and wait at the junction by 6:30.
+-------------------
+They both leave. As Ivan searched the forests, you go to the beach. You see a guard cleaning a caravel and readying a sail. You couldn't find anything related to the missing. Possibly due to the mild anxiety caused by that letter.
+Caravel - a small highly maneuverable ship.
+------------
+You come to the junction to see Podrick waiting for you with a bag
+Podrick: Here is the money. You might also need this. (He hands over a sword)
+                It was a pleasure working with you.
+iLive: Don't mean as if I am going to die there. We will meet again in 2 hours.
+Podrick: (smiles) Good luck sir.
+
+(You start your journey. Before you reach the bottom of the cliff, the sun has already gone down and it's so dark. Finally, you reach the peak after a tough journey.)
+(You see a man waiting for you. You go near him and bend down to drop the bag with money. Suddenly the man drove his sword and starts to attack you.)
+
+iLive: Where is the princess? Who sent you? 
+Assassin: Who are you and why should I tell you?
+He spits the blood in his mouth nearby
+iLive: So you have been attacking me even though you don't know who I am? Listen carefullly. The name is iLive and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
+You pull him up by his collar with cold calmness and ask him again
+Assassin: Don't kill me. I'll tell everything I know.
+You put him down.
+Assassin: They don't tell me the place where they hid the princess, but I know it was the prince that ordered to kill you.
+iLive: The Prince? Don't you dare lie (pressing the sword against his chest). 
+         Why would he kidnap his own sister and try to kill me?
+Assassin: I'm not lying (he screams). They didn't tell me the details. It's your job to find it. But one thing, it was never about the princess. You'll certainly have another combat. 
+You understand he is just a labour. You sit down on a rock near him and try to understand what's happening. You have heard about the prince in a good way and he could not have any intensions on kidnapping his own sister. You feel that someone else is involved.
+-----------------------
+Assassin: Leave the gold coins here and the princess will be released tonight.
+iLive: Why would the prince desire for a bag of coins when he has access to an entire treasury? Whoever wants it, ask them not to fight like a coward using the Princ's name.
+You take the money bag with you and ride down the cliff. You swiftly come towards the city and near the junction Podrick is waiting. You two start moving into the city.
+Podrick: What happened there? Weren't you supposed to hand over this bag to them?
+iLive: It was not about the money. I feel that they want my life more than the princess'. 
+Podrick: What are you talking about?
+iLive: This even feels strange for me. This is the first time I come to this city and with who could have such vengeance for me?
+
+Podrick: Do you say that you are their target, and nothing will happen to the kidnapped people?
+iLive: Yes, according to the assassin that tried to kill me.
+Podrick: What...? An assassin tried to kill you?
+iLive: Don't panic. It's all over. I need time to think. Can you arrange me a room?
+Podrick: I have already booked a room for you. I'll drop you there.
+iLive: Thanks, Podrick. Is there any lead from Ivan?
+Podrick: He said that there is a possibility of finding her in a specific location inside the forest. 
+--------------------
+
+(Now, you both reach the city. After a few minutes ride, Podrick takes you to a deluxe mansion and shows your room.)
+Podrick: Take some rest and then start thinking about the case.
+iLive: Take this bag of gold coins back to the kingdom. (You hand over that big black bag)
+         Can you do me a favour Podrick? Bring me a map of this country along with the place Ivan suspected marked on it.
+Podrick: Sure. I will bring it within one hour.
+As it was a hard day, you prefer to get yourself relaxed by taking a good bath. After you calm your mind, you start to think about the case again.
+
+It has been about half an hour since Podrick left. You look out the window to find a heavy downpour.
+You wonder if Podrick will be able to come to get you the map. You sigh and lie on the bed and wait for the rain to end for what seems like an eternity. Suddenly you hear a knock on the door, you find Podrick shivering and heavily drenched from the rain. You open the door and Podrick enters the room and removes his wet cloak. You start a fire for him to warm up
+Podrick: Here is the map, sorry it got wet.
+iLive: That's not a problem, but you could have waited for the rain to subside.
+Podrick: Finding the princess is of the utmost importance
+ Ivan will be here in a few minutes. We can together search the place Ivan suspected.
+iLive: Where is that place? 
+Podrick: It is a place deep inside the forest where there is no human activity for years.
+-----------------
+
+Someone knocks the door. You go and open the door. It is Ivan. You also notice a cover at the bottom of the door.
+You open it and the following words are written.
+"As the coward prince didn't get his ransom on time, a poor girl named Matilda lost her life."
+---------------
+
+You stand devastated without any breath. By looking your reaction, Podrick and Ivan take that letter from your motion-less body and read it. After reading it, Iva's heart stopped. Everyone in the room looks stunned and cannot understand what has happened.
+Suddenly, Ivan is filled with extreme rage and draws his sword and furiously pounces to attack you.
+Save yourself!!
+-----------------
+
+You dodge the first swing successfully but land awkwardly so that you are not able to dodge the second swing properly and crash into the cupboard.
+Podrick holds back Ivan and asks him to calm down.
+Ivan: What have you done? What did you do in that cliff?
+You explain what happened there as """""""""""""""""""""""""""""""""""""""""""""""""""
+Ivan couldn't control his tears and he just runs away to his horse while the tears from his eyes drip all over his path.
+Podrick (to iLive): Come, we need to console Ivan.
+You both just started to run through that big hallway, when Ivan shouts at you.
+Ivan: STOP. Don't come any closer. If you take even a step, no one can stop me from killing you.
+Podrick: Ivan, listen. We can talk. Don't do anything stupid.
+Ivan: My only happiness in this world was killed by that vicious detective. What more do I have in this life? 
+He goes out of the hotel. You both go behind him and try to stop him. But he doesn't listen to you and gets on his horse. You can see a bag on his horse and along with it he hastily went outside the city.
+----------------
+
+Podrick: Please tell me what happened in the cliff.
+iLive: The assassin told me it was the prince that kidnapped them and tried to kill me. But I didn't believe it then.
+Podrick: For the past few months, the prince has some issues with the family. It can be his work. Why would you tell the prince as a coward? I think that's what aggravated him.
+iLive: No, I didn't. It was a miscommunication.
+Podrick: All right. We need to talk about this to the king.
+You both get on your horses and start moving to the palace quickly
+-------------
+
+iLive: Podrick, I didn't expect this at all. I didn't do this on purpose.
+Podrick: Don't worry too much. We can't be sure that he killed Matilda just by his words on a letter.
+You suddenly stop. Your feeling of guilt suddenly vanishes, and your mind becomes clear and open. You start to see the broader picture. You get doubts on people around you.
+# Can you think of anyone who might be the suspect
+1. Prince 
+2. Podrick 
+3. Ivan
+
+iLive: Prince
+Your inner voice: I feel that there is someone involved more
+iLive: Podrick
+Your inner voice: No, He seems a very loyal man. What made you think that?
+
+Podrick: Why are you silent?
+You: Did you notice the fact that both the letters from the kidnappers came to us through Ivan?
+Podrick: You suspect Ivan? He is already heartbroken. You are blabbering because of the stress.
+------------------
+
+At the end of the road, you can see some guards searching for something in a hurry. Podrick calls one of the guards and asks what happened. 
+Guard: Half of the treasury is missing including the bag of coins you brought an hour ago. The Prime minister is also missing in this important time.
+Podrick: What? From when is the prime minister missing?
+Guard1: One of our guards saw Prime minister Aron riding out of the city 2 hours ago. He was not carrying any bags. Hence, it's not the Prime minister who looted the treasury.
+Guard2: We also searched his chambers just in case and found this letter. It arrived in the evening.
+The guard hands you over the letter.
+"I have arranged 7 men. We will take of him. You don't worry Boris"
+Boris - It's an unforgettable name for you. 20 years back in the country of Shaer, you solved a case on serial killing of people above 30 and expensive robberies which took you about a year to solve. That was done by 2 brothers, Adonis and Boris. Adonis, a married man, was the head of a big network involved in killings and young Boris was the mastermind in robbery. After you found the criminals, Adonis was hanged, and Boris flew the country along with Adonis' son.
+------------------
+
+You: Boris? Podrick, is Boris, I mean Prime Minister Aron a native citizen?
+Podrick: Aron came to this country 20 years ago. Due to his extreme intelligence and loyalty, he gained the position of the Prime minister a few years back. Why do you ask that now?
+You: I guess Prime minister is involved in the robbery. But before explaining you why, we need to find where he could have gone.
+# Where could the Prime minister be?
+1. Hiding somewhere inside the city. 
+2. Fleeing out through Jawad. 
+3. Escaping through sea. 
+
+iLive: Hiding somewhere inside the city.
+Your inner voice: Guards are searching everywhere. He is an intelligent man and should have planned to flee the city.
+iLive: Fleeing out through Jawad.
+Podrick: It is possible, but we can't be sure
+iLive: Escaping through sea.
+Podrick: We even saw a guard getting a boat ready
+
+iLive: Ask your guards to go to the port quickly. The Prime minister is escaping through sea.
+Podrick: How can you say so sure? He didn't even carry any bag.
+iLive: But Ivan did. 
+         We both need to go to that place Ivan told. I'll explain you on the way.
+Can you guess what could have happened? You and Podrick ride that place in the deep forest.
+--------------
+
+Podrick: Explain me what's happening.
+iLive: The kidnap, missing treasury, men trying to kill me, everything is Aron's plan. His actual name is Boris. I am the reason why Ivan is an orphan. During a case 20 years back, I found Ivan's father guilty for which he was hanged. Boris along with Ivan fled that city. 
+        As I came to the neighboring city Jawad, they found this opportunity the best to give revenge. So, they kidnapped the princess and recommended me to be involved in this case. By creating a chaos in the palace, they found it easy to loot this large amount.
+
+Podrick: Are you serious? Then what about Matilda's death?
+
+1. They could have lied to create tension and slow me down.
+2. Ivan could have lied on loving Matilda. 
+3. They plan to take Matilda forcefully with them and blame her missing as death due to me. 
+
+iLive: They could have lied to create tension and slow me down. 
+     They plan to take Matilda forcefully with them and blame her missing as death due to me.
+iLive: Ivan could have lied on loving Matilda.
+     No, he really loved her and made many attempts to impress her
+iLive: They plan to take Matilda forcefully with them and blame her missing as death due to me.
+     They could have lied to create tension and slow me down.
+
+iLive: Even though Adonis and Boris were killers and thieves they never harmed a child's life. So I am sure that nothing happened to Matilda also given the fact that Ivan loves Matilda.
+Podrick: If Ivan kidnapped them, why would he tell me the right location? 
+iLive: He thought the assassin would kill me. As he has no vengeance with the princess, you could find them later at that location. But before this they would have fled the city and you couldn't have caught them.
+Podrick: Okay. Now I get it.
+
+You and Podrick reach that place in the deep forest. You see a cave there. 
+Podrick: The princess should be ...
+Suddenly a bunch of arrows are being fired at you from archers hidden at tree tops. Two of those arrows pierce your horse's head and you fall on the ground. You quickly hide behind a nearby tree. Podrick retreats and goes a few meters behind. 
+Podrick: This must be the kidnappers. 
+iLive: She must be inside that cave. You go and bring some men.
+Podrick: How can I leave you alone here?
+iLive: At least one of us must be alive to tell them where the princess is. Nothing will happen to me if you bring some guards quickly.
+Podrick, who cannot help you alone against these invisible archers in the dark, goes quickly to get some help
+-------------
+Within a few moments after Podrick went, 7 archers climbed down from the tree tops and come towards you. Knowing that you can't fight these trained archers, you surrender on your knees.
+Archer 1: Do you remember Sir Adonis? Entire Shaer will tremble on hearing that name even now.
+iLive: So... you must be those assassins who worked under him.
+Archer 2: He was feared and respected more than any king. But you tricky bastard fooled our leader and humiliated his pride.
+iLive: I was just doing my job.
+Archer 1: And for that we are here to offer you death, a very painful one.
+Archer 2: You won't see death for the next few weeks but would have already experienced the hell waiting for you.
+
+You hear a horse approaching you from behind. You turn and look hoping it is Podrick but to see Ivan.
+Archer 1: Young master, why are you here? We will take care of this puny man. You please leave the city.
+Ivan: No. You must have understood by now that I am the reason for all this. By now, I should be at the docks but suddenly I felt that it must be me who kills the man who was the reason for my father's death. Do you know who these archers were? They were the loyal assassins who worked under my father. All my life, I had only one dream, to trick this pig-head the same way he did to my father and make him realize he is not the most intelligent man. But suddenly now I feel that it should be my hands which rip his ribs apart. It should be me who should defend my father's death.
+Archer 2: Then what about Prime minister?
+Ivan: I asked him and Matilda to go to England. The future superpower. I am going to stay with you people. But quick we need to get away from this place before anyone comes.
+
+They tied your hands, and everybody is about to move with their horses. To your delight, Podrick comes with an army. But still those archers are so skilled that even that army can't come any closer.
+Archer 2: We can't keep this up for a long time. Forget about us, you take that bastard and go away.
+Ivan: They are slowly closing in. It is not good to postpone his killing. 
+He drags you inside that cave. You see the princess and others tied there except Matilda, who should be with the prime minister. There is also a big grey wolf which comes and stands beside Ivan. Ivan shouts 'attack' and both him and the wolf attack you.
+
+Ivan: Deviation from the plan for the sake of satisfaction costed me this defeat. But my uncle will definitely get back at you for everything you did to our family.
+iLive: (Laughing) Last minute hope? We are going to find him too and imprison him for life.
+Ivan: (Understanding he has no other way) I cannot rot in jail.
+He takes his sword and cuts out his throat. Ivan died.
+-------
+You untie the princess and rescue everyone with her. You come out of the cave. You see the last of the archer fall after an arrow pierced his chest. Podrick comes running after seeing you and the others. 
+Podrick: Did anything happen to you princess? Are you safe?
+Princess: I am fine. Ivan didn't hurt me or anybody else. But Matilda was taken away by a guard. Do you know where Matilda is?
+Podrick: Uh... About that, iLive, we couldn't catch the prime minister.
+iLive: Prime minster is headed to England. Matilda is with him.
+Podrick: Wow. That's a great news. Raken and England are good friends. We can catch them.
+	 We won detective iLive!!
+
+The princess is safely returned to the kingdom. After 3 days prime minister and Matilda are found. Both prime minster and Ivan are imprisoned. The king gave you rewards, and you happily leave the country.
+A great feast was arranged and whole of the kingdom was overwhelmed with joy. You were awarded with a huge amount and was also offered a minister post. But you refused and went on pursuing your detective career.
+The prince of Raken came to Jade. After hearing what happened to the princess, he was very angry and ordered some of his men to immediately return to Raken to seize Boris. After a couple of weeks, Boris was arrested in England and was imprisoned in Raken.
+Later, the princess wed him and got settled in Raken. King George stepped down and Jade got its new Prince. Slowly jade grew economically and later became one of the safest kingdoms with negligible crimes. 
+And also, England went on to become a powerful and a dominating kingdom.
