@@ -17,10 +17,9 @@
 */
 int playerHealth = 100;//remove this and include global.hpp
 int playerDefendStat = 50;
-//#include"global.hpp
 // #include"global.hpp"
 #include<iostream>
-#include "mingw.thread.h"
+#include<SFML/System.hpp>
 #include<Windows.h>
 #include<ctime>
 std::string temporaryInput="NO";
@@ -82,7 +81,8 @@ class Fighting{
     }
     std::string enemyName;//I don't know if need these two or not.Anyway , i included this here, you can remove it if you dont want to tho.
     void getEvent(){
-        std::thread th( fightFunction::countDown);
+        sf::Thread thread(&fightFunction::countDown);
+        thread.launch();
         while(fightFunction::didFunctionQuit == false){
             // std::cout<<"intput is going to be given"<<std::endl;
             if(fightFunction::didGetEventProceed == false){
@@ -93,7 +93,7 @@ class Fighting{
             }
             // std::cout<<"input has been given"<<std::endl;
         }
-        th.join();
+        thread.wait();
         if(fightFunction::doProceed!=true){
             std::cout<<"you failed to move in time"<<std::endl;
         }else{
@@ -287,11 +287,11 @@ class Fighting{
         }
     }
 };
-int main(){
-    Fighting f;
-    if(!f.startBattle("nirmalie")){
-        std::cout<<"you died!"<<std::endl;
-    }else{
-        std::cout<<"success!"<<std::endl;
-    }
-}
+// int main(){
+//     Fighting f;
+//     if(!f.startBattle("nirmalie")){
+//         std::cout<<"you died!"<<std::endl;
+//     }else{
+//         std::cout<<"success!"<<std::endl;
+//     }
+// }

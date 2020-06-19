@@ -1,7 +1,7 @@
 #include<iostream>
 #include<SFML/Audio.hpp>
 #include<Windows.h>
-#include"mingw.thread.h"
+#include<SFML/System.hpp>
 using namespace std;
 int fiveSeconds = 5 ;
 std::string typeJump = "heDidNotType";
@@ -34,12 +34,13 @@ namespace typingJump
 } // namespace typingJump
 
 bool jumpFunction(){
-    std::thread counting(typingJump::countingFiveSeconds);
+    sf::Thread thread(&typingJump::countingFiveSeconds);
+    thread.launch();
     while(didCountingFiveSecondsQuit == false){
         std::cin>>typeJump;
         Sleep(1000);
     }
-    counting.join();
+    thread.wait();
     if(doProceed != true){
         std::cout<<"you failed"<<std::endl;
         return false;

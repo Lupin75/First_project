@@ -1,1 +1,0 @@
-These files are seperate project , to add these files to the currect game , we need to change the linker directory in the makefile
