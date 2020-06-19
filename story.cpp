@@ -37,7 +37,7 @@ public:
         system("pause");
         system("cls");
     }
-
+    //This function helps us conttrol the speed of output using "speed" var
     void displaySlow(string line, int speed = 100000, bool sleepStats = true)
     {
         // char ch;
@@ -49,6 +49,7 @@ public:
         }
         cout << "\n";
     }
+    //Wraps text to avoid cutting of words in terminal
     void wrap(string text, size_t line_length = 110)
     {
         std::istringstream words(text);
@@ -76,6 +77,7 @@ public:
         }
         displaySlow(wrapped.str());
     }
+    //Displays story line between start and end line number
     void displayStory(fstream &fpr, int start, int end, bool init_line_counter = true)
     {
         if (init_line_counter == false)
@@ -107,10 +109,8 @@ public:
     void displayStory(fstream &fpr, int start)
     {
         GotoLine(fpr, start);
-        //int ln = start;
         lin.clear();
         getline(fpr, lin, '\n');
-        //displaySlow(lin);
         wrap(lin);
     }
 
@@ -179,6 +179,7 @@ public:
             }
         }
     }
+    //Customises game to input name
     void customise_game()
     {
         ifstream templat;
@@ -1394,6 +1395,20 @@ public:
         music.stop();
         displayStory(story, 472, 474);
         // function to dodge
+        /*cout<<"Type jump within 5 seconds"<<endl;
+        if(jumpFunction()==true){
+            cout<<"You escaped it successfully, but he swings again.JUMP"<<endl;
+            cout<<"Type jump within 5 seconds"<<endl;
+            if(jumpFunction()==true){
+
+            }
+            else
+                goto find_princess;
+            
+        }
+        else 
+            goto find_princess;*/
+
         // if dodge success
         cls();
         displayStory(story, 477, 495);
