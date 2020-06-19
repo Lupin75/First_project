@@ -1,4 +1,4 @@
-AT = -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio -lsfml-network
+AT = -lsfml-system -lsfml-audio
 CXX = g++ -std=c++17
 FLAGS = -c -std=c++17
 INC = -I"resources/externalDependencies/include"
