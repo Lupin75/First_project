@@ -6,6 +6,7 @@
 #include <Windows.h>
 #include "./resources/hpps/global.hpp"
 #include"./resources/hpps/fighting.hpp"
+#include"./resources/hpps/jump.hpp"
 /*
     Last modified by: Abishek.R
     Last modified   : 16-06-2020
