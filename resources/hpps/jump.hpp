@@ -49,3 +49,13 @@ bool jumpFunction(){
         return true;
     }
 }
+/*
+int main(){
+    cout<<"type jump within 5 seconds"<<endl;
+    if(jumpFunction()==true){
+        cout<<"passed"<<endl;
+    }else{
+        cout<<"failed"<<endl;
+    }
+}
+*/
