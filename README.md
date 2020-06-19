@@ -1,3 +1,7 @@
+# TO PLAY
+* type `make` to compile
+* and then `make run` to play
+
 # TODO:
  * **Add story** 
  * Include Animation
