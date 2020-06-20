@@ -1,0 +1,8 @@
+a.exe
+./fighting/a.exe
+./resources/txtFiles/custom.txt
+./resources/txtFiles/progress.txt
+BUILD/game.exe
+./BUILD/resources/txtFiles/custom.txt
+./BUILD/resources/txtFiles/progress.txt
+story.o
