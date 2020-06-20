@@ -10,11 +10,11 @@ bool didCountingFiveSecondsQuit = false;
 // namespace typingJump
 namespace typingJump
 {
-    int countingFiveSeconds(){
+    void countingFiveSeconds(){
     sf::Music music;
-    if(!music.openFromFile("clock-ticking.ogg")){
+    if(!music.openFromFile("./resources/audio/clock-ticking.ogg")){
         std::cout<<"error! clock-ticking.ogg not found!"<<std::endl;
-        return -1;
+        goto x;
     }
     while(fiveSeconds !=-1 && doProceed != true){
         fiveSeconds--;
@@ -29,8 +29,8 @@ namespace typingJump
             typeJump = "heDidNotType";
         }
     }
+    x:
     didCountingFiveSecondsQuit = true;
-    return 0;
     }
 } 
 //Returns true if jumped in time else false

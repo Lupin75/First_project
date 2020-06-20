@@ -1038,6 +1038,7 @@ public:
                 tea_talk = 0, farmTalk = 0;
             group1();
         }
+        music.stop();
         progress.close();
         story.close();
         group3();
@@ -1232,8 +1233,11 @@ public:
         }
         cout << "SPYBAR: " << SPYBAR << endl;
         if (SPYBAR >= 100)
+        {
+            music.stop();
             group1();
-
+        }
+        music.stop();
         progress.close();
     }
     void woods()
@@ -1395,20 +1399,17 @@ public:
         music.stop();
         displayStory(story, 472, 474);
         // function to dodge
-        /*cout<<"Type jump within 5 seconds"<<endl;
+        cout<<"Type jump within 5 seconds"<<endl;
         if(jumpFunction()==true){
             cout<<"You escaped it successfully, but he swings again.JUMP"<<endl;
             cout<<"Type jump within 5 seconds"<<endl;
-            if(jumpFunction()==true){
-
-            }
-            else
+            if(jumpFunction()!=true){
                 goto find_princess;
-            
+            }
         }
-        else 
-            goto find_princess;*/
-
+        else{ 
+            goto find_princess;
+        }
         // if dodge success
         cls();
         displayStory(story, 477, 495);
