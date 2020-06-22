@@ -10,10 +10,10 @@ namespace typingJump{
     bool doProceed = false;
     bool didCountingFiveSecondsQuit = false;
     void reset(){
-        int fiveSeconds = 5 ;
-        std::string typeJump = "heDidNotType";
-        bool doProceed = false;
-        bool didCountingFiveSecondsQuit = false;
+        fiveSeconds = 5 ;
+        typeJump = "heDidNotType";
+        doProceed = false;
+        didCountingFiveSecondsQuit = false;
     }
     void countingFiveSeconds(){
         sf::Music music;
@@ -28,7 +28,6 @@ namespace typingJump{
             music.stop();
             if(typeJump == "jump"){
                 doProceed = true;
-                std::cout<<"passed"<<std::endl;
             }else if(typeJump != "heDidNotType"){
                 std::cout<<"nope!try again"<<std::endl;
                 typeJump = "heDidNotType";
@@ -36,24 +35,25 @@ namespace typingJump{
         }
         x:
         didCountingFiveSecondsQuit = true;
-        typingJump::reset();
     }
 } 
 //Returns true if jumped in time else false
 bool jumpFunction(){
-    cout<<"Enter \"Jump\" in five seconds: "<<endl;
+    cout<<"Enter \"Jump\" in 5 seconds: "<<endl;
     sf::Thread thread(&typingJump::countingFiveSeconds);
     thread.launch();
     while(typingJump::didCountingFiveSecondsQuit == false){
         std::cin>>typingJump::typeJump;
-        Sleep(1000);
+        sf::sleep(sf::milliseconds(800));
     }
     thread.wait();
     if(typingJump::doProceed != true){
         std::cout<<"you failed"<<std::endl;
+        typingJump::reset();
         return false;
     }else{
-        std::cout<<"you have passed"<<std::endl;
+        std::cout<<"you passed"<<std::endl;
+        typingJump::reset();
         return true;
     }
 }

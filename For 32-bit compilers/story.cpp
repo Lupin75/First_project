@@ -1399,15 +1399,14 @@ public:
         music.stop();
         displayStory(story, 472, 474);
         // function to dodge
-        cout<<"Type jump within 5 seconds"<<endl;
         if(jumpFunction()==true){
-            cout<<"You escaped it successfully, but he swings again.JUMP"<<endl;
-            cout<<"Type jump within 5 seconds"<<endl;
-            if(jumpFunction()!=true){
-                goto find_princess;
-            }
+            cout<<"You escaped it successfully, but he swings again."<<endl;
+        }else{
+            goto find_princess;
         }
-        else{ 
+        if(jumpFunction()==true){
+            cout<<"You escaped it successfully again."<<endl;
+        }else{
             goto find_princess;
         }
         // if dodge success
