@@ -1,26 +1,8 @@
-//  g++ -std=c++17 fighting.cpp -D_WIN32_WINNT=0x0A00
-/*
-
-    okay, new bug: the very first attack is not getting considered for no reason
-
-    (new)since im using random number generator for enemy movement patterns, the enemy has dumbest AI ever.
-
-    (old)haven't tested if this works or not but , i hope it does.
-    i felt like keeping pokemon(original) style fighting here will be weird, so i added this, hope you guys like it.
-    okay, this is how it works, we have a namespace called `fightFunction` (dont ask me why i named it function eventho it's not a function)
-    this namespace contains fiveSeconds, doProceed , didFunctionQuit and countDown function and reset function.
-    call countDown in a seperate thread, and a while loop in the main function.
-    in main function , keep checking didFunctionQuit is false or not. if true exit the loop.
-    in main  function, take input `didTheUserType`.  and Sleep for 1 second.why, because there will be a case that the countDown function quits while the the main function is IN THE WHILE LOOP.
-    to counter this, we need a delay.             (EDIT:(this whole para symplified)Sleep to maintain syncronization between the two threads).
-    the delay can be anything as long as the we have sync between the two threads.
-*/
 int playerHealth = 100;//remove this and include global.hpp
 int playerDefendStat = 50;
 // #include"global.hpp"
 #include<iostream>
 #include<SFML/System.hpp>
-#include<Windows.h>
 #include<ctime>
 std::string temporaryInput="NO";
 namespace fightFunction{

@@ -1,6 +1,5 @@
 #include<iostream>
 #include<SFML/Audio.hpp>
-#include<Windows.h>
 #include<SFML/System.hpp>
 using namespace std;
 
@@ -25,7 +24,7 @@ namespace typingJump{
         while(fiveSeconds !=-1 && doProceed != true){
             fiveSeconds--;
             music.play();
-            Sleep(1000);
+            sf::sleep(sf::milliseconds(1000));
             music.stop();
             if(typeJump == "jump"){
                 doProceed = true;
