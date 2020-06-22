@@ -1,0 +1,2 @@
+cd .\BUILD
+.\game.exe
