@@ -1393,6 +1393,7 @@ public:
         cls();
         music.stop();
         music.openFromFile("resources/audio/Knocking-on-wall-five-knocks-www.fesliyanstudios.com.ogg");
+        music.setLoop(false);
         music.play();
         displayStory(story,465,470);
         cls();

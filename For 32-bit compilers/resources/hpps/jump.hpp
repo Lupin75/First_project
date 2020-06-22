@@ -44,7 +44,7 @@ bool jumpFunction(){
     thread.launch();
     while(typingJump::didCountingFiveSecondsQuit == false){
         std::cin>>typingJump::typeJump;
-        sf::sleep(sf::milliseconds(800));
+        sf::sleep(sf::milliseconds(1000));
     }
     thread.wait();
     if(typingJump::doProceed != true){
