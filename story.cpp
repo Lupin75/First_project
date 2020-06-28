@@ -29,7 +29,8 @@ private:
     int f1, f2, f3, f4, f5;
     int farmTalk;
     int cobbler_talk;
-
+    int reply;
+    int ans;
 public:
     void cls()
     {
@@ -385,7 +386,7 @@ public:
         displayStory(story, 41, 47);
         cls();
         displayStory(story, 49, 57);
-        int option;
+        option;
         //option(58,3);
         //question(58,2);
 
@@ -561,7 +562,7 @@ public:
                 {
                     displayStory(story, 139);
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         displayStory(story, 140);
@@ -618,7 +619,7 @@ public:
                         displayStory(story, 148, 149);
                         cout << "# What do you reply? \n1. Yes, of course. \n2. No, I am an atheist\n"
                              << endl;
-                        int reply = check_binary(reply);
+                        reply = check_binary(reply);
                         if (reply == 1)
                         {
                             cout << playerName + ": Yes, ofcourse." << endl;
@@ -894,7 +895,7 @@ public:
 
                         farmTalk++;
                         cout << " *How do you start a conversation?/\n    1. Ask directions to the palace posing as foreigners\n    2. Talk about the pleasant weather" << endl;
-                        int ans = check_binary(ans);
+                        ans = check_binary(ans);
                         if (ans == 1)
                         {
                             SPYBAR += 50;
@@ -1076,7 +1077,7 @@ public:
                 {
                     displayStory(story, 259);
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         displayStory(story, 260);
@@ -1094,7 +1095,7 @@ public:
                 {
                     displayStory(story, 262, 267);
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         displayStory(story, 268);
@@ -1112,7 +1113,7 @@ public:
                 {
                     displayStory(story, 270);
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         SPYBAR += 100;
@@ -1131,7 +1132,7 @@ public:
                 {
                     displayStory(story, 273);
                     cout << " 1. Talk\n 2. Move" << endl;
-                    int choice = check_binary(choice);
+                    choice = check_binary(choice);
                     if (choice == 1)
                     {
                         cobbler_talk++;
