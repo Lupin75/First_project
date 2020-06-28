@@ -261,12 +261,17 @@ class Fighting{
     }
 };
 
-// int main(){
-//     Fighting f;
-//     if(!f.startBattle("nirmalie")){
-//         std::cout<<"you died!"<<std::endl;
-//     }else{
-//         std::cout<<"success!"<<std::endl;
-//     }
-// }
 #endif
+
+/*
+#include "resources/hpps/fighting.hpp"
+#include <iostream>
+int main(){
+    Fighting f;
+    if(!f.startBattle("nirmalie")){
+        std::cout<<"failed"<<std::endl;
+    }else{
+        std::cout<<"passed"<<std::endl;
+    }
+}
+*/

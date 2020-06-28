@@ -177,6 +177,7 @@ public:
                 }
             }
         }
+        story.close();
     }
     //Customises game to input name
     void customise_game()
@@ -258,6 +259,8 @@ public:
         {
             cout << "Choose:\n    (1) : To start the game\n    (2) : To exit the game\n";
         }
+        story.close();
+        progress.close();
     }
     void title()
     {
@@ -267,6 +270,7 @@ public:
         fstream progress;
         progress.open("./resources/txtFiles/progress.txt", ios::app);
         progress << "TITLE" << endl;
+        progress.close();
         cls();
         sf::Music music;
         music.setLoop(true);
@@ -430,13 +434,13 @@ public:
                 displayStory(story, 54, 57);
             }
         }
-        // my code
         cls();
         line_count = 65;
         displayStory(story, 66, 69);
         cls();
         music.stop();
         matilda();
+        story.close();
     }
     void matilda()
     {
@@ -447,6 +451,7 @@ public:
         progress.open("./resources/txtFiles/progress.txt", ios::app);
 
         progress << "MATILDA" << endl;
+        progress.close();
         line_count = 70;
 
         displayStory(story, 71, 73);
@@ -520,6 +525,7 @@ public:
         displayStory(story, 117, 125);
         cls();
         music.stop();
+        story.close();
         group1();
     }
     void group1()
@@ -531,6 +537,7 @@ public:
         progress.open("./resources/txtFiles/progress.txt", ios::app);
 
         progress << "GROUP1" << endl;
+        progress.close();
         SPYBAR = 0;
 
     group1:
@@ -846,7 +853,6 @@ public:
         wrap(line);
         line_count++;
     }*/
-        progress.close();
         story.close();
         cls();
         music.stop();
@@ -1222,6 +1228,7 @@ public:
             displayStory(story, 330, 346);
             // system("pause");
             cls();
+            story.close();
             woods();
         }
         else
@@ -1237,6 +1244,7 @@ public:
             group1();
         }
         music.stop();
+        story.close();
         progress.close();
     }
     void woods()
@@ -1249,6 +1257,7 @@ public:
         progress.open("./resources/txtFiles/progress.txt", ios::app);
 
         progress << "WOODS" << endl;
+        progress.close();
     woods:
 
         displayStory(story, 348, 357);
@@ -1365,6 +1374,7 @@ public:
         cout << "***********call fight function************" << endl;
         cls();
         music.stop();
+        story.close();
         finding_princess();
     }
 
@@ -1375,6 +1385,7 @@ public:
         fstream progress;
         progress.open("./resources/txtFiles/progress.txt", ios::app);
         progress << "FIND PRINCESS" << endl;
+        progress.close();
     find_princess:
         sf::Music music;
         music.openFromFile("resources/audio/forest.ogg");
@@ -1506,6 +1517,7 @@ public:
         }
         displayStory(story, 566, 568);
         cls();
+        story.close();
         music.stop();
         //maze();
     }
