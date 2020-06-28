@@ -4,3 +4,4 @@ BUILD/game.exe
 */resources/txtFiles/progress.txt
 */*.dll
 */*/*/*.a
+.vscode

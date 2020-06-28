@@ -1,12 +1,11 @@
-#include<SFML/Audio.hpp>
-#include<SFML/System.hpp>
+#include <SFML/Audio.hpp>
+#include <SFML/System.hpp>
 #include <iostream>
 #include <string>
 #include <fstream>
-#include <Windows.h>
-#include "./resources/hpps/global.hpp"
-#include"./resources/hpps/fighting.hpp"
-#include"./resources/hpps/jump.hpp"
+#include "resources/hpps/global.hpp"
+#include "resources/hpps/fighting.hpp"
+#include "resources/hpps/jump.hpp"
 /*
     Last modified by: Abishek.R
     Last modified   : 16-06-2020
@@ -45,7 +44,7 @@ public:
         {
             cout << line[i];
             if (sleepStats == true)
-                Sleep(1000 / speed);
+                sf::sleep(sf::milliseconds(1000 /speed));
         }
         cout << "\n";
     }
