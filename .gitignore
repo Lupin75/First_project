@@ -6,3 +6,4 @@ BUILD/game.exe
 */*/*/*.a
 .vscode
 .vs
+test.cpp
