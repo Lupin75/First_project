@@ -7,3 +7,4 @@ bin/game.exe
 .vscode
 .vs
 test.cpp
+resources/library/lib/cmake
