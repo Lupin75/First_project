@@ -6,7 +6,7 @@
 bool jumpFunction() {
     sf::Music music;
     music.openFromFile("resources/audio/clock-ticking.ogg");
-    music.setVolume(15);
+    music.setVolume(20);
     music.play();
     sf::Clock timer;
     while(timer.getElapsedTime().asSeconds()<=5 ) {
@@ -24,6 +24,7 @@ bool jumpFunction() {
             music.stop();
             return false;
         }
+        return true;
     }
 }
 #endif//JUMP_HPP

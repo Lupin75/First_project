@@ -29,6 +29,14 @@ class Fighting{
             this->enemyLogic="jump";
         }
     }
+
+    void reset(){
+        std::string enemyLogic = "NULL";
+        std::string playerLogic = "NULL";
+        std::string enemyPreviousLogic = "NULL";
+        std::string playerPreviousLogic = "NULL";
+    }
+
     void setPlayerLogic(){
         sf::Music music;
         music.openFromFile("resources/audio/clock-ticking.ogg");
@@ -105,11 +113,11 @@ class Fighting{
                     std::cout<<this->enemyName<<" infilcted "<< enemyBaseDamage*(playerDefendStat/100)<<" damage on you"<<std::endl;
                     playerHealth=playerHealth-(enemyBaseDamage*(playerDefendStat/100));
                     enemyHealth=enemyHealth-(playerBaseDamage*(enemyDefendStat/100));
-                    this->enemyPreviousLogic =this->enemyLogic;
+                    this->enemyPreviousLogic = this->enemyLogic;
                 }else if(this->enemyLogic=="defend"){
                     std::cout<<this->enemyName<<" defended";
                     std::cout<<"you inflicted "<<(playerBaseDamage*(enemyDefendStat/100))/4<<" on the "<<this->enemyName<<std::endl;
-                    this->enemyPreviousLogic =="defend";
+                    this->enemyPreviousLogic = "defend";
                 }else{
                     std::cout<<this->enemyName<<" jumped back, you did no damage."<<std::endl;
                     // if(enemyHealth<enemyMaxHealth){
@@ -245,17 +253,19 @@ class Fighting{
                     std::cout<<this->enemyName<<" did nothing, due to your insane luck"<<std::endl;
                 }else{
                     std::cout<<this->enemyName<<" did nothing, due to your insane luck"<<std::endl;
-                    if(enemyHealth<enemyMaxHealth){
-                        enemyHealth=enemyHealth+(enemyMaxHealth/20);
+                    if( enemyHealth< enemyMaxHealth ){
+                        enemyHealth = enemyHealth + ( enemyMaxHealth / 20 );
                     }
                 }
-                this->playerPreviousLogic ="NULL";
-                this->enemyPreviousLogic =this->enemyLogic;
+                this->playerPreviousLogic = "NULL";
+                this->enemyPreviousLogic = this->enemyLogic;
             }
         }
         if(playerHealth>0 && enemyHealth <= 0){
+            this->reset();
             return true;
         }else{
+            this->reset();
             return false;
         }
     }

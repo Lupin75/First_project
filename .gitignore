@@ -1,5 +1,5 @@
 a.exe
-BUILD/game.exe
+bin/game.exe
 */resources/txtFiles/custom.txt
 */resources/txtFiles/progress.txt
 */*.dll
