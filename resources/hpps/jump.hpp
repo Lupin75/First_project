@@ -24,7 +24,7 @@ bool jumpFunction() {
             music.stop();
             return false;
         }
-        return true;
     }
+    return true;
 }
 #endif//JUMP_HPP
