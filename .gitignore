@@ -8,3 +8,4 @@ bin/game.exe
 .vs
 test.cpp
 resources/library/lib/cmake
+resources/library/include
