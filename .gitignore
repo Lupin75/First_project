@@ -2,10 +2,9 @@ a.exe
 bin/game.exe
 */resources/txtFiles/custom.txt
 */resources/txtFiles/progress.txt
-*/*.dll
-*/*/*/*.a
+bin/*.dll
 .vscode
 .vs
 test.cpp
-resources/library/lib/cmake
-resources/library/include
+resources/library/lib/
+resources/library/include/
