@@ -39,15 +39,15 @@
                 sfml-network-2.dll
                 sfml-system-2.dll
                 sfml-window-2.dll
-        7. Go back to ~\SFML-2.5.1\BUILD and copy 'lib' folder to '~\First_project\resources\library' and paste or replace the 'lib' folder
+        7. Go back to -\SFML-2.5.1\BUILD and copy 'lib' folder to '-\First_project\resources\library' and paste or replace the 'lib' folder
            Go inside 'lib' and delete these:
             sfml-audio-2.dll
             sfml-graphics-2.dll
             sfml-network-2.dll
             sfml-system-2.dll
             sfml-window-2.dll
-        8. Go back to ~\SFML-2.5.1 and copy 'include' folder to '~\First_project\resources\library' and paste or replace the 'include' folder
-        9. Go to '~\SFML-2.5.1\extlibs\bin' and according to your compiler version go into either 'x86' or 'x64' and copy 'openal32.dll' into '~\First_project\bin'
+        8. Go back to -\SFML-2.5.1 and copy 'include' folder to '-\First_project\resources\library' and paste or replace the 'include' folder
+        9. Go to '-\SFML-2.5.1\extlibs\bin' and according to your compiler version go into either 'x86' or 'x64' and copy 'openal32.dll' into '-\First_project\bin'
 
 
          
