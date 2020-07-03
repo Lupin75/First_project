@@ -11,7 +11,11 @@
 #include<cstring>
 #include<exception>
 #include<ctype.h>
-
+#include<io.h>
+bool FileExists( const std::string &Filename )
+{
+    return access( Filename.c_str(), 0 ) == 0;
+}
 #undef max
 
 using namespace std;

@@ -19,14 +19,45 @@ class Fighting{
 
     void setEnemyLogic(){
         srand(time(NULL));
-        int dummy;
-        dummy = rand()%3;
-        if(dummy==0){
-            this->enemyLogic="attack";
-        }else if(dummy==1){
-            this->enemyLogic="defend";
-        }else{
-            this->enemyLogic="jump";
+        if(this->enemyPreviousLogic == "defend" ) {
+            if(this->playerPreviousLogic != "defend"){
+                this->enemyLogic = "attack";
+            }
+        }else if(this->enemyPreviousLogic == "jump"){
+            if(this->playerPreviousLogic == "defend"){
+                int dummy;
+                dummy = rand()%2;
+                if(dummy == 1){
+                    int dumy;
+                    dumy = rand()%3;
+                    if(dumy==0){
+                        this->enemyLogic="attack";
+                    }else if(dumy==1){
+                        this->enemyLogic="defend";
+                    }else{
+                        this->enemyLogic="jump";
+                    }
+                }else{
+                    this->enemyLogic = "defend";
+                }
+            }
+        }
+        if(this->playerPreviousLogic == "jump"){
+            int dummy;
+            dummy = rand()%2;
+            if(dummy == 0){
+                this->enemyLogic = "attack";
+            }else{
+                int dummy;
+                dummy = rand()%3;
+                if(dummy==0){
+                    this->enemyLogic="attack";
+                }else if(dummy==1){
+                    this->enemyLogic="defend";
+                }else{
+                    this->enemyLogic="jump";
+                }
+            }
         }
     }
 
@@ -89,7 +120,7 @@ class Fighting{
             if(this->playerLogic == "attack" ){
                 std::cout<<"You attacked "<<this->enemyName<<" and inflicted "<<playerBaseDamage*(enemyDefendStat/100)<<" damage on "<<this->enemyName<<std::endl;
                 enemyHealth=enemyHealth-(playerBaseDamage*(enemyDefendStat/100));
-            }else if(this->playerLogic=="defend"){
+            }else if(this->playerLogic== "defend"){
                 std::cout<<"you proceeded with caution and the enemy saw you."<<std::endl;
             }else if(this->playerLogic== "jump" ){
                 std::cout<<"you stepped back a bit,the enemy saw you"<<std::endl;

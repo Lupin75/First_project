@@ -2,6 +2,7 @@ a.exe
 bin/game.exe
 */resources/txtFiles/custom.txt
 */resources/txtFiles/progress.txt
+*/resources/txtFiles/playerName.txt
 bin/*.dll
 .vscode
 .vs

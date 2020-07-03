@@ -3,10 +3,11 @@
 #include <iostream>
 #include <string>
 #include <fstream>
-#include<Windows.h>
+//#include<Windows.h>
 #include "resources/hpps/global.hpp"
 #include "resources/hpps/fighting.hpp"
 #include "resources/hpps/jump.hpp"
+#include "resources/hpps/intro.hpp"
 /*
     Last modified by: Abishek.R
     Last modified   : 16-06-2020
@@ -34,23 +35,23 @@ private:
     int ans;
 
 public:
-    void show_loading()
-    {
-        for (int i = 0; i < 4; i++)
-        {
-            cout<<"loading...";
-            if (i == 0)
-                cout << "|";
-            if (i == 1)
-                cout << "/";
-            if (i == 2)
-                cout << "-";
-            if (i == 3)
-                cout << "\\";
-            Sleep(1000);
-            system("cls");
-        }
-    }
+    // void show_loading()
+    // {
+    //     for (int i = 0; i < 4; i++)
+    //     {
+    //         cout<<"loading...";
+    //         if (i == 0)
+    //             cout << "|";
+    //         if (i == 1)
+    //             cout << "/";
+    //         if (i == 2)
+    //             cout << "-";
+    //         if (i == 3)
+    //             cout << "\\";
+    //         Sleep(1000);
+    //         system("cls");
+    //     }
+    // }
     void cls()
     {
         system("pause");
@@ -1572,11 +1573,24 @@ int main()
     StoryPlot storyPlot;
     std::vector<string> story_line;
     string line;
-
-    cout << "Enter a name for your character: ";
-    cin >> playerName;
+    fstream name;
+    printTitle();
+    if(FileExists("resources/txtFiles/playerName.txt")){
+        name.open("resources/txtFiles/playerName.txt");
+        while(name.good()){
+            getline(name,playerName);
+        }
+        name.close();
+    }else{
+        cout << "Enter a name for your character: ";
+        cin >> playerName;
+        name.open("resources/txtFiles/playerName.txt",ios::out);
+        name << playerName;
+        name.close();
+    }
     system("cls");
-    storyPlot.show_loading();
+    //storyPlot.show_loading();
+    std::cout<<"Player name : "<< playerName<<std::endl;
     storyPlot.customise_game();
     fstream story;
     story.open("./resources/txtFiles/custom.txt");
