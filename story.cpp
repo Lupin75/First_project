@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include<Windows.h>
 #include "resources/hpps/global.hpp"
 #include "resources/hpps/fighting.hpp"
 #include "resources/hpps/jump.hpp"
@@ -31,7 +32,25 @@ private:
     int cobbler_talk;
     int reply;
     int ans;
+
 public:
+    void show_loading()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            cout<<"loading...";
+            if (i == 0)
+                cout << "|";
+            if (i == 1)
+                cout << "/";
+            if (i == 2)
+                cout << "-";
+            if (i == 3)
+                cout << "\\";
+            Sleep(1000);
+            system("cls");
+        }
+    }
     void cls()
     {
         system("pause");
@@ -45,7 +64,7 @@ public:
         {
             cout << line[i];
             if (sleepStats == true)
-                sf::sleep(sf::milliseconds(1000 /speed));
+                sf::sleep(sf::milliseconds(1000 / speed));
         }
         cout << "\n";
     }
@@ -1299,16 +1318,16 @@ public:
             }
             else
                 wrap("Podrick: We already talked about this");
-            
-            if(ans==1){
-                cout<<"Podrick: That's fine but we need another clue to be sure"<<endl;
+
+            if (ans == 1)
+            {
+                cout << "Podrick: That's fine but we need another clue to be sure" << endl;
             }
             if (f2 == 0 || f5 == 0)
             {
                 displayStory(story, 359, 364);
                 cout << endl;
             }
-            
         }
         displayStory(story, 379, 389);
         f1 = 0;
@@ -1316,7 +1335,7 @@ public:
         while (f1 == 0)
         {
             displayStory(story, 390, 393);
-            option=check_binary(option);
+            option = check_binary(option);
             if (option == 1)
             {
                 cout << "Type your guess:" << endl;
@@ -1352,7 +1371,7 @@ public:
         f1 = 0;
         while (f1 == 0)
         {
-            option=check_binary(option);
+            option = check_binary(option);
             if (option == 1)
             {
                 cout << "Challenge Accepted" << endl;
@@ -1406,19 +1425,25 @@ public:
         music.openFromFile("resources/audio/Knocking-on-wall-five-knocks-www.fesliyanstudios.com.ogg");
         music.setLoop(false);
         music.play();
-        displayStory(story,465,470);
+        displayStory(story, 465, 470);
         cls();
         music.stop();
         displayStory(story, 472, 474);
         // function to dodge
-        if(jumpFunction()==true){
-            cout<<"You escaped it successfully, but he swings again."<<endl;
-        }else{
+        if (jumpFunction() == true)
+        {
+            cout << "You escaped it successfully, but he swings again." << endl;
+        }
+        else
+        {
             goto find_princess;
         }
-        if(jumpFunction()==true){
-            cout<<"You escaped it successfully again."<<endl;
-        }else{
+        if (jumpFunction() == true)
+        {
+            cout << "You escaped it successfully again." << endl;
+        }
+        else
+        {
             goto find_princess;
         }
         // if dodge success
@@ -1538,7 +1563,7 @@ public:
         cls();
         displayStory(story, 600, 609);
         cls();
-        displayStory(story,610,615);
+        displayStory(story, 610, 615);
         //The End function like some logo maybe?
     }
 };
@@ -1550,7 +1575,8 @@ int main()
 
     cout << "Enter a name for your character: ";
     cin >> playerName;
-
+    system("cls");
+    storyPlot.show_loading();
     storyPlot.customise_game();
     fstream story;
     story.open("./resources/txtFiles/custom.txt");
@@ -1567,14 +1593,14 @@ int main()
         checkp.push_back(checkpoint);
         c_p++;
     }
-    
+
     if (checkpoint == "" && checkp.size() > 1)
     {
         checkpoint = checkp[c_p - 2];
     }
-    
+
     cout << "Last checkpoint: " << checkpoint << endl;
-    
+
     if (checkpoint == "GROUP1")
         storyPlot.group1();
     else if (checkpoint == "GROUP2")
