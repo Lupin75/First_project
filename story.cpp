@@ -276,7 +276,9 @@ public:
         {
             cout << "You should accept the invitation to play the game!" << endl;
             cout << "Ending game...Thank You" << endl;
-            exit(0);
+            story.close();
+            progress.close();
+            _Exit(0);
         }
         else
         {
@@ -1397,8 +1399,9 @@ public:
         cls();
         //cout << "***********call fight function************" << endl;
         Fighting f;
-        if(!f.startBattle("Assassin")){
+        if(!f.startBattle("Assassin",25,25,10,50,false)){
             std::cout<<"Fail"<<std::endl;
+            playerHealth = 100;
             cls();
             goto woods;
         }else{
@@ -1568,6 +1571,13 @@ public:
         displayStory(story, 587, 596);
         cls();
         cout << "*****Fight*****" << endl;
+        Fighting battle;
+        if(battle.startBattle("Ivan",60,20,20,100,false)){
+            std::cout<<"you successfully defeated Ivan"<<std::endl;
+        }else{
+            std::cout<<"you died"<<std::endl;
+            goto climax;
+        }
         //fight();
         cls();
         displayStory(story, 600, 609);
