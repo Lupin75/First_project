@@ -1396,14 +1396,14 @@ public:
         displayStory(story, 404, 419);
         cls();
         //cout << "***********call fight function************" << endl;
-        /*Fighting f;
+        Fighting f;
         if(!f.startBattle("Assassin")){
             std::cout<<"Fail"<<std::endl;
             cls();
             goto woods;
         }else{
             std::cout<<"Pass"<<std::endl;
-        }*/
+        }
         cls();
         music.stop();
         story.close();
@@ -1643,7 +1643,7 @@ int main()
         storyPlot.prologue();
     checkpnt.close();
     
+    std::cout<<std::endl<<"\t\tTHE END" << std::endl;
     system("pause");
-
     return 0;
 }
