@@ -1,6 +1,7 @@
 #ifndef JUMP_HPP
 #define JUMP_HPP
 #include <iostream>
+#include "global.hpp"
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 bool jumpFunction() {
@@ -14,7 +15,7 @@ bool jumpFunction() {
         std::cout<<"ENTER JUMP WITH IN 5 SECONDS"<<std::endl;
         std::cin>>input;
         if(timer.getElapsedTime().asSeconds()<=5) {
-            if(input == "jump") {
+            if(toSmall(input) == "jump") {
                 music.stop();
                 return true;
             } else {

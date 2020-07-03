@@ -10,7 +10,7 @@
 #include "resources/hpps/intro.hpp"
 /*
     Last modified by: Abishek.R
-    Last modified   : 16-06-2020
+    Last modified   : 04-07-2020
     Filename        : story.cpp
     Description     : Removed redundant code for displaying story
 */
@@ -52,6 +52,8 @@ public:
     //         system("cls");
     //     }
     // }
+    
+    //This function clears and pauses the terminal
     void cls()
     {
         system("pause");
@@ -636,7 +638,7 @@ public:
                     {
 
                         tea_talk++;
-                        displayStory(story, 148, 149);
+                        displayStory(story, 148, 150);
                         cout << "# What do you reply? \n1. Yes, of course. \n2. No, I am an atheist\n"
                              << endl;
                         reply = check_binary(reply);
@@ -1067,6 +1069,7 @@ public:
         music.stop();
         progress.close();
         story.close();
+        cls();
         group3();
     }
     void group3()
@@ -1392,7 +1395,15 @@ public:
         music.play();
         displayStory(story, 404, 419);
         cls();
-        cout << "***********call fight function************" << endl;
+        //cout << "***********call fight function************" << endl;
+        /*Fighting f;
+        if(!f.startBattle("Assassin")){
+            std::cout<<"Fail"<<std::endl;
+            cls();
+            goto woods;
+        }else{
+            std::cout<<"Pass"<<std::endl;
+        }*/
         cls();
         music.stop();
         story.close();
@@ -1430,7 +1441,7 @@ public:
         cls();
         music.stop();
         displayStory(story, 472, 474);
-        // function to dodge
+        // function to dodge/jump
         if (jumpFunction() == true)
         {
             cout << "You escaped it successfully, but he swings again." << endl;
@@ -1439,11 +1450,7 @@ public:
         {
             goto find_princess;
         }
-        if (jumpFunction() == true)
-        {
-            cout << "You escaped it successfully again." << endl;
-        }
-        else
+        if (jumpFunction() != true)
         {
             goto find_princess;
         }
@@ -1546,7 +1553,7 @@ public:
         cls();
         story.close();
         music.stop();
-        //maze();
+        climax();
     }
     void climax()
     {
@@ -1561,6 +1568,7 @@ public:
         displayStory(story, 587, 596);
         cls();
         cout << "*****Fight*****" << endl;
+        //fight();
         cls();
         displayStory(story, 600, 609);
         cls();
@@ -1574,7 +1582,7 @@ int main()
     std::vector<string> story_line;
     string line;
     fstream name;
-    printTitle();
+    int status = printTitle();
     if(FileExists("resources/txtFiles/playerName.txt")){
         name.open("resources/txtFiles/playerName.txt");
         while(name.good()){
@@ -1612,8 +1620,8 @@ int main()
     {
         checkpoint = checkp[c_p - 2];
     }
-
-    cout << "Last checkpoint: " << checkpoint << endl;
+    if (status != 1)
+        cout << "Last checkpoint: " << checkpoint << endl;
 
     if (checkpoint == "GROUP1")
         storyPlot.group1();
@@ -1631,10 +1639,10 @@ int main()
         storyPlot.finding_princess();
     else if (checkpoint == "CLIMAX")
         storyPlot.climax();
-    //checkpnt.close();
     else
         storyPlot.prologue();
-    //finding_princess();
+    checkpnt.close();
+    
     system("pause");
 
     return 0;

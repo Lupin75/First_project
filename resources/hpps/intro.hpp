@@ -2,9 +2,9 @@
 #define INTRO_HPP
 #include<iostream>
 #include"global.hpp"
-void printTitle(){
+int printTitle(){
     //cout -->title name here;
-    std::cout<<"\t1: new game"<<std::endl<<"\t2: continue\n\t3: exit"<<std::endl;
+    std::cout<<"\t1: New Game"<<std::endl<<"\t2: Continue\n\t3: Exit"<<std::endl;
     int input;
     x:input = getInputAsInt(input);
     if(input == 1){
@@ -17,6 +17,7 @@ void printTitle(){
         std::cout<<"invalid input given , please try again!"<<std::endl;
         goto x;
     }
+    return input;
 }
 
 #endif //INTRO_HPP
