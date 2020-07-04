@@ -2,7 +2,7 @@
 #define FIGHTING_HPP
 int playerHealth = 100;//remove this and include global.hpp
 int playerDefendStat = 50;
-// #include"global.hpp"
+#include"global.hpp"
 #include <iostream>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
@@ -96,9 +96,10 @@ class Fighting{
         int enemyMaxHealth = enemyHealth;
         int playerMaxHealth = playerHealth;
         //printing instructions for the battle
-        std::cout<<"INSTRUCTIONS"<<std::endl;
-        std::cout<<"\t1:Type `attack` to attack the enemy."<<std::endl<<"\t2:Type `defend` to brace yourself for impact(you will take damage but 1/4th than usual.defending yourself will increase the attack power if you `attack` right after `defend`)"<<std::endl;
-        std::cout<<"\t3:Type `jump` to jump backward to completely miss the enemy attack and heal yourself, however if you type `attack` right after `jump` your damage output will be lower"<<std::endl;
+        wrap("INSTRUCTIONS");
+        wrap("\t1:Type `attack` to attack the enemy.");
+        wrap("\t2:Type `defend` to brace yourself for impact(you will take damage but 1/4th than usual.defending yourself will increase the attack power if you `attack` right after `defend`)");
+        wrap("\t3:Type `jump` to jump backward to completely miss the enemy attack and heal yourself, however if you type `attack` right after `jump` your damage output will be lower");
         system("pause");
         std::cout<<"the battle has begun!"<<std::endl;
         if(isPlayerFirst == true){

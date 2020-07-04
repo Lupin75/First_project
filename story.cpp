@@ -59,46 +59,7 @@ public:
         system("pause");
         system("cls");
     }
-    //This function helps us conttrol the speed of output using "speed" var
-    void displaySlow(string line, int speed = 100000, bool sleepStats = true)
-    {
-        // char ch;
-        for (int i = 0; i < line.size(); i++)
-        {
-            cout << line[i];
-            if (sleepStats == true)
-                sf::sleep(sf::milliseconds(1000 / speed));
-        }
-        cout << "\n";
-    }
-    //Wraps text to avoid cutting of words in terminal
-    void wrap(string text, size_t line_length = 110)
-    {
-        std::istringstream words(text);
-        std::ostringstream wrapped;
-        std::string word;
-
-        if (words >> word)
-        {
-            wrapped << word;
-            size_t space_left = line_length - word.length();
-            while (words >> word)
-            {
-                if (space_left < word.length() + 1)
-                {
-                    wrapped << '\n'
-                            << word;
-                    space_left = line_length - word.length();
-                }
-                else
-                {
-                    wrapped << ' ' << word;
-                    space_left -= word.length() + 1;
-                }
-            }
-        }
-        displaySlow(wrapped.str());
-    }
+   
     //Displays story line between start and end line number
     void displayStory(fstream &fpr, int start, int end, bool init_line_counter = true)
     {
