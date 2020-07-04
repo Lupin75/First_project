@@ -1002,6 +1002,10 @@ public:
             SPYBAR = 0,
             //h1=0,h2=0,h3=0,h4=0;
                 tea_talk = 0, farmTalk = 0;
+            Bar bar;
+            bar.useBar(50);
+            cout<<endl;
+            cls();
             group1();
         }
         music.stop();
@@ -1203,6 +1207,12 @@ public:
         if (SPYBAR >= 100)
         {
             music.stop();
+            cout << "You talked with spies or caused discomfort among people... "
+                 << "\nRestarting investigation in the colonies" << endl;
+            Bar bar;
+            bar.useBar(50);
+            cout<<endl;
+            cls();
             group1();
         }
         music.stop();
