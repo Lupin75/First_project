@@ -203,6 +203,14 @@ private:
            pBarUpdater = "/-\\|";
 
 public:
+
+    void reset()
+    {
+        pBarLength = 50;
+        currUpdateVal = 0;
+        currentProgress = 0;
+        neededProgress = 100;
+    }
     void update(double newProgress)
     {
         currentProgress += newProgress;
@@ -228,7 +236,20 @@ public:
         currUpdateVal += 1;
     }
 
-    void useBar(int sleepRate = 1)
+    void progressBar(int progress, int sleepRate=1)
+    {
+        cout<<"\nProgress\n";
+        for (int i = 0; i < progress; i++)
+        {
+            update(1); //How much new progress was added (only needed when new progress was added)
+            //Print pBar:
+            print();
+            Sleep(sleepRate);
+        }
+        currentProgress = 0;
+        cout<<endl;
+    }
+    void loadBar(int sleepRate = 1)
     {
         for (int i = 0; i < 100; i++)
         {

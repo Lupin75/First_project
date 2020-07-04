@@ -35,6 +35,7 @@ private:
     int ans;
 
 public:
+    Bar progressBar;
     //Displays story line between start and end line number
     void displayStory(fstream &fpr, int start, int end, bool init_line_counter = true)
     {
@@ -398,6 +399,7 @@ public:
         cls();
         line_count = 65;
         displayStory(story, 66, 69);
+        progressBar.progressBar(10);
         cls();
         music.stop();
         matilda();
@@ -484,6 +486,7 @@ public:
 
         line_count = 116;
         displayStory(story, 117, 125);
+        progressBar.progressBar(25);
         cls();
         music.stop();
         story.close();
@@ -815,6 +818,7 @@ public:
         line_count++;
     }*/
         story.close();
+        progressBar.progressBar(40);
         cls();
         music.stop();
         group2();
@@ -1003,7 +1007,7 @@ public:
             //h1=0,h2=0,h3=0,h4=0;
                 tea_talk = 0, farmTalk = 0;
             Bar bar;
-            bar.useBar(50);
+            bar.loadBar(50);
             cout<<endl;
             cls();
             group1();
@@ -1011,6 +1015,7 @@ public:
         music.stop();
         progress.close();
         story.close();
+        progressBar.progressBar(45);
         cls();
         group3();
     }
@@ -1193,6 +1198,7 @@ public:
             cls();
             displayStory(story, 330, 346);
             // system("pause");
+            progressBar.progressBar(55);
             cls();
             story.close();
             woods();
@@ -1210,7 +1216,7 @@ public:
             cout << "You talked with spies or caused discomfort among people... "
                  << "\nRestarting investigation in the colonies" << endl;
             Bar bar;
-            bar.useBar(50);
+            bar.loadBar(50);
             cout<<endl;
             cls();
             group1();
@@ -1353,6 +1359,7 @@ public:
         }else{
             std::cout<<"Pass"<<std::endl;
         }
+        progressBar.progressBar(70);
         cls();
         music.stop();
         story.close();
@@ -1499,6 +1506,7 @@ public:
             }
         }
         displayStory(story, 566, 568);
+        progressBar.progressBar(85);
         cls();
         story.close();
         music.stop();
@@ -1529,6 +1537,8 @@ public:
         displayStory(story, 600, 609);
         cls();
         displayStory(story, 610, 615);
+        progressBar.update(100);
+        progressBar.print();
         //The End function like some logo maybe?
     }
 };

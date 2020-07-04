@@ -13,14 +13,14 @@ int printTitle(){
         remove("resources/txtFiles/custom.txt");
         remove("resources/txtFiles/progress.txt");
         remove("resources/txtFiles/playerName.txt");
-        bar.useBar(30);
+        bar.loadBar(30);
         cout<<endl;
         cls();
     }else if(input == 3){
         _Exit(0);
     }else if(input == 2){
         cout<<"Loading Last Checkpoint\n";
-        bar.useBar(30);
+        bar.loadBar(30);
         cout<<endl;
         cls();
     }
