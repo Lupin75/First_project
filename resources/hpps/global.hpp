@@ -9,7 +9,9 @@
 #include <iomanip>
 #include <cstring>
 #include <ctype.h>
+#include <Windows.h>
 #include <io.h>
+
 bool FileExists(const std::string &Filename)
 {
     return access(Filename.c_str(), 0) == 0;
@@ -18,6 +20,13 @@ bool FileExists(const std::string &Filename)
 
 using namespace std;
 
+//This function clears and pauses the terminal
+    void cls()
+    {
+        system("pause");
+        system("cls");
+    }
+    
 // To check if the input is integer type
 int getInputAsInt(int number)
 {
@@ -138,7 +147,7 @@ int check_penta(int option)
     }
 }
 
- //This function helps us conttrol the speed of output using "speed" var
+//This function helps us conttrol the speed of output using "speed" var
 void displaySlow(string line, int speed = 100000, bool sleepStats = true)
 {
     // char ch;
@@ -180,5 +189,56 @@ void wrap(string text, size_t line_length = 110)
     displaySlow(wrapped.str());
 }
 
+class Bar
+{
+private:
+    int amountOfFiller,
+        pBarLength = 50,
+        currUpdateVal = 0;
+    double currentProgress = 0,
+           neededProgress = 100;
+    string firstPartOfpBar = "[",
+           lastPartOfpBar = "]",
+           pBarFiller = "|",
+           pBarUpdater = "/-\\|";
+
+public:
+    void update(double newProgress)
+    {
+        currentProgress += newProgress;
+        amountOfFiller = (int)((currentProgress / neededProgress) * (double)pBarLength);
+    }
+    void print()
+    {
+        currUpdateVal %= pBarUpdater.length();
+        cout << "\r"             //Bring cursor to start of line
+             << firstPartOfpBar; //Print out first part of pBar
+        for (int a = 0; a < amountOfFiller; a++)
+        { //Print out current progress
+            cout << pBarFiller;
+        }
+        cout << pBarUpdater[currUpdateVal];
+        for (int b = 0; b < pBarLength - amountOfFiller; b++)
+        { //Print out spaces
+            cout << " ";
+        }
+        cout << lastPartOfpBar                                                  //Print out last part of progress bar
+             << " (" << (int)(100 * (currentProgress / neededProgress)) << "%)" //This just prints out the percent
+             << flush;
+        currUpdateVal += 1;
+    }
+
+    void useBar(int sleepRate = 1)
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            update(1); //How much new progress was added (only needed when new progress was added)
+            //Print pBar:
+            print();
+            Sleep(sleepRate);
+        }
+        currentProgress = 0;
+    }
+};
 //-----------------------------------------------------------------------------------------
 #endif

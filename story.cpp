@@ -9,10 +9,10 @@
 #include "resources/hpps/jump.hpp"
 #include "resources/hpps/intro.hpp"
 /*
-    Last modified by: Abishek.R
-    Last modified   : 04-07-2020
-    Filename        : story.cpp
-    Description     : Removed redundant code for displaying story
+    Last modified by: 
+    Last modified   : 
+    Filename        : 
+    Description     : 
 */
 using namespace std;
 class StoryPlot
@@ -35,31 +35,6 @@ private:
     int ans;
 
 public:
-    // void show_loading()
-    // {
-    //     for (int i = 0; i < 4; i++)
-    //     {
-    //         cout<<"loading...";
-    //         if (i == 0)
-    //             cout << "|";
-    //         if (i == 1)
-    //             cout << "/";
-    //         if (i == 2)
-    //             cout << "-";
-    //         if (i == 3)
-    //             cout << "\\";
-    //         Sleep(1000);
-    //         system("cls");
-    //     }
-    // }
-    
-    //This function clears and pauses the terminal
-    void cls()
-    {
-        system("pause");
-        system("cls");
-    }
-   
     //Displays story line between start and end line number
     void displayStory(fstream &fpr, int start, int end, bool init_line_counter = true)
     {
@@ -1568,7 +1543,6 @@ int main()
         name.close();
     }
     system("cls");
-    //storyPlot.show_loading();
     std::cout<<"Player name : "<< playerName<<std::endl;
     storyPlot.customise_game();
     fstream story;
