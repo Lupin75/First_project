@@ -1,12 +1,11 @@
 #ifndef FIGHTING_HPP
 #define FIGHTING_HPP
-int playerHealth = 100;//remove this and include global.hpp
+int playerHealth = 100;
 int playerDefendStat = 50;
 #include"global.hpp"
 #include <iostream>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
-#include <ctime>
 
 class Fighting{
     private:
@@ -69,8 +68,9 @@ class Fighting{
         std::string input;
         sf::Clock timer;
         while(timer.getElapsedTime().asSeconds()<=5 ) {
-            std::cout<<"ENTER PLAYER MOVE WITH IN 5 SECONDS"<<std::endl;
+            std::cout<<"ENTER PLAYER'S MOVE WITH IN 5 SECONDS"<<std::endl;
             std::cin>>input;
+            input = toSmall(input);
             if(timer.getElapsedTime().asSeconds()<5) {
                 if(input == "jump" || input == "attack" || input == "defend") {
                     music.stop();
@@ -106,8 +106,8 @@ class Fighting{
             std::cout<<this->enemyName<<" is infront for you"<<std::endl<<"\tYOU:"<<std::endl;
             this->setPlayerLogic();
             if(this->playerLogic == "attack" ){
-                std::cout<<"You attacked "<<this->enemyName<<" and inflicted "<<(PBD*enemyDefendStat/100)<<" damage on "<<this->enemyName<<std::endl;
-                enemyHealth = enemyHealth - (PBD*enemyDefendStat/100);
+                std::cout<<"You attacked "<<this->enemyName<<" and inflicted "<<(PBD*(1-(enemyDefendStat/100)))<<" damage on "<<this->enemyName<<std::endl;
+                enemyHealth = enemyHealth - (PBD*(1-(enemyDefendStat/100)));
             }else if(this->playerLogic == "defend" ){
                 std::cout<<"you proceeded with caution and the enemy saw you."<<std::endl;
             }else if(this->playerLogic == "jump" ){
@@ -137,13 +137,13 @@ class Fighting{
             }
             if(this->playerLogic=="attack"){
                 if(this->enemyLogic=="attack"){
-                    std::cout<<"You inflicted "<<(PBD*enemyDefendStat/100)<<" damage on "<<this->enemyName<<std::endl;
-                    std::cout<<this->enemyName<<" inflicted "<<(EBD*playerDefendStat/100)<<" damage on YOU"<<std::endl;
-                    enemyHealth = enemyHealth - (PBD*enemyDefendStat/100);
-                    playerHealth = playerHealth - (EBD*playerDefendStat/100);
+                    std::cout<<"You inflicted "<<(PBD*(1-(enemyDefendStat/100)))<<" damage on "<<this->enemyName<<std::endl;
+                    std::cout<<this->enemyName<<" inflicted "<<(EBD*(1-(playerDefendStat/100)))<<" damage on YOU"<<std::endl;
+                    enemyHealth = enemyHealth - (PBD*(1-(enemyDefendStat/100)));
+                    playerHealth = playerHealth - (EBD*(1-(playerDefendStat/100)));
                 }else if(this->enemyLogic=="defend"){
-                    std::cout<<"you inflicted "<<((PBD*enemyDefendStat/100)/4)<<" damage on "<<this->enemyName<<std::endl;
-                    enemyHealth = enemyHealth - ((PBD*enemyDefendStat/100)/4);
+                    std::cout<<"you inflicted "<<((PBD*(1-(enemyDefendStat/100)))/4)<<" damage on "<<this->enemyName<<std::endl;
+                    enemyHealth = enemyHealth - ((PBD*(1-(enemyDefendStat/100)))/4);
                 }else if(this->enemyLogic=="jump"){
                     std::cout<<"you did no damage to "<<this->enemyName<<std::endl;
                     if(enemyHealth<enemyMaxHealth){
@@ -155,8 +155,8 @@ class Fighting{
             }else if(this->playerLogic=="defend"){
                 std::cout<<"you defended"<<std::endl;
                 if(this->enemyLogic=="attack"){
-                    std::cout<<this->enemyName<<" inflicted "<<(EBD*(playerDefendStat/100))/4<<" damage on you"<<std::endl;
-                    playerHealth=playerHealth-(EBD*(playerDefendStat/100))/4;
+                    std::cout<<this->enemyName<<" inflicted "<<(EBD*(1-(playerDefendStat/100))/4)<<" damage on you"<<std::endl;
+                    playerHealth=playerHealth-(EBD*(1-(playerDefendStat/100))/4);
                 }else if(this->enemyLogic=="defend"){
                     std::cout<<"both defended, really!"<<std::endl;
                 }else if(this->enemyLogic=="jump"){
@@ -184,7 +184,8 @@ class Fighting{
                 this->enemyPreviousLogic =this->enemyLogic;
             }else{
                 if(this->enemyLogic=="attack"){
-                    std::cout<<this->enemyName<<" inflicted "<<EBD*playerDefendStat/100<<" on you while you were staring at him"<<std::endl;
+                    std::cout<<this->enemyName<<" inflicted "<<(EBD*(1-(playerDefendStat/100)))<<" on you while you were staring at him"<<std::endl;
+                    playerHealth = playerHealth - (EBD*(1-(playerDefendStat/100))) ;
                 }else if(this->enemyLogic=="defend"){
                     std::cout<<this->enemyName<<" did nothing, due to your insane luck"<<std::endl;
                 }else{
@@ -196,8 +197,8 @@ class Fighting{
                 this->playerPreviousLogic = "NULL";
                 this->enemyPreviousLogic = this->enemyLogic;
             }
-        std::cout<<"YOU HEALTH IS "<<playerHealth<<std::endl;
-        std::cout<<this->enemyName<<" HEALTH IS "<<enemyHealth<<std::endl;
+        std::cout<<playerName<<"'S HEALTH IS "<<playerHealth<<std::endl;
+        std::cout<<this->enemyName<<"'S HEALTH IS "<<enemyHealth<<std::endl;
         }
         if(playerHealth>0 && enemyHealth <= 0){
             this->reset();
