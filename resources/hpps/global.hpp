@@ -133,11 +133,12 @@ int check_two(int option)
 }
 int check_penta(int option)
 {
+    option = getInputAsInt(option);
     if (option != 1 && option != 2 && option != 3 && option != 4 && option != 5)
     {
         cout << "Error...No such option available" << endl
              << "Enter option (1/2/3/4/5): ";
-        cin >> option;
+        //cin >> option;
         return check_penta(option);
     }
     else

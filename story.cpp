@@ -1245,7 +1245,7 @@ public:
         int ans = 0;
         while (ans != 2)
         {
-            cin >> option;
+            //cin >> option;
             option = check_penta(option);
             if (option == 1 && f1 == 0)
             {

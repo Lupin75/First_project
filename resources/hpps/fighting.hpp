@@ -89,6 +89,7 @@ class Fighting{
 
     public:
     //startBattle works both as a constructor and as a function.ename is enemy name. eH is enemy health
+    //Parameters - enemyname ,enemy defense stat, player base damage, enemy base damage, enemy health , isplayer first
     bool startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int enemyHealth=10,bool isPlayerFirst = true){
         int PBD = playerBaseDamage;
         int EBD = enemyBaseDamage;
