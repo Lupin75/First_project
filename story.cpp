@@ -1351,7 +1351,7 @@ public:
         cls();
         //cout << "***********call fight function************" << endl;
         Fighting f;
-        if(!f.startBattle("Assassin",25,25,10,50,false)){
+        if(!f.startBattle("Assassin",40,10,10,50,false)){
             std::cout<<"Fail"<<std::endl;
             playerHealth = 100;
             cls();
@@ -1526,10 +1526,13 @@ public:
         cls();
         cout << "*****Fight*****" << endl;
         Fighting battle;
-        if(battle.startBattle("Ivan",60,20,20,100,false)){
+        playerHealth = 100;
+        if(battle.startBattle("Ivan",50,20,20,100,false)){
             std::cout<<"you successfully defeated Ivan"<<std::endl;
         }else{
+            playerHealth = 100;
             std::cout<<"you died"<<std::endl;
+            system("pause");
             goto climax;
         }
         //fight();
