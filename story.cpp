@@ -1526,6 +1526,7 @@ public:
         cls();
         cout << "*****Fight*****" << endl;
         Fighting battle;
+        playerHealth = 100;
         if(battle.startBattle("Ivan",50,20,20,100,false)){
             std::cout<<"you successfully defeated Ivan"<<std::endl;
         }else{
