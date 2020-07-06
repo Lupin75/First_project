@@ -240,13 +240,9 @@ public:
     void progressBar(int progress, int sleepRate=1)
     {
         cout<<"\nProgress\n";
-        for (int i = 0; i < progress; i++)
-        {
-            update(1); //How much new progress was added (only needed when new progress was added)
-            //Print pBar:
-            print();
-            Sleep(sleepRate);
-        }
+        update(progress); //How much new progress was added (only needed when new progress was added)
+        //Print pBar:
+        print();
         currentProgress = 0;
         cout<<endl;
     }
