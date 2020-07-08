@@ -1,5 +1,8 @@
-a.exe
-bin/game.exe
+a.*
+bin/a.*
+bin/game.*
+game
+bin/game
 */resources/txtFiles/custom.txt
 */resources/txtFiles/progress.txt
 */resources/txtFiles/playerName.txt

@@ -9,12 +9,18 @@
 #include <iomanip>
 #include <cstring>
 #include <ctype.h>
-#include <Windows.h>
-#include <io.h>
 
 bool FileExists(const std::string &Filename)
 {
-    return access(Filename.c_str(), 0) == 0;
+    std::ifstream file;
+    file.open(Filename);
+    if(file.fail()){
+        file.close();
+        return false;
+    }else{
+        file.close();
+        return true;
+    }
 }
 #undef max
 
@@ -23,8 +29,11 @@ using namespace std;
 //This function clears and pauses the terminal
     void cls()
     {
-        system("pause");
-        system("cls");
+        std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
+        std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
+        for(int i=0;i<20;i++){
+            std::cout<<std::endl;
+        }
     }
     
 // To check if the input is integer type
@@ -253,7 +262,7 @@ public:
             update(1); //How much new progress was added (only needed when new progress was added)
             //Print pBar:
             print();
-            Sleep(sleepRate);
+            sf::sleep(sf::milliseconds(sleepRate));
         }
         currentProgress = 0;
     }

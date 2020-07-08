@@ -101,7 +101,8 @@ class Fighting{
         wrap("\t1:Type `attack` to attack the enemy.");
         wrap("\t2:Type `defend` to brace yourself for impact(you will take damage but 1/4th than usual.defending yourself will increase the attack power if you `attack` right after `defend`)");
         wrap("\t3:Type `jump` to jump backward to completely miss the enemy attack and heal yourself, however if you type `attack` right after `jump` your damage output will be lower");
-        system("pause");
+        std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
+        std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
         std::cout<<"the battle has begun!"<<std::endl;
         if(isPlayerFirst == true){
             std::cout<<this->enemyName<<" is infront for you"<<std::endl<<"\tYOU:"<<std::endl;
@@ -121,7 +122,8 @@ class Fighting{
         while(playerHealth >0 && enemyHealth > 0 ) {
             PBD = playerBaseDamage;
             EBD = enemyBaseDamage;
-            system("pause");
+            std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
+            std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
             this->setEnemyLogic();
             std::cout<<this->enemyName<<" is about to "<<this->enemyLogic<<std::endl;
             std::cout<<"YOU: "<<std::endl;
@@ -198,8 +200,14 @@ class Fighting{
                 this->playerPreviousLogic = "NULL";
                 this->enemyPreviousLogic = this->enemyLogic;
             }
-        std::cout<<playerName<<"'S HEALTH IS "<<playerHealth<<std::endl;
-        std::cout<<this->enemyName<<"'S HEALTH IS "<<enemyHealth<<std::endl;
+        std::cout<<playerName<<"'S HEALTH IS ";
+        if(playerHealth < 0){
+            std::cout<<0<<std::endl;
+        }
+        std::cout<<this->enemyName<<"'S HEALTH IS ";
+        if(enemyHealth < 0){
+            std::cout<<0<<std::endl;
+        }
         }
         if(playerHealth>0 && enemyHealth <= 0){
             this->reset();

@@ -1532,7 +1532,7 @@ public:
         }else{
             playerHealth = 100;
             std::cout<<"you died"<<std::endl;
-            system("pause");
+            cls();
             goto climax;
         }
         //fight();
@@ -1565,7 +1565,9 @@ int main()
         name << playerName;
         name.close();
     }
-    system("cls");
+    for(int i=0;i<15;i++){
+        std::cout<<std::endl;
+    }
     std::cout<<"Player name : "<< playerName<<std::endl;
     storyPlot.customise_game();
     fstream story;
@@ -1612,6 +1614,7 @@ int main()
     checkpnt.close();
     
     std::cout<<std::endl<<"\t\tTHE END" << std::endl;
-    system("pause");
+    std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
+    std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
     return 0;
 }

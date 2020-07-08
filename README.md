@@ -3,8 +3,16 @@
 * The gif files are recorded using [ScreenToGif](https://www.screentogif.com/)
 
 # TO COMPILE THE CODE
- * To compile the code ,
-    1. Go this [link to SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and download the SFML library according to your compiler.
+
+## For Linux
+
+1. Get sfml library, enter the following in your terminal
+    `sudo apt install libsfml-dev`
+2. Then `g++ story.cpp -libsfml-system -libsfml-audio -o bin/game`
+3. Go to bin folder by `cd bin` and run game by `./game`
+    
+## For Windows
+1. Go this [link to SFML website](https://www.sfml-dev.org/download/sfml/2.5.1/) and download the SFML library according to your compiler.
     * For Example(Not recommended),
         I use mingw compiler with i686 archictecture (x84 or 32 bit).
         1. copy the files in sfml/bin folder to $(this_repo)/bin folder
@@ -52,12 +60,12 @@
 
          
 
-    2. Once all the files are in place, compile the story.cpp file with the following command. `g++ -std=c++17 story.cpp -lsfml-system -lsfml-audio -I"resources/library/include" -L"resources/library/lib" -o ./bin/game`
-     or by using the commands compile.bat and run.bat
-    3. The executable file will be created in bin folder.
-    4. double click on the executable to run the game.
-    
+2. Once all the files are in place, compile the story.cpp file with the following command. `g++ -std=c++17 story.cpp -lsfml-system -lsfml-audio -I"resources/library/include" -L"resources/library/lib" -o ./bin/game`
+ or by using the commands compile.bat and run.bat
+3. The executable file will be created in bin folder.
+4. double click on the executable to run the game.
+
+
 # TODO:
+ * game title
  * Main menu integration
- * Include Animation
- * Some bug fixes 
