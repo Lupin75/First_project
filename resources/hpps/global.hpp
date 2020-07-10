@@ -45,12 +45,19 @@ string findOs()
 //This function clears and pauses the terminal
     void cls()
     {
-        system("pause");
+        
         string osName = findOs();
         if(osName == "Windows 32-bit" || osName=="Windows 64-bit")
+        {
             system("cls");
+            system("pause");
+        }
         else if(osName == "Linux" || osName=="Unix")
+        {
+            cout<<"Press any key to continue..."<<endl;
+            char c= getchar();
             system("clear");
+        }
         else
         {
             cout<<"Program maynot be comaptible with your OS"<<endl;
