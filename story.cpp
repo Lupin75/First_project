@@ -1353,6 +1353,7 @@ public:
         Fighting f;
         if(!f.startBattle("Assassin",40,10,10,50,false)){
             std::cout<<"Fail"<<std::endl;
+            std::cout<<"Returning to last checkpoint"<<endl;
             playerHealth = 100;
             cls();
             goto woods;
@@ -1404,10 +1405,12 @@ public:
         }
         else
         {
+            cout<<"Returning to last checkpoint since you didn't dodge in time.."<<endl;
             goto find_princess;
         }
         if (jumpFunction() != true)
         {
+            cout<<"Returning to last checkpoint since you didn't dodge in time.."<<endl;
             goto find_princess;
         }
         // if dodge success
@@ -1528,10 +1531,11 @@ public:
         Fighting battle;
         playerHealth = 100;
         if(battle.startBattle("Ivan",50,20,20,100,false)){
-            std::cout<<"you successfully defeated Ivan"<<std::endl;
+            std::cout<<"You successfully defeated Ivan"<<std::endl;
         }else{
             playerHealth = 100;
-            std::cout<<"you died"<<std::endl;
+            std::cout<<"FAIL"<<std::endl;
+            cout<<"Returning to last checkpoint"<<endl;
             cls();
             goto climax;
         }
