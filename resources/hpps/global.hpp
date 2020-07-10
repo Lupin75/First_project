@@ -54,7 +54,7 @@ string findOs()
         }
         else if(osName == "Linux" || osName=="Unix")
         {
-            cout<<"Press any key to continue..."<<endl;
+            cout<<"Press any key to continue...";
             char c= getchar();
             system("clear");
         }
@@ -243,14 +243,6 @@ private:
            pBarUpdater = "/-\\|";
 
 public:
-
-    void reset()
-    {
-        pBarLength = 50;
-        currUpdateVal = 0;
-        currentProgress = 0;
-        neededProgress = 100;
-    }
     void update(double newProgress)
     {
         currentProgress += newProgress;
