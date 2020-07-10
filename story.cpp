@@ -1565,9 +1565,6 @@ int main()
         name << playerName;
         name.close();
     }
-    for(int i=0;i<15;i++){
-        std::cout<<std::endl;
-    }
     std::cout<<"Player name : "<< playerName<<std::endl;
     storyPlot.customise_game();
     fstream story;

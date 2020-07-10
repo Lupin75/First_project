@@ -26,14 +26,37 @@ bool FileExists(const std::string &Filename)
 
 using namespace std;
 
+//This function returns the OS name
+string findOs()
+ {
+    #ifdef _WIN32
+    return "Windows 32-bit";
+    #elif _WIN64
+    return "Windows 64-bit";
+    #elif __linux__
+    return "Linux";
+    #elif __unix || __unix__
+    return "Unix";
+    #else
+    return "Other";
+    #endif
+ }
+
 //This function clears and pauses the terminal
     void cls()
     {
-        std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
-        std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
-        for(int i=0;i<20;i++){
-            std::cout<<std::endl;
+        system("pause");
+        string osName = findOs();
+        if(osName == "Windows 32-bit" || osName=="Windows 64-bit")
+            system("cls");
+        else if(osName == "Linux" || osName=="Unix")
+            system("clear");
+        else
+        {
+            cout<<"Program maynot be comaptible with your OS"<<endl;
+            exit(0);
         }
+        
     }
     
 // To check if the input is integer type
