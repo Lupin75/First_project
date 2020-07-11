@@ -22,7 +22,6 @@ bool FileExists(const std::string &Filename)
         return true;
     }
 }
-#undef max
 
 using namespace std;
 
@@ -31,8 +30,6 @@ string findOs()
  {
     #ifdef _WIN32
     return "Windows 32-bit";
-    #elif _WIN64
-    return "Windows 64-bit";
     #elif __linux__
     return "Linux";
     #elif __unix || __unix__
@@ -47,23 +44,17 @@ string findOs()
     {
         
         string osName = findOs();
-        if(osName == "Windows 32-bit" || osName=="Windows 64-bit")
+        if(osName == "Windows 32-bit")
         {
             system("pause");
             system("cls");
         }
-        else if(osName == "Linux" || osName=="Unix")
-        {
-            cout<<"Press any key to continue...";
-            char c= getchar();
-            system("clear");
-        }
         else
         {
-            cout<<"Program maynot be comaptible with your OS"<<endl;
-            exit(0);
+            cout<<"Press any key to continue...";
+            std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
+            system("clear");
         }
-        
     }
     
 // To check if the input is integer type

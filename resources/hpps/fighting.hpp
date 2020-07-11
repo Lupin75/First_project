@@ -67,11 +67,11 @@ class Fighting{
         music.play();
         std::string input;
         sf::Clock timer;
-        while(timer.getElapsedTime().asSeconds()<=5 ) {
-            std::cout<<"ENTER PLAYER'S MOVE WITH IN 5 SECONDS"<<std::endl;
+        while(timer.getElapsedTime().asSeconds()<=8 ) {
+            std::cout<<"ENTER PLAYER'S MOVE WITH IN 8 SECONDS"<<std::endl;
             std::cin>>input;
             input = toSmall(input);
-            if(timer.getElapsedTime().asSeconds()<5) {
+            if(timer.getElapsedTime().asSeconds()<=8) {
                 if(input == "jump" || input == "attack" || input == "defend") {
                     music.stop();
                     this->playerLogic = input;
@@ -101,8 +101,7 @@ class Fighting{
         wrap("\t1:Type `attack` to attack the enemy.");
         wrap("\t2:Type `defend` to brace yourself for impact(you will take damage but 1/4th than usual.defending yourself will increase the attack power if you `attack` right after `defend`)");
         wrap("\t3:Type `jump` to jump backward to completely miss the enemy attack and heal yourself, however if you type `attack` right after `jump` your damage output will be lower");
-        std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
-        std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
+        cls();
         std::cout<<"the battle has begun!"<<std::endl;
         if(isPlayerFirst == true){
             std::cout<<this->enemyName<<" is infront for you"<<std::endl<<"\tYOU:"<<std::endl;
@@ -119,14 +118,14 @@ class Fighting{
                 std::cout<<"You stared at him, both drawed swords and assumed battle positions"<<std::endl;
             }
         }
+        for(int i=0; i<5;i++ ){
+            std::cout<<std::endl;
+        }
         while(playerHealth >0 && enemyHealth > 0 ) {
             PBD = playerBaseDamage;
             EBD = enemyBaseDamage;
-            std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
-            std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
             this->setEnemyLogic();
             std::cout<<this->enemyName<<" is about to "<<this->enemyLogic<<std::endl;
-            std::cout<<"YOU: "<<std::endl;
             this->setPlayerLogic();
             if(this->playerPreviousLogic == "jump"){
                 PBD = PBD/4;
@@ -163,7 +162,7 @@ class Fighting{
                 }else if(this->enemyLogic=="defend"){
                     std::cout<<"both defended, really!"<<std::endl;
                 }else if(this->enemyLogic=="jump"){
-                    std::cout<<"nothing happened, it just felt like 2 magikarp fighting eachother(-_-)"<<std::endl;
+                    std::cout<<"nothing happened."<<std::endl;
                     if(enemyHealth<enemyMaxHealth){
                         enemyHealth = enemyHealth+(enemyMaxHealth/20);
                     }
@@ -176,12 +175,12 @@ class Fighting{
                 if(this->enemyLogic=="attack"){
                     std::cout<<"you evaded the attack!"<<std::endl;
                 }else if(this->enemyLogic=="defend"){
-                    std::cout<<"nothing happened, it just felt like 2 magikarp fighting eachother(-_-)"<<std::endl;
+                    std::cout<<"nothing happened."<<std::endl;
                 }else if(this->enemyLogic=="jump"){
                     if(enemyHealth<enemyMaxHealth){
                         enemyHealth = enemyHealth + (enemyMaxHealth/20);
                     }
-                    std::cout<<this->enemyName<<" and you both finished playing dance floor arcade machine,it was a tie"<<std::endl;
+                    std::cout<<this->enemyName<<" and you both finished jumping around."<<std::endl;
                 }
                 this->playerPreviousLogic =this->playerLogic;
                 this->enemyPreviousLogic =this->enemyLogic;
@@ -200,14 +199,21 @@ class Fighting{
                 this->playerPreviousLogic = "NULL";
                 this->enemyPreviousLogic = this->enemyLogic;
             }
-        std::cout<<playerName<<"'S HEALTH IS ";
-        if(playerHealth < 0){
-            std::cout<<0<<std::endl;
-        }
-        std::cout<<this->enemyName<<"'S HEALTH IS ";
-        if(enemyHealth < 0){
-            std::cout<<0<<std::endl;
-        }
+            for(int i=0; i<5;i++ ){
+                std::cout<<std::endl;
+            }
+            std::cout<<playerName<<"'s health is ";
+            if(playerHealth < 0){
+                std::cout<<0<<std::endl;
+            }else{
+                std::cout<<playerHealth<<std::endl;
+            }
+            std::cout<<this->enemyName<<"'s health is ";
+            if(enemyHealth < 0){
+                std::cout<<0<<std::endl;
+            }else{
+                std::cout<<enemyHealth<<std::endl;
+            }
         }
         if(playerHealth>0 && enemyHealth <= 0){
             this->reset();
