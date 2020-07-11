@@ -34,6 +34,8 @@ string findOs()
     return "Linux";
     #elif __unix || __unix__
     return "Unix";
+    #elif __APPLE__ || __MACH__
+    return "Mac OS";
     #else
     return "Other";
     #endif
@@ -49,7 +51,7 @@ string findOs()
             system("pause");
             system("cls");
         }
-        else
+        else if(osName == "Linux" || osName == "Mac OS")
         {
             cout<<"Press any key to continue...";
             std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
