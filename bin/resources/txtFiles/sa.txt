@@ -9,7 +9,7 @@ Do you accept the invitation?
 	2: No
 Enter 1 or 2
 //********TITLE**********
-Understanding the emergency, you get on your horse and start galloping towards Jade City. All alone in the scorching highways with not much trees around you to cast shadow from hot sunrays you maintain a steady pace through the rough terrains. Finally, you see a big arch welcoming you to the city of Jadeite after three hours of ride. When you go closer you find the arch looking in a bad state of maintenance and there are no guards at the entrance. As you ride through the outskirts for some ten minutes, you finally approach a junction with a nearby stall for travelers to refresh themselves.
+Understanding the emergency, you get on your horse and start galloping towards Jade City. All alone in the scorching highways with not much trees around you to cast shadow from hot sunrays you maintain a steady pace through the rough terrains. Finally, you see a big arch welcoming you to the city of Jade City after three hours of ride. When you go closer you find the arch looking in a bad state of maintenance and there are no guards at the entrance. As you ride through the outskirts for some ten minutes, you finally approach a junction with a nearby stall for travelers to refresh themselves.
 So you decide to take a small break and let your horse take some rest. After few minutes as you are starting to resume your journey after asking the stall owner directions to the city, you see a blonde man on a white horse coming that way taking a right at the junction (the direction of the main city/ palace).As you observe his clothes, you think that he is a foreign traveler but something seems suspicious about him. But you see that man slowing down his horse as if he was coming for you.
 Traveler: Hello, Detective $PN. I am a chief intelligence agent of Jade City. This is for you.   (He offers you a letter)
 It reads: 
@@ -25,13 +25,13 @@ You get on your horse and follow Podrick
 4.	About the people.
 
 $PN: So what happened and who is missing?
-Podrick: Her honor the princess "Name" has gone missing. The princess, her two friends along with two important generals in top military positions, who went for their safety, have gone missing yesterday.
+Podrick: Her honor the princess Grace has gone missing. The princess, her two friends along with two important generals in top military positions, who went for their safety, have gone missing yesterday.
 $PN: So why is the fact that the princess is missing, is being kept a secret?
 Podrick: If you have not heard, there was a famine 6 months ago, due to which the economy and military of the kingdom went down drastically. Due to such issues there was also a small people's rebellion which was quickly solves as the King accepted the plea of the people. Due to the current political situation, every other country is waiting for the right opportunity to hit us.
 $PN: What makes this a right opportunity for the invaders?
 Podrick: Due to increasing political tension, the princess was engaged to Prince Clarke of Raken for military support. But the ambassador of Raken got to know about the princess missing. To ease the tension, he asked for the prince Clarke to come here to Jade City. It takes around 2 days for the prince to come from Raken. If the prince Clarke finds that she is missing he will call off any further relationship with our country. So, our country will become more vulnerable to war.
 $PN: And what about the people?
-Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum possible interactions possible. Type SPYBAR.
+Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum possible interactions possible. About SPYBAR.
  ~SPYBAR:
   1.Every interaction of yours increases a certain amount of value in a SPYBAR.
   2.Once this value reached 100, this means that spies in the city knew about the missing. This results in a war in which King George loses. Hence you lost and need to restart the level.
@@ -64,7 +64,7 @@ Podrick: Traveling time will be lot and the purpose of picnic won't be fulfilled
 ------------------------------
 Despite the famine you are surrounded by trees on your way to the main city. After riding for around 15 mins you can faintly see the huge gates of the main city.
 $PN: Did you investigate in her friend's houses?
-Podrick: Due to spies' problem, we haven't even told Matilda's parents about them missing. We told them she is staying in the palace. We don't yet know the exact location of where the boy lives. The princess has known him for less than a year. His father died due to the famine. The pet shop and their previous house have been closed for months.
+Podrick: Due to an increase in number of spies in the kingdom, we haven't even told Matilda's parents about them missing. We told them she is staying in the palace. We don't yet know the exact location of where the boy lives. The princess has known him for less than a year. His father died due to the famine. The pet shop and their previous house have been closed for months.
 $PN: He seems suspicious and smart. Within a year, he has become the best friend of princess. Where are we going now?
 Podrick: I thought of starting to investigate at Matilda's house with your help first as we need to start the investigation quickly. We can come back to the junction later to investigate more.
 
@@ -118,12 +118,12 @@ $PN: This could help us retrace their steps hopefully.
 
 You have reached the colony. As Podrick describes the buildings are not continuous and spread in 3 clusters. The door numbers of shops and houses are in the order 221A, 221B and so on till 221K.
 1.	To take a closer look on the house, type the alphabet. (This will tell about the way the house/shop looks from outside along with Podrick's perspective, if any.)
-2.	//You can only go in order. (i.e. you can't type B after you typed C)
-3.	If you feel that you could get some information, type talk. Due to SPYBAR restriction, you can maximum enter any 5 houses or shops in this entire colony.
+2.	You can go in any order.
+3.	If you feel that you could get some information, choose talk. Due to SPYBAR restriction, minimise the number of people you talk to.
 4.	Remember, you are not investigating directly. You create a conversation and channel the talk in a way you get some information related to missing.
 5.	Also remember not to talk with spies.
 6.	Choose 'move' if you don't want to get in the shop.
-7.	If you finished investigation, type 'end'.
+7.	If you fail to get any clue in a group your progress in the group will be reset i.e. you have to visit all the buildings before moving on to next group, but SPYBAR will remain the same.
 
 						If you want to recall, type SPYBAR.
 
@@ -421,7 +421,7 @@ $PN: Where is the princess? Who sent you?
 Assassin: Who are you and why should I tell you?
 He spits the blood in his mouth nearby
 $PN: So you have been attacking me even though you don't know who I am? Listen carefullly. The name is $PN and oh, I may be on the side of the good guys, but don't for one second think that I am one of them
-You pull him up by his collar with cold calmness and ask him again
+You pull him up by his collar hold him over the ledge with cold calmness and ask him again
 Assassin: Don't kill me. I'll tell everything I know.
 You put him down.
 Assassin: They don't tell me the place where they hid the princess, but I know it was the prince that ordered to kill you.
@@ -477,7 +477,7 @@ Save yourself!!
 You dodge the first swing successfully but land awkwardly so that you are not able to dodge the second swing properly and crash into the cupboard.
 Podrick holds back Ivan and asks him to calm down.
 Ivan: What have you done? What did you do in that cliff?
-You explain what happened there as """""""""""""""""""""""""""""""""""""""""""""""""""
+You explain what happened there as they listen with dread.
 Ivan couldn't control his tears and he just runs away to his horse while the tears from his eyes drip all over his path.
 Podrick (to $PN): Come, we need to console Ivan.
 You both just started to run through that big hallway, when Ivan shouts at you.

@@ -181,7 +181,7 @@ int check_penta(int option)
 }
 
 //This function helps us conttrol the speed of output using "speed" var
-void displaySlow(string line, int speed = 100000, bool sleepStats = true)
+void displaySlow(string line, int speed = 100, bool sleepStats = true)
 {
     // char ch;
     for (int i = 0; i < line.size(); i++)

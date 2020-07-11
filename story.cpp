@@ -485,7 +485,7 @@ public:
         cls();
 
         line_count = 116;
-        displayStory(story, 117, 125);
+        displayStory(story, 117, 126);
         progressBar.progressBar(25);
         cls();
         music.stop();
@@ -1327,6 +1327,7 @@ public:
         }
         displayStory(story, 394, 403);
         f1 = 0;
+        int exc = 0;
         while (f1 == 0)
         {
             option = check_binary(option);
@@ -1337,9 +1338,20 @@ public:
             }
             else
             {
-                cout << "Ivan fears that it could be Matilda who they will kill if you don't go. For their sake, you accept to go." << endl;
-                cout << "Game proceeds only if you accept the challenge" << endl;
-                displayStory(story, 400, 402);
+                if(exc==1){
+                    wrap("Podrick is visibly disappointed in you. But he takes you back to the city and gets you a room. You have trouble sleeping that night.\n The next morning when you come out you find that the city is in a state of panic and you find that since you did not go to meet the kidnappers the kidnappers slipped the information to the spies and eventually a war broke out.");
+                    cout<<endl<<"~~~LOST~~~"<<endl;
+                    cout<<"Returning to previous checkpoint"<<endl;
+                    cls();
+                    goto woods;
+                }
+                else{
+                    cout << "Ivan fears that it could be Matilda who they will kill if you don't go. For their sake, you accept to go." << endl;
+                    cout << "Game proceeds only if you accept the challenge" << endl;
+                    displayStory(story, 400, 402);
+                    exc++;
+                }
+                    
             }
         }
         sf::Music music;
@@ -1352,13 +1364,13 @@ public:
         //cout << "***********call fight function************" << endl;
         Fighting f;
         if(!f.startBattle("Assassin",40,10,10,50,false)){
-            std::cout<<"Fail"<<std::endl;
-            std::cout<<"Returning to last checkpoint"<<endl;
+            std::cout<<"~~~Fail~~~"<<std::endl;
+            std::cout<<"~~~Returning to last checkpoint~~~"<<endl;
             playerHealth = 100;
             cls();
             goto woods;
         }else{
-            std::cout<<"Pass"<<std::endl;
+            std::cout<<"~~~Pass~~~"<<std::endl;
         }
         progressBar.progressBar(70);
         cls();
@@ -1405,12 +1417,14 @@ public:
         }
         else
         {
-            cout<<"Returning to last checkpoint since you didn't dodge in time.."<<endl;
+            cout<<"~~~Returning to last checkpoint since you didn't dodge in time..~~~"<<endl;
+            cls();
             goto find_princess;
         }
         if (jumpFunction() != true)
         {
-            cout<<"Returning to last checkpoint since you didn't dodge in time.."<<endl;
+            cout<<"~~~Returning to last checkpoint since you didn't dodge in time..~~~"<<endl;
+            cls();
             goto find_princess;
         }
         // if dodge success
@@ -1534,8 +1548,8 @@ public:
             std::cout<<"You successfully defeated Ivan"<<std::endl;
         }else{
             playerHealth = 100;
-            std::cout<<"FAIL"<<std::endl;
-            cout<<"Returning to last checkpoint"<<endl;
+            std::cout<<"~~~FAIL~~~"<<std::endl;
+            cout<<"~~~Returning to last checkpoint~~~"<<endl;
             cls();
             goto climax;
         }
@@ -1615,7 +1629,7 @@ int main()
     checkpnt.close();
     
     std::cout<<std::endl<<"\t\tTHE END" << std::endl;
-    std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
-    std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
+    //std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
+    //std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
     return 0;
 }
