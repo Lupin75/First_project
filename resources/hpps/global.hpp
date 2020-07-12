@@ -9,7 +9,9 @@
 #include <iomanip>
 #include <cstring>
 #include <ctype.h>
+#ifdef _WIN32
 #include<Windows.h>
+#endif
 
 bool FileExists(const std::string &Filename)
 {
@@ -199,7 +201,9 @@ void setcolor()
     if(findOs()=="Windows 32-bit")
     {
         srand(time(0));
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),rand()%15+1);
+        #ifdef _WIN32
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),rand()%15+1);
+        #endif
     }
     return;
 }
@@ -207,7 +211,8 @@ void setcolor()
 //Wraps text to avoid cutting of words in terminal
 void wrap(string text, size_t line_length = 110)
 {
-    setcolor();
+    if(findOs()=="Windows 32-bit")
+        setcolor();
     std::istringstream words(text);
     std::ostringstream wrapped;
     std::string word;
