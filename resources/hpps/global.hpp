@@ -9,6 +9,7 @@
 #include <iomanip>
 #include <cstring>
 #include <ctype.h>
+#include<Windows.h>
 
 bool FileExists(const std::string &Filename)
 {
@@ -181,7 +182,7 @@ int check_penta(int option)
 }
 
 //This function helps us conttrol the speed of output using "speed" var
-void displaySlow(string line, int speed = 100, bool sleepStats = true)
+void displaySlow(string line, int speed = 25, bool sleepStats = false)
 {
     // char ch;
     for (int i = 0; i < line.size(); i++)
@@ -193,9 +194,20 @@ void displaySlow(string line, int speed = 100, bool sleepStats = true)
     cout << "\n";
 }
 
+void setcolor()
+{
+    if(findOs()=="Windows 32-bit")
+    {
+        srand(time(0));
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),rand()%15+1);
+    }
+    return;
+}
+
 //Wraps text to avoid cutting of words in terminal
 void wrap(string text, size_t line_length = 110)
 {
+    setcolor();
     std::istringstream words(text);
     std::ostringstream wrapped;
     std::string word;
