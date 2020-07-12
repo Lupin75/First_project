@@ -1366,7 +1366,6 @@ public:
         if(!f.startBattle("Assassin",40,10,10,50,false)){
             std::cout<<"~~~Fail~~~"<<std::endl;
             std::cout<<"~~~Returning to last checkpoint~~~"<<endl;
-            playerHealth = 100;
             cls();
             goto woods;
         }else{
@@ -1543,11 +1542,9 @@ public:
         cls();
         cout << "*****Fight*****" << endl;
         Fighting battle;
-        playerHealth = 100;
         if(battle.startBattle("Ivan",50,20,20,100,false)){
             std::cout<<"You successfully defeated Ivan"<<std::endl;
         }else{
-            playerHealth = 100;
             std::cout<<"~~~FAIL~~~"<<std::endl;
             cout<<"~~~Returning to last checkpoint~~~"<<endl;
             cls();

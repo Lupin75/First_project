@@ -1,8 +1,5 @@
 #ifndef FIGHTING_HPP
 #define FIGHTING_HPP
-int playerHealth = 100;
-int playerDefendStat = 50;
-#include"global.hpp"
 #include <iostream>
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
@@ -14,6 +11,18 @@ class Fighting{
     std::string playerLogic = "NULL";
     std::string enemyPreviousLogic = "NULL";
     std::string playerPreviousLogic = "NULL";
+
+    string toSmall(string large)
+    {
+        for (int i = 0; i < large.size(); i++){
+            if (isalpha(large[i]) != 0){
+                if (isupper(large[i]) != 0){
+                    large[i] = tolower(large[i]);
+                }
+            }
+        }
+        return large;
+    }
 
     void setEnemyLogic(){
         srand(time(NULL));
@@ -70,7 +79,7 @@ class Fighting{
         while(timer.getElapsedTime().asSeconds()<=8 ) {
             std::cout<<"ENTER PLAYER'S MOVE WITH IN 8 SECONDS"<<std::endl;
             std::cin>>input;
-            input = toSmall(input);
+            input = this->toSmall(input);
             if(timer.getElapsedTime().asSeconds()<=8) {
                 if(input == "jump" || input == "attack" || input == "defend") {
                     music.stop();
@@ -91,6 +100,8 @@ class Fighting{
     //startBattle works both as a constructor and as a function.ename is enemy name. eH is enemy health
     //Parameters - enemyname ,enemy defense stat, player base damage, enemy base damage, enemy health , isplayer first
     bool startBattle(std::string ename/*enemyName*/,int enemyDefendStat/*in percentage*/=50,int playerBaseDamage=10,int enemyBaseDamage=10,int enemyHealth=10,bool isPlayerFirst = true){
+        int playerHealth = 100;
+        int playerDefendStat = 50;
         int PBD = playerBaseDamage;
         int EBD = enemyBaseDamage;
         this->enemyName=ename;

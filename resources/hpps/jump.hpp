@@ -1,7 +1,6 @@
 #ifndef JUMP_HPP
 #define JUMP_HPP
 #include <iostream>
-#include "global.hpp"
 #include <SFML/System.hpp>
 #include <SFML/Audio.hpp>
 bool jumpFunction() {
