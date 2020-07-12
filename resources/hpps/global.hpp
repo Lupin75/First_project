@@ -184,7 +184,7 @@ int check_penta(int option)
 }
 
 //This function helps us conttrol the speed of output using "speed" var
-void displaySlow(string line, int speed = 25, bool sleepStats = false)
+void displaySlow(string line, int speed = 25, bool sleepStats = true)
 {
     // char ch;
     for (int i = 0; i < line.size(); i++)
@@ -196,13 +196,16 @@ void displaySlow(string line, int speed = 25, bool sleepStats = false)
     cout << "\n";
 }
 
-void setcolor()
+void setcolor(bool setDefault=false)
 {
     if(findOs()=="Windows 32-bit")
     {
         srand(time(0));
         #ifdef _WIN32
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),rand()%15+1);
+            if(setDefault==true)
+                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
+            else
+                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),rand()%15+1);
         #endif
     }
     return;

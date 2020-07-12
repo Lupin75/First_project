@@ -1629,6 +1629,8 @@ int main()
     checkpnt.close();
     
     std::cout<<std::endl<<"\t\tTHE END" << std::endl;
+    if(findOs()=="Windows 32-bit")
+        setcolor(true);
     //std::cout << "Press ENTER to continue... " <<std::endl<< std::flush;
     //std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
     return 0;

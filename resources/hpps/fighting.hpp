@@ -102,6 +102,8 @@ class Fighting{
         wrap("\t2:Type `defend` to brace yourself for impact(you will take damage but 1/4th than usual.defending yourself will increase the attack power if you `attack` right after `defend`)");
         wrap("\t3:Type `jump` to jump backward to completely miss the enemy attack and heal yourself, however if you type `attack` right after `jump` your damage output will be lower");
         cls();
+        if(findOs()=="Windows 32-bit")
+            setcolor(true);
         std::cout<<"the battle has begun!"<<std::endl;
         if(isPlayerFirst == true){
             std::cout<<this->enemyName<<" is infront for you"<<std::endl<<"\tYOU:"<<std::endl;

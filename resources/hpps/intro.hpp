@@ -19,6 +19,8 @@ int printTitle(){
         cout<<endl;
         cls();
     }else if(input == 3){
+        if(findOs()=="Windows 32-bit")
+            setcolor(true);
         _Exit(0);
     }else if(input == 2){
         cout<<"Loading Last Checkpoint\n";
