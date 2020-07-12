@@ -31,7 +31,7 @@ Podrick: If you have not heard, there was a famine 6 months ago, due to which th
 $PN: What makes this a right opportunity for the invaders?
 Podrick: Due to increasing political tension, the princess was engaged to Prince Clarke of Raken for military support. But the ambassador of Raken got to know about the princess missing. To ease the tension, he asked for the prince Clarke to come here to Jade City. It takes around 2 days for the prince to come from Raken. If the prince Clarke finds that she is missing he will call off any further relationship with our country. So, our country will become more vulnerable to war.
 $PN: And what about the people?
-Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum possible interactions possible. About SPYBAR.
+Podrick: The number of spies in the country has increased drastically. Even investigating for evidences, increases risks of spies knowing it. So, we must have minimum interactions possible. About SPYBAR.
  ~SPYBAR:
   1.Every interaction of yours increases a certain amount of value in a SPYBAR.
   2.Once this value reached 100, this means that spies in the city knew about the missing. This results in a war in which King George loses. Hence you lost and need to restart the level.
