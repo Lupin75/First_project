@@ -54,7 +54,7 @@ string findOs()
             system("pause");
             system("cls");
         }
-        else if(osName == "Linux" || osName == "Mac OS")
+        else if(osName == "Linux" || osName == "Mac OS" || osName=="Unix")
         {
             cout<<"Press any key to continue...";
             std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
@@ -209,6 +209,23 @@ void setcolor(bool setDefault=false)
         #endif
     }
     return;
+}
+
+void showTitle()
+{
+    string osName = findOs();
+    int i=0;
+    while(i<5){
+    if(osName=="Windows 32-bit")
+        system("cls");
+    else if(osName=="Linux" || osName=="Unix" || osName=="Mac OS")
+        system("clear");
+    cout<<"\t\t\t\t\tThe case of a missing princess";
+    setcolor();
+    Sleep(1000);
+    i++;
+    }
+    cout<<endl;
 }
 
 //Wraps text to avoid cutting of words in terminal

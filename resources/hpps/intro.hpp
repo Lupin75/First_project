@@ -3,7 +3,7 @@
 #include<iostream>
 #include"global.hpp"
 int printTitle(){
-    //cout -->title name here;
+    showTitle();
     if(findOs()=="Windows 32-bit")
         setcolor();
     std::cout<<"\t1: New Game"<<std::endl<<"\t2: Continue\n\t3: Exit"<<std::endl;
