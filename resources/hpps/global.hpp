@@ -10,17 +10,20 @@
 #include <cstring>
 #include <ctype.h>
 #ifdef _WIN32
-#include<Windows.h>
+#include <Windows.h>
 #endif
 
 bool FileExists(const std::string &Filename)
 {
     std::ifstream file;
     file.open(Filename);
-    if(file.fail()){
+    if (file.fail())
+    {
         file.close();
         return false;
-    }else{
+    }
+    else
+    {
         file.close();
         return true;
     }
@@ -30,38 +33,38 @@ using namespace std;
 
 //This function returns the OS name
 string findOs()
- {
-    #ifdef _WIN32
+{
+#ifdef _WIN32
     return "Windows 32-bit";
-    #elif __linux__
+#elif __linux__
     return "Linux";
-    #elif __unix || __unix__
+#elif __unix || __unix__
     return "Unix";
-    #elif __APPLE__ || __MACH__
+#elif __APPLE__ || __MACH__
     return "Mac OS";
-    #else
+#else
     return "Other";
-    #endif
- }
+#endif
+}
 
 //This function clears and pauses the terminal
-    void cls()
+void cls()
+{
+
+    string osName = findOs();
+    if (osName == "Windows 32-bit")
     {
-        
-        string osName = findOs();
-        if(osName == "Windows 32-bit")
-        {
-            system("pause");
-            system("cls");
-        }
-        else if(osName == "Linux" || osName == "Mac OS" || osName=="Unix")
-        {
-            cout<<"Press any key to continue...";
-            std::cin.ignore(std::numeric_limits <std::streamsize> ::max(), '\n');
-            system("clear");
-        }
+        system("pause");
+        system("cls");
     }
-    
+    else if (osName == "Linux" || osName == "Mac OS" || osName == "Unix")
+    {
+        cout << "Press any key to continue...";
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        system("clear");
+    }
+}
+
 // To check if the input is integer type
 int getInputAsInt(int number)
 {
@@ -196,17 +199,17 @@ void displaySlow(string line, int speed = 25, bool sleepStats = true)
     cout << "\n";
 }
 
-void setcolor(bool setDefault=false)
+void setcolor(bool setDefault = false)
 {
-    if(findOs()=="Windows 32-bit")
+    if (findOs() == "Windows 32-bit")
     {
         srand(time(0));
-        #ifdef _WIN32
-            if(setDefault==true)
-                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),15);
-            else
-                SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),rand()%15+1);
-        #endif
+#ifdef _WIN32
+        if (setDefault == true)
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
+        else
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), rand() % 15 + 1);
+#endif
     }
     return;
 }
@@ -214,26 +217,32 @@ void setcolor(bool setDefault=false)
 void showTitle()
 {
     string osName = findOs();
-    int i=0;
-    while(i<15){
-    if(osName=="Windows 32-bit")
-        system("cls");
-    else if(osName=="Linux" || osName=="Unix" || osName=="Mac OS")
-        system("clear");
-    cout<<"\t\t\t\t\tThe case of a missing princess";
-    #ifdef _WIN32
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),i+1);
-    #endif
-    sf::sleep(sf::milliseconds(50));
-    i++;
+    int i = 0;
+    if (osName == "Windows 32-bit")
+    {
+        while (i < 15)
+        {
+            system("cls");
+            cout << "\t\t\t\t\tThe case of a missing princess";
+#ifdef _WIN32
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), i + 1);
+#endif
+            sf::sleep(sf::milliseconds(50));
+            i++;
+        }
+        cout << endl;
     }
-    cout<<endl;
+    else
+    {
+        cout << "\t\t\t\t\tThe case of a missing princess" << endl;
+        sf::sleep(sf::milliseconds(50));
+    }
 }
 
 //Wraps text to avoid cutting of words in terminal
 void wrap(string text, size_t line_length = 110)
 {
-    if(findOs()=="Windows 32-bit")
+    if (findOs() == "Windows 32-bit")
         setcolor();
     std::istringstream words(text);
     std::ostringstream wrapped;
@@ -300,14 +309,14 @@ public:
         currUpdateVal += 1;
     }
 
-    void progressBar(int progress, int sleepRate=1)
+    void progressBar(int progress, int sleepRate = 1)
     {
-        cout<<"\nProgress\n";
+        cout << "\nProgress\n";
         update(progress); //How much new progress was added (only needed when new progress was added)
         //Print pBar:
         print();
         currentProgress = 0;
-        cout<<endl;
+        cout << endl;
     }
     void loadBar(int sleepRate = 1)
     {
