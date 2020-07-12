@@ -1,1 +1,1 @@
-g++ -std=c++17 story.cpp -lsfml-system -lsfml-audio -I"resources/library/include" -L"resources/library/lib" -o ./bin/game
+g++ -std=c++17 story.cpp -lsfml-system -lsfml-audio -I"resources/library/include" -L"resources/library/lib" -static-libstdc++ -o ./bin/game
