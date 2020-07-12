@@ -4,8 +4,6 @@
 #include"global.hpp"
 int printTitle(){
     showTitle();
-    if(findOs()=="Windows 32-bit")
-        setcolor();
     std::cout<<"\t1: New Game"<<std::endl<<"\t2: Continue\n\t3: Exit"<<std::endl;
     int input;
     Bar bar;

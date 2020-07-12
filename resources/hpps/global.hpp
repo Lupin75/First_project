@@ -215,14 +215,16 @@ void showTitle()
 {
     string osName = findOs();
     int i=0;
-    while(i<5){
+    while(i<15){
     if(osName=="Windows 32-bit")
         system("cls");
     else if(osName=="Linux" || osName=="Unix" || osName=="Mac OS")
         system("clear");
     cout<<"\t\t\t\t\tThe case of a missing princess";
-    setcolor();
-    Sleep(1000);
+    #ifdef _WIN32
+    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE),i+1);
+    #endif
+    sf::sleep(sf::milliseconds(50));
     i++;
     }
     cout<<endl;
