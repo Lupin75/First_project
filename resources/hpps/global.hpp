@@ -12,7 +12,7 @@
 #ifdef _WIN32
 #include <Windows.h>
 #endif
-
+int color_digits[] = {2,3,4,5,6,7,8,9,10,11,12,13,14,15};
 bool FileExists(const std::string &Filename)
 {
     std::ifstream file;
@@ -201,14 +201,17 @@ void displaySlow(string line, int speed = 25, bool sleepStats = true)
 
 void setcolor(bool setDefault = false)
 {
+
+    
     if (findOs() == "Windows 32-bit")
     {
         srand(time(0));
+        int pos=rand() % size(color_digits)/sizeof(int);
 #ifdef _WIN32
         if (setDefault == true)
             SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
         else
-            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), rand() % 15 + 1);
+            SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color_digits[pos]);
 #endif
     }
     return;
