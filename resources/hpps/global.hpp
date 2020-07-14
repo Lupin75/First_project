@@ -12,7 +12,7 @@
 #ifdef _WIN32
 #include <Windows.h>
 #endif
-int color_digits[] = {2,3,4,5,6,7,8,9,10,11,12,13,14,15};
+int color_digits[] = {6,7,9,10,11,12,13,14,15};
 bool FileExists(const std::string &Filename)
 {
     std::ifstream file;
