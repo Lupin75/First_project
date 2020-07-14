@@ -1,5 +1,9 @@
+a.*
+bin/a.*
 */resources/txtFiles/custom.txt
 */resources/txtFiles/progress.txt
 */resources/txtFiles/playerName.txt
 .vscode
 .vs
+resources/library/lib/
+resources/library/include/
