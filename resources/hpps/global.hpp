@@ -206,7 +206,7 @@ void setcolor(bool setDefault = false)
     if (findOs() == "Windows 32-bit")
     {
         srand(time(0));
-        int pos=rand() % size(color_digits)/sizeof(int);
+        int pos=rand() % sizeof(color_digits)/sizeof(int);
 #ifdef _WIN32
         if (setDefault == true)
             SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 15);
