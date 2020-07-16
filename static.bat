@@ -1,0 +1,1 @@
+g++ -std=c++17 story.cpp -DSFML_STATIC -lsfml-audio-s -lopenal32 -lflac -lvorbisenc -lvorbisfile -lvorbis -logg -lsfml-system-s -lwinmm -I"resources/library/include" -L"resources/library/lib" -static-libstdc++ -o ./bin/game

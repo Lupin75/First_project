@@ -1,5 +1,8 @@
 a.*
 bin/a.*
+bin/game.exe
+bin/*.dll
+bin/*.7z
 */resources/txtFiles/custom.txt
 */resources/txtFiles/progress.txt
 */resources/txtFiles/playerName.txt
